@@ -75,7 +75,7 @@
             </li>
             <li class="nav-item">
               <a class="nav-link nav-pad" data-bs-toggle="offcanvas" href="#cart-modal">
-                <span id="cart" class="position-relative" data-cart="2">
+                <span id="cart" class="position-relative" data-cart="0">
                   <i class="fa-solid fa-cart-shopping"></i>
                 </span>
               </a>
@@ -324,7 +324,7 @@
       <div class="item">
         <div class="image">
           <img src="../img/sec-four-1.jpg" alt="">
-          <button class="btn-view">
+          <button class="btn-quick-view">
             <i class="fa-regular fa-eye"></i>
             <span>Quick View</span>
           </button>
@@ -340,7 +340,7 @@
       <div class="item">
         <div class="image">
           <img src="../img/sec-four-2.jpg" alt="">
-          <button class="btn-view">
+          <button class="btn-quick-view">
             <i class="fa-regular fa-eye"></i>
             <span>Quick View</span>
           </button>
@@ -358,7 +358,7 @@
       <div class="item">
         <div class="image">
           <img src="../img/sec-four-3.jpg" alt="">
-          <button class="btn-view">
+          <button class="btn-quick-view">
             <i class="fa-regular fa-eye"></i>
             <span>Quick View</span>
           </button>
@@ -374,7 +374,7 @@
       <div class="item">
         <div class="image">
           <img src="../img/sec-four-4.jpg" alt="">
-          <button class="btn-view" data-bs-toggle="modal" data-bs-target="#myModal">
+          <button class="btn-quick-view" data-bs-toggle="modal" data-bs-target="#myModal">
             <i class="fa-regular fa-eye"></i>
             <span>Quick View</span>
           </button>
@@ -390,7 +390,7 @@
       <div class="item">
         <div class="image">
           <img src="../img/sec-four-5.jpg" alt="">
-          <button class="btn-view">
+          <button class="btn-quick-view">
             <i class="fa-regular fa-eye"></i>
             <span>Quick View</span>
           </button>
@@ -406,7 +406,7 @@
       <div class="item">
         <div class="image">
           <img src="../img/sec-four-6.jpg" alt="">
-          <button class="btn-view">
+          <button class="btn-quick-view">
             <i class="fa-regular fa-eye"></i>
             <span>Quick View</span>
           </button>
@@ -422,7 +422,7 @@
       <div class="item">
         <div class="image">
           <img src="../img/sec-four-7.jpg" alt="">
-          <button class="btn-view">
+          <button class="btn-quick-view">
             <i class="fa-regular fa-eye"></i>
             <span>Quick View</span>
           </button>
@@ -696,7 +696,7 @@
   </footer>
   
   <!-- Modal -->
-  <div class="modal modal-xl" id="myModal">
+  <div class="modal modal-xl" id="myModal" data-id="-1">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="row">
@@ -756,7 +756,7 @@
               <div class="button-modal">
                 <div class="row d-flex align-items-center">
                   <div class="col-3">
-                    <select class="quantity form-select">
+                    <select class="quantity form-select" id="quantity">
                       <option selected value="1">1</option>
                       <option value="2">2</option>
                       <option value="3">3</option>
@@ -870,11 +870,11 @@
   <div class="cart offcanvas offcanvas-end" id="cart-modal">
     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     <div class="offcanvas-header justify-content-center">
-      <h2 class="title">Your Cart (2)</h2>
+      <h2 class="title">Your Cart (0)</h2>
     </div>
     <div class="offcanva-body">
       <ul class="list">
-        <li class="item">
+        <!-- <li class="item">
           <div class="row align-items-center">
             <div class="col-4">
               <img src="../img/cart-1.jpg" alt="">
@@ -911,12 +911,12 @@
               </div>
             </div>
           </div>
-        </li>
+        </li> -->
       </ul>
     </div>
     <div class="total">
       <p class="title">Subtotal</p>
-      <span class="price">$89.00</span>
+      <span class="price" id="total-money">$89.00</span>
     </div>
     <div class="offcanva-footer">
       <a href="#" class="button-footer btn-checkout">Continue to Checkout</a>

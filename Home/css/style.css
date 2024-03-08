@@ -322,6 +322,7 @@
 }
 .sec-four .slide-category .item .image img {
   width: 100%;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 .sec-four .slide-category .item .image {
   position: relative;
@@ -354,7 +355,7 @@
   background-color: #ff6f61;
   color: #ffffff;
 }
-.sec-four .slide-category .item .image .btn-view {
+.sec-four .slide-category .item .image .btn-quick-view {
   border: 0;
   width: 100%;
   background-color: #1C1C1C;
@@ -365,7 +366,7 @@
   display: none;
   font-weight: 500;
 }
-.sec-four .slide-category .item .image:hover.image .btn-view{
+.sec-four .slide-category .item .image:hover.image .btn-quick-view{
   display: block;
 }
 .sec-four .slide-category .item .name {
