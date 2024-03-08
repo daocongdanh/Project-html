@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home page</title>
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="../css/slick.css">
+  <link rel="stylesheet" href="../css/slick-theme.css">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <section class="py-3 bg-dark">
+      <div class="text-center text-white">
+        <span class="text-uppercase">⚡️ Happy Holiday Deals on Everything ⚡️</span>
+      </div>
+    </section>
+    <nav class="navbar navbar-expand-sm">
+      <div class="container">
+        <a class="navbar-brand d-none" href="#">Shopper</a>
+        <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-between" id="collapsibleNavbar">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Catalog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Shop</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Pages</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Blogs</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Docs</a>
+            </li>
+          </ul>
+          <div class="logo mx-8" href="#">Shopper</div>
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#">United States
+                <i class="fa-solid fa-angle-down"></i>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link border-left" href="#">USD
+                <i class="fa-solid fa-angle-down"></i>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link border-left" href="#">EN
+                <i class="fa-solid fa-angle-down"></i>
+              </a>
+            </li>
+          </ul>
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link nav-pad" data-bs-toggle="offcanvas" href="#search"><i class="fa-solid fa-magnifying-glass"></i></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-pad" href="#"><i class="fa-regular fa-user"></i></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-pad" href="#"><i class="fa-regular fa-heart"></i></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-pad" data-bs-toggle="offcanvas" href="#cart-modal">
+                <span id="cart" class="position-relative" data-cart="2">
+                  <i class="fa-solid fa-cart-shopping"></i>
+                </span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!-- End Header -->
+
+  <!-- Slide -->
+  <div id="slide" class="carousel slide" data-bs-ride="carousel">
+
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="item item-one">
+          <div class="container">
+            <div class="inner-item">
+              <h1 class="title">Summer Sale</h1>
+              <h2 class="sale">-70%</h2>
+              <p class="code">with promo code CN67EW*</p>
+              <button class="button">
+                Shop Now
+                <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="item item-two d-flex align-items-center">
+          <div class="container d-flex justify-content-end">
+            <div class="inner-item">
+              <h1 class="title">Summer Collection</h1>
+              <p class="content">So called give, one whales tree seas dry place own day, winged tree created spirit.</p>
+              <button class="button">
+                Shop Now
+                <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="item item-three d-flex align-items-center">
+          <div class="container">
+            <div class="inner-item d-flex flex-column align-items-center">
+              <h1 class="title">Summer Styles</h1>
+              <h2 class="sale">50% OFF</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#slide" data-bs-slide="prev">
+      <span class="text-black"><i class="fa-solid fa-angle-left m-0"></i></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#slide" data-bs-slide="next">
+      <span class="text-black"><i class="fa-solid fa-angle-right m-0"></i></span>
+    </button>
+  </div>
+
+  <!-- End Slide -->
+
+  <!-- Sec-one -->
+  <div class="sec-one">
+    <div class="row">
+      <div class="col-4">
+        <div class="item item-one">
+          <h2 class="title">Summer Hats</h2>
+          <div class="left">
+            <button class="button">
+              Shop Now
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="item item-two">
+          <h2 class="title">Men Hats</h2>
+          <div class="left">
+            <button class="button">
+              Shop Now
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="item item-three">
+          <h2 class="title">Floral Dresses</h2>
+          <div class="left">
+            <button class="button">
+              Shop Now
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Sec-one -->
+
+  <!-- Sec-two -->
+  <div class="sec-two">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="item">
+            <h2 class="name">Shop by Category</h2>
+            <div class="option">
+              <button class="cate active">Women</button>
+              <button class="cate">Men</button>
+              <button class="cate">Kids</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 mt-5" style="padding: 0 100px;">
+          <div class="slide-category" id="slide-category">
+            <div class="item">
+              <div class="image">
+                <img src="../img/sec-two-1.jpg" alt="">
+              </div>
+              <p class="name">
+                Dresses
+                <span> (58)</span>
+              </p>
+            </div>
+            <div class="item">
+              <div class="image">
+                <img src="../img/sec-two-2.jpg" alt="">
+              </div>
+              <p class="name">
+                Tops
+                <span> (35)</span>
+              </p>
+            </div>
+            <div class="item">
+              <div class="image">
+                <img src="../img/sec-two-3.jpg" alt="">
+              </div>
+              <p class="name">
+                T-shirts
+                <span> (27)</span>
+              </p>
+            </div>
+            <div class="item">
+              <div class="image">
+                <img src="../img/sec-two-4.jpg" alt="">
+              </div>
+              <p class="name">
+                Shoes
+                <span> (64)</span>
+              </p>
+            </div>
+            <div class="item">
+              <div class="image">
+                <img src="../img/sec-two-5.jpg" alt="">
+              </div>
+              <p class="name">
+                Jeans
+                <span> (12)</span>
+              </p>
+            </div>
+            <div class="item">
+              <div class="image">
+                <img src="../img/sec-two-6.jpg" alt="">
+              </div>
+              <p class="name">
+                Sweatshirts
+                <span> (11)</span>
+              </p>
+            </div>
+            <div class="item">
+              <div class="image">
+                <img src="../img/sec-two-7.jpg" alt="">
+              </div>
+              <p class="name">
+                Jackets
+                <span> (9)</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Sec-two -->
+  
+  <!-- Sec-three -->
+  <div class="sec-three">
+    <div class="container">
+      <div class="row">
+        <div class="col-6">
+          <div class="item">
+            <div class="image">
+              <img src="../img/sec-three-1.jpg" class="w-100" alt="">
+            </div>
+            <div class="sale">
+              <span class="old">$99.00</span>
+              <span class="new">$59.00</span>
+            </div>
+            <div class="mid">
+              <h2>Cropped Trousers</h2>
+              <div class="bottom">
+                <button class="button">
+                  Shop Now
+                  <i class="fa-solid fa-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="item">
+            <div class="image">
+              <img src="../img/sec-three-2.jpg" class="w-100" alt="">
+            </div>
+            <div class="sale">
+              <span class="old">$99.00</span>
+              <span class="new">$59.00</span>
+            </div>
+            <div class="mid">
+              <h2>Cropped Trousers</h2>
+              <div class="bottom">
+                <button class="button">
+                  Shop Now
+                  <i class="fa-solid fa-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Sec-three -->
+
+  <!-- Sec-four -->
+  <div class="sec-four">
+    <h1 class="title">New Arrivals</h1>
+    <div class="slide-category" id="slide-product-hot">
+      <div class="item">
+        <div class="image">
+          <img src="../img/sec-four-1.jpg" alt="">
+          <button class="btn-view">
+            <i class="fa-regular fa-eye"></i>
+            <span>Quick View</span>
+          </button>
+          <div class="wish">
+            <i class="fa-regular fa-heart"></i>
+          </div>
+        </div>
+        <p class="name">Cotton floral print Dress</p>
+        <p class="price">
+          <span class="price-only">$40.00</span>
+        </p>  
+      </div>
+      <div class="item">
+        <div class="image">
+          <img src="../img/sec-four-2.jpg" alt="">
+          <button class="btn-view">
+            <i class="fa-regular fa-eye"></i>
+            <span>Quick View</span>
+          </button>
+          <div class="wish">
+            <i class="fa-regular fa-heart"></i>
+          </div>
+          <span class="sale">SALE</span>
+        </div>
+        <p class="name">Suede cross body Bag</p>
+        <p class="price">
+          <span class="old">$85.00</span>
+          <span class="new">$49.00</span>
+        </p>
+      </div>
+      <div class="item">
+        <div class="image">
+          <img src="../img/sec-four-3.jpg" alt="">
+          <button class="btn-view">
+            <i class="fa-regular fa-eye"></i>
+            <span>Quick View</span>
+          </button>
+          <div class="wish">
+            <i class="fa-regular fa-heart"></i>
+          </div>
+        </div>
+        <p class="name">Cotton leaf print Shirt</p>
+        <p class="price">
+          <span class="price-only">$65.00</span>
+        </p>
+      </div>
+      <div class="item">
+        <div class="image">
+          <img src="../img/sec-four-4.jpg" alt="">
+          <button class="btn-view" data-bs-toggle="modal" data-bs-target="#myModal">
+            <i class="fa-regular fa-eye"></i>
+            <span>Quick View</span>
+          </button>
+          <div class="wish">
+            <i class="fa-regular fa-heart"></i>
+          </div>
+        </div>
+        <p class="name">Leather Sneakers</p>
+        <p class="price">
+          <span class="option">Select Options</span>
+        </p>
+      </div>
+      <div class="item">
+        <div class="image">
+          <img src="../img/sec-four-5.jpg" alt="">
+          <button class="btn-view">
+            <i class="fa-regular fa-eye"></i>
+            <span>Quick View</span>
+          </button>
+          <div class="wish">
+            <i class="fa-regular fa-heart"></i>
+          </div>
+        </div>
+        <p class="name">Another fine dress</p>
+        <p class="price">
+          <span class="price-only">$99.00</span>
+        </p>
+      </div>
+      <div class="item">
+        <div class="image">
+          <img src="../img/sec-four-6.jpg" alt="">
+          <button class="btn-view">
+            <i class="fa-regular fa-eye"></i>
+            <span>Quick View</span>
+          </button>
+          <div class="wish">
+            <i class="fa-regular fa-heart"></i>
+          </div>
+        </div>
+        <p class="name">Baseball Cap</p>
+        <p class="price">
+          <span class="price-only">$10.00</span>
+        </p>
+      </div>
+      <div class="item">
+        <div class="image">
+          <img src="../img/sec-four-7.jpg" alt="">
+          <button class="btn-view">
+            <i class="fa-regular fa-eye"></i>
+            <span>Quick View</span>
+          </button>
+          <div class="wish">
+            <i class="fa-regular fa-heart"></i>
+          </div>
+        </div>
+        <p class="name">Leather sneakers</p>
+        <p class="price">
+          <span class="price-only">$19.00</span>
+        </p>
+      </div>
+    </div>
+  </div>
+  <!-- End Sec-four -->
+
+  <!-- Sec-five -->
+  <div class="sec-five">
+    <div class="container" style="max-width: 992px;">
+      <div class="row align-items-center">
+        <div class="col-7">
+          <div class="slide-left">
+            <div class="item">
+              <div class="image">
+                <img src="../img/sec-five-4.jpg" alt="">
+              </div>
+            </div>
+            <div class="item">
+              <div class="image">
+                <img src="../img/sec-five-5.jpg" alt="">
+              </div>
+            </div>
+            <div class="item">
+              <div class="image">
+                <img src="../img/sec-five-6.jpg" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-5">
+          <h3 class="sub-title">PERFECT SUMMER</h3>
+          <h1 class="title">Summer Days Look</h1>
+          <div class="slide-right">
+            <div class="item">
+              <div class="image">
+                <img src="../img/sec-five-1.jpg" alt="">
+                <div class="wish">
+                  <i class="fa-regular fa-heart"></i>
+                </div>
+                <span class="sale">SALE</span>
+              </div>
+              <p class="name">Textured cotton Top</p>
+              <p class="price">
+                <span class="old">$90.00</span>
+                <span class="new">$69.00</span>
+              </p>  
+            </div>
+            <div class="item">
+              <div class="image">
+                <img src="../img/sec-five-2.jpg" alt="">
+                <div class="wish">
+                  <i class="fa-regular fa-heart"></i>
+                </div>
+              </div>
+              <p class="name">Animal crossbody Bag</p>
+              <p class="price">
+                <span class="price-only">$59.00</span>
+              </p>  
+            </div>
+            <div class="item">
+              <div class="image">
+                <img src="../img/sec-five-3.jpg" alt="">
+                <div class="wish">
+                  <i class="fa-regular fa-heart"></i>
+                </div>
+              </div>
+              <p class="name">Jacket with Pockets</p>
+              <p class="price">
+                <span class="price-only">$70.00</span>
+              </p>  
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Sec-five -->
+
+  <!-- Sec-six -->
+  <div class="sec-six">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h3 class="sub-title">OUR BLOG</h3>
+          <h1 class="title">Latest in Blog</h1>
+        </div>
+        <div class="col-4">
+          <div class="item">
+            <div class="image">
+              <img src="../img/sec-six-1.jpg" alt="">
+            </div>
+            <div class="footer">
+              <p class="time">Fashion / jun 20, 2019</p>
+              <p class="content">Us yielding Fish sea night night the said him two</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="item">
+            <div class="image">
+              <img src="../img/sec-six-2.jpg" alt="">
+            </div>
+            <div class="footer">
+              <p class="time">Travel / Jun 13, 2019</p>
+              <p class="content">Tree earth fowl given moveth deep lesser After</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="item">
+            <div class="image">
+              <img src="../img/sec-six-3.jpg" alt="">
+            </div>
+            <div class="footer">
+              <p class="time">Lifestyle / Jun 08, 2019</p>
+              <p class="content">Given Set was without from god divide rule Hath</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12">
+          <button class="button-more">Discover more</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Sec-six -->
+
+  <!-- Sec-util -->
+  <div class="sec-util">
+    <div class="container">
+      <div class="row">
+        <div class="col-3">
+          <div class="item">
+            <div class="left">
+              <i class="fa-solid fa-truck"></i>
+            </div>
+            <div class="right">
+              <p class="title">FREE SHIPPING</p>
+              <span class="sub-title">From all orders over $100</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="item">
+            <div class="left">
+              <i class="fa-solid fa-repeat"></i>
+            </div>
+            <div class="right">
+              <p class="title">FREE RETURNS</p>
+              <span class="sub-title">Return money within 30 days</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="item">
+            <div class="left">
+              <i class="fa-solid fa-lock"></i>
+            </div>
+            <div class="right">
+              <p class="title">SECURE SHOPPING</p>
+              <span class="sub-title">You're in safe hands</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="item">
+            <div class="left">
+              <i class="fa-solid fa-tag"></i>
+            </div>
+            <div class="right">
+              <p class="title">OVER 10,000 STYLES</p>
+              <span class="sub-title">We have everything you need</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Sec-util -->
+
+  <!-- Footer -->
+  <!-- End Footer -->
+  <footer class="footer">
+    <div class="infor">
+      <div class="container">
+        <div class="row" style="margin-bottom: 80px;">
+          <div class="col-12 d-flex justify-content-center flex-column align-items-center">
+            <h1 class="mail">Wants style Ideas and Treats?</h1>
+            <div class="send-mail">
+              <input type="text" placeholder="Enter Email *">
+              <button>Subscribe</button>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-24">
+            <h3 class="name">Shopper</h3>
+            <div class="social">
+              <span class="item"><i class="fa-brands fa-facebook-f"></i></span>
+              <span class="item"><i class="fa-brands fa-youtube"></i></span>
+              <span class="item"><i class="fa-brands fa-twitter"></i></span>
+              <span class="item"><i class="fa-brands fa-instagram"></i></span>
+              <span class="item"><i class="fa-brands fa-medium"></i></span>
+            </div>
+          </div>
+          <div class="col-24">
+            <h3 class="title">SUPPORT</h3>
+            <ul>
+              <li>Contact Us</li>
+              <li>FAQs</li>
+              <li>Size Guide</li>
+              <li>Shipping & Returns</li>
+            </ul>
+          </div>
+          <div class="col-24">
+            <h3 class="title">SHOP</h3>
+            <ul>
+              <li>Men's Shopping</li>
+              <li>Women's Shopping</li>
+              <li>Kid's Shopping</li>
+              <li>Discounts</li>
+            </ul>
+          </div>
+          <div class="col-24">
+            <h3 class="title">COMPANY</h3>
+            <ul>
+              <li>Our Story</li>
+              <li>Careers</li>
+              <li>Terms & Conditions</li>
+              <li>Privacy & Cookie policy</li>
+            </ul>
+          </div>
+          <div class="col-24">
+            <h3 class="title">CONTACT</h3>
+            <ul>
+              <li>1-202-555-0105</li>
+              <li>1-202-555-0106</li>
+              <li>help@shopper.com</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="payment">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 d-flex justify-content-between">
+            <p>© 2019 All rights reserved. Designed by Unvab.</p>
+            <div class="list">
+              <span class="card-item"><img src="../img/card-1.svg" alt=""></span>
+              <span class="card-item"><img src="../img/card-2.svg" alt=""></span>
+              <span class="card-item"><img src="../img/card-3.svg" alt=""></span>
+              <span class="card-item"><img src="../img/card-4.svg" alt=""></span>
+              <span class="card-item"><img src="../img/card-5.svg" alt=""></span>
+              <span class="card-item"><img src="../img/card-6.svg" alt=""></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+  <!-- Modal -->
+  <div class="modal modal-xl" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="row">
+          <div class="col-5 p-0">
+            <div class="left">
+              <div class="image">
+                <img id="modal-image" src="../img/modal-1.jpg" alt="">
+              </div>
+              <button class="product-info">More Product Info <span><i class="fa-solid fa-circle-info"></i></span></button>
+            </div>
+          </div>
+          <div class="col-7 p-0">
+            <div class="right">
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              <h2 class="name">Leather Sneakers</h2>
+              <p class="price">$85.00
+                <span> (In Stock)</span>
+              </p>
+              <p class="color">Color: <span id="color">White</span></p>
+              <div class="image">
+                <input class="rd-img" type="radio" id="image1" name="image" checked value="1" />
+                <label class="lb1" for="image1"></label>
+                <input class="rd-img" type="radio" id="image2" name="image" value="2"/>
+                <label class="lb2" for="image2"></label>
+              </div>
+              <p class="size">Size: <span id="size">8 US</span></p>
+              <div class="size-list">
+                <input type="radio" class="btn-check" name="options-base" id="size1" autocomplete="off">
+                <label class="size-input btn" for="size1">6</label>
+                <input type="radio" class="btn-check" name="options-base" id="size2" autocomplete="off" disabled>
+                <label class="size-input through btn" for="size2">6.5</label>
+                <input type="radio" class="btn-check" name="options-base" id="size3" autocomplete="off" >
+                <label class="size-input btn" for="size3">7</label>
+                <input type="radio" class="btn-check" name="options-base" id="size4" autocomplete="off" >
+                <label class="size-input btn" for="size4">7.5</label>
+                <input type="radio" class="btn-check" name="options-base" id="size5" autocomplete="off" checked>
+                <label class="size-input btn" for="size5">8</label>
+                <input type="radio" class="btn-check" name="options-base" id="size6" autocomplete="off" >
+                <label class="size-input btn" for="size6">8.5</label>
+                <input type="radio" class="btn-check" name="options-base" id="size7" autocomplete="off" disabled>
+                <label class="size-input through btn" for="size7">9</label>
+                <input type="radio" class="btn-check" name="options-base" id="size8" autocomplete="off" disabled>
+                <label class="size-input through btn" for="size8">9.5</label>
+                <input type="radio" class="btn-check" name="options-base" id="size9" autocomplete="off" >
+                <label class="size-input btn" for="size9">10</label>
+                <input type="radio" class="btn-check" name="options-base" id="size10" autocomplete="off" >
+                <label class="size-input btn" for="size10">10.5</label>
+                <input type="radio" class="btn-check" name="options-base" id="size11" autocomplete="off" >
+                <label class="size-input btn" for="size11">11</label>
+                <input type="radio" class="btn-check" name="options-base" id="size12" autocomplete="off" >
+                <label class="size-input btn" for="size12">12</label>
+                <input type="radio" class="btn-check" name="options-base" id="size13" autocomplete="off" >
+                <label class="size-input btn" for="size13">13</label>
+                <input type="radio" class="btn-check" name="options-base" id="size14" autocomplete="off" >
+                <label class="size-input btn" for="size14">14</label>
+              </div>
+              <div class="button-modal">
+                <div class="row d-flex align-items-center">
+                  <div class="col-3">
+                    <select class="quantity form-select">
+                      <option selected value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                    </select>
+                  </div>
+                  <div class="col-6">
+                    <button class="add-cart w-100">Add to Cart <span><i class="fa-solid fa-cart-shopping"></i></span></button>
+                  </div>
+                  <div class="col-3">
+                    <button class="wish">Wish <span><i class="fa-regular fa-heart"></i></span></button>
+                  </div>  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Modal -->
+
+  <!-- Search -->
+  <div class="search offcanvas offcanvas-end"  id="search">
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    <div class="offcanvas-header justify-content-center">
+      <h2 class="title">Search Products</h2>
+    </div>
+    <div class="offcanva-body">
+      <form action="">
+        <select class="form-select">
+          <option value="All Categories" checked>All Categories</option>
+          <option value="Women">Women</option>
+          <option value="Men">Men</option>
+          <option value="Kids">Kids</option>
+        </select>
+        <div class="input-group">
+          <input class="form-control" type="text" placeholder="Search">
+          <div class="input-group-append d-flex">
+            <button class="button-search" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="offcanva-footer">
+      <p class="title">Search Results:</p>
+      <ul class="list">
+        <li class="item">
+          <div class="row align-items-center">
+            <div class="col-3">
+              <img src="../img/search-1.jpg" alt="">
+            </div>
+            <div class="col-9">
+              <p class="name">Leather mid-heel Sandals</p>
+              <span class="price">$129.00</span>
+            </div>
+          </div>
+        </li>
+        <li class="item">
+          <div class="row align-items-center">
+            <div class="col-3">
+              <img src="../img/search-2.jpg" alt="">
+            </div>
+            <div class="col-9">
+              <p class="name">Cotton floral print Dress</p>
+              <span class="price">$40.00</span>
+            </div>
+          </div>
+        </li>
+        <li class="item">
+          <div class="row align-items-center">
+            <div class="col-3">
+              <img src="../img/search-3.jpg" alt="">
+            </div>
+            <div class="col-9">
+              <p class="name">Leather Sneakers</p>
+              <span class="price">$85.00</span>
+            </div>
+          </div>
+        </li>
+        <li class="item">
+          <div class="row align-items-center">
+            <div class="col-3">
+              <img src="../img/search-4.jpg" alt="">
+            </div>
+            <div class="col-9">
+              <p class="name">Cropped cotton Top</p>
+              <span class="price">$29.00</span>
+            </div>
+          </div>
+        </li>
+        <li class="item">
+          <div class="row align-items-center">
+            <div class="col-3">
+              <img src="../img/search-5.jpg" alt="">
+            </div>
+            <div class="col-9">
+              <p class="name">Floral print midi Dress</p>
+              <span class="price">$50.00</span>
+            </div>
+          </div>
+        </li>
+      </ul>
+      <button class="view">View All<i class="fa-solid fa-arrow-right"></i></button>
+    </div>
+  </div>
+  <!-- End Search -->
+
+  <!-- Cart -->
+  <div class="cart offcanvas offcanvas-end" id="cart-modal">
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    <div class="offcanvas-header justify-content-center">
+      <h2 class="title">Your Cart (2)</h2>
+    </div>
+    <div class="offcanva-body">
+      <ul class="list">
+        <li class="item">
+          <div class="row align-items-center">
+            <div class="col-4">
+              <img src="../img/cart-1.jpg" alt="">
+            </div>
+            <div class="col-8">
+              <p class="name">Cropped cotton Top</p>
+              <span class="price">$29.00</span>
+              <div class="action">
+                <select class="form-select form-select-xxs w-auto">
+                  <option value="1" checked>1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                </select>
+                <a href="#"><i class="fa-solid fa-xmark"></i>Remove</a>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="item">
+          <div class="row align-items-center">
+            <div class="col-4">
+              <img src="../img/cart-2.jpg" alt="">
+            </div>
+            <div class="col-8">
+              <p class="name">Suede cross body Bag</p>
+              <span class="price">$49.00</span>
+              <div class="action">
+                <select class="form-select form-select-xxs w-auto">
+                  <option value="1" checked>1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                </select>
+                <a href="#"><i class="fa-solid fa-xmark"></i>Remove</a>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="total">
+      <p class="title">Subtotal</p>
+      <span class="price">$89.00</span>
+    </div>
+    <div class="offcanva-footer">
+      <a href="#" class="button-footer btn-checkout">Continue to Checkout</a>
+      <a href="#" class="button-footer btn-view">View Cart</a>
+    </div>
+  </div>
+  <!-- End Cart -->
+  <script src="../js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="../js/jquery-1.11.0.min.js"></script>
+  <script src="../js/jquery-migrate-1.2.1.min.js"></script>
+  <script src="../js/slick.min.js"></script>
+  <script src="../js/data.js"></script>
+  <script src="../js/index.js"></script>
+</body>
+</html>
