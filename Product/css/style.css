@@ -2,7 +2,7 @@
 
 * {
   font-family: "Jost";
-  color: #1f1f1f;
+  /* color: #1f1f1f; */
 }
 .container {
   max-width: 1200px;
@@ -257,21 +257,32 @@ a {
 .content .tag i {
   color: #767676;
 }
-.content .product {
+.content .item {
   margin-bottom: 30px;
 }
-.content .product .image{
+.content .item .image .sale {
+  position: absolute;
+  font-size: 11px;
+  font-weight: 500;
+  padding: 5px 11px;
+  background-color: #1C1C1C;
+  color: #ffffff;
+  left: 0;
+  top: 8%;
+}
+.content .item .image{
   cursor: pointer;
   position: relative;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
-.content .product .action {
+.content .item .action {
   position: absolute;
   bottom: 0;
   padding: 20px;
   width: 100%;
   display: none;
 }
-.content .product .action .action-item {
+.content .item .action .action-item {
   border: 0;
   width: 45px;
   height: 45px;
@@ -283,52 +294,52 @@ a {
   background-color: #ffffff;
   transition: all .2s;
 }
-.content .product .action .action-item:hover{
+.content .item .action .action-item:hover{
   background-color: #ff6f61;
 }
-.content .product .action .action-item:hover i {
+.content .item .action .action-item:hover i {
   color: #ffffff;
 }
-.content .product .action .action-item i {
+.content .item .action .action-item i {
   margin: 0;
 }
-.content .product .image:hover .action {
+.content .item .image:hover .action {
   display: flex;
   justify-content: center;
 }
-.content .product .image .image-front{
+.content .item .image .image-front{
   position: absolute;
   top: 0;
   left: 0;
   transition: opacity 0.5s ease;
 }
 /* Dùng positon nên ảnh front có thứ tự ưu tiên cao hơn back */
-.content .product .image:hover.image .image-front{
+.content .item .image:hover.image .image-front{
   opacity: 0;
 }
-.content .product .image:hover.image .image-back {
+.content .item .image:hover.image .image-back {
   opacity: 1;
 }
-.content .product .cate {
+.content .item .cate {
   font-size: 14px;
   color: #767676;
   margin-top: 15px;
 }
-.content .product .name {
+.content .item .name {
   font-weight: 500;
   margin: 0;
 }
-.content .product .price {
+.content .item .price {
   font-weight: 500;
 }
-.content .product .price .price-only {
+.content .item .price .price-only {
   color: #A6A6A6;
 }
-.content .product .price .old {
+.content .item .price .old {
   color: #A6A6A6;
   text-decoration: line-through;
 }
-.content .product .price .new {
+.content .item .price .new {
   color: #ff6f61;
 }
 .page-link {
@@ -338,6 +349,7 @@ a {
   font-weight: 500;
   border-bottom: 1px solid #ddd;
   transition: all .2s;
+  cursor: pointer;
 }
 .active>.page-link, .page-link.active {
   background-color: #ffffff;

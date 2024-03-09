@@ -30,7 +30,7 @@ $(document).ready(function () {
   productRandom1.forEach(item => {
     htmlProducts += `<div class="item" data-id="${item.id}">
                       <div class="image">
-                        <img src="../img/${item.thumbnail}" alt="">
+                        <img src="../img/${item.thumbnail[0]}" alt="">
                         <button class="btn-quick-view" data-bs-toggle="modal" data-bs-target="#myModal">
                           <i class="fa-regular fa-eye"></i>
                           <span>Quick View</span>
@@ -61,7 +61,7 @@ $(document).ready(function () {
   }
 
   // Modal
-  $(".btn-quick-view").click(function(){
+  $(document).on("click",".btn-quick-view",function(){
     var id = $(this).closest(".item").attr("data-id"); // Tìm thẻ item là cha gần nhất của button
     var product = getProductById(id);
     var modal = $("#myModal");
@@ -75,9 +75,8 @@ $(document).ready(function () {
       modal.find(".price").html(`$${(product.price * (1-product.sale/100)).toFixed(0)} <span> (In Stock)</span>`);
     }
     modal.find("#color").text(product.color);
-    modal.find("#modal-image").attr('src','../img/' + product.thumbnail);
-  });
-
+    modal.find("#modal-image").attr('src','../img/' + product.thumbnail[0]);
+  })
   // Add cart
   const addToCart = (id,qty) => {
     var product = getProductById(id);
@@ -129,7 +128,7 @@ $(document).ready(function () {
         htmlCartModal += `<li class="item" data-id="${item.product.id}">
                             <div class="row align-items-center">
                               <div class="col-4">
-                                <img src="../img/${item.product.thumbnail}" alt="">
+                                <img src="../img/${item.product.thumbnail[0]}" alt="">
                               </div>
                               <div class="col-8">
                                 <p class="name">Cropped cotton Top</p>
@@ -162,7 +161,6 @@ $(document).ready(function () {
       product : cart[indexCartItem].product,
       quantity: qty
     }
-    console.log(indexCartItem);
     sessionStorage.setItem("cart",JSON.stringify(cart)); 
   }
   const removeCart = (id) => {

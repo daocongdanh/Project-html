@@ -557,10 +557,10 @@
               <p class="text-secondary">Home > Women's Clothing</p>
             </div>
             <div class="col-3">
-              <select class="form-select">
-                <option value="">Most popular</option>
-                <option value="">Highest price</option>
-                <option value="">Lowest price</option>
+              <select class="form-select" id="filter-sort">
+                <option value="All">All</option>
+                <option value="Highest price">Highest price</option>
+                <option value="Lowest price">Lowest price</option>
               </select>
             </div>
           </div>
@@ -576,14 +576,14 @@
               <span class="tag">$50.00 - $99.00<i class="fa-solid fa-xmark ms-2"></i></span>
             </div>
           </div>
-          <div class="row">
+          <div class="row" id="product-list">
             <div class="col-4">
-              <div class="product">
+              <div class="item">
                 <div class="image">
                   <img src="../img/product1-a.jpg" class="image-front w-100" alt="">
                   <img src="../img/product1-b.jpg" class="image-back w-100" alt="">
                   <div class="action">
-                    <button class="action-item"><i class="fa-regular fa-eye"></i></button>
+                    <button class="action-item" data-bs-toggle="modal" data-bs-target="#myModal"><i class="fa-regular fa-eye"></i></button>
                     <button class="action-item"><i class="fa-solid fa-cart-shopping"></i></button>
                     <button class="action-item"><i class="fa-regular fa-heart"></i></button>
                   </div>
@@ -596,7 +596,7 @@
               </div>
             </div>
             <div class="col-4">
-              <div class="product">
+              <div class="item">
                 <div class="image">
                   <img src="../img/product2-a.jpg" class="image-front w-100" alt="">
                   <img src="../img/product2-b.jpg" class="image-back w-100" alt="">
@@ -614,7 +614,7 @@
               </div>
             </div>
             <div class="col-4">
-              <div class="product">
+              <div class="item">
                 <div class="image">
                   <img src="../img/product3-a.jpg" class="image-front w-100" alt="">
                   <img src="../img/product3-b.jpg" class="image-back w-100" alt="">
@@ -633,7 +633,7 @@
               </div>
             </div>
             <div class="col-4">
-              <div class="product">
+              <div class="item">
                 <div class="image">
                   <img src="../img/product4-a.jpg" class="image-front w-100" alt="">
                   <img src="../img/product4-b.jpg" class="image-back w-100" alt="">
@@ -653,7 +653,7 @@
               </div>
             </div>
             <div class="col-4">
-              <div class="product">
+              <div class="item">
                 <div class="image">
                   <img src="../img/product5-a.jpg" class="image-front w-100" alt="">
                   <img src="../img/product5-b.jpg" class="image-back w-100" alt="">
@@ -673,19 +673,18 @@
           </div>
           <div class="d-flex justify-content-end">
             <nav aria-label="Page navigation example">
-              <ul class="pagination">
-                <li class="page-item">
+              <ul class="pagination" id="pagination">
+                <li class="page-item" data-page="-1">
                   <a class="page-link" href="#" aria-label="Previous">
                     <span aria-hidden="true"><i class="fa-solid fa-caret-left"></i></span>
                   </a>
                 </li>
-                <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                <li class="page-item"><a class="page-link" href="#">4</a></li>
-                <li class="page-item"><a class="page-link" href="#">5</a></li>
-                <li class="page-item"><a class="page-link" href="#">6</a></li>
-                <li class="page-item">
+                <li class="page-item active" data-page="1"><a class="page-link" href="#">1</a></li>
+                <li class="page-item" data-page="2"><a class="page-link" href="#">2</a></li>
+                <li class="page-item" data-page="3"><a class="page-link" href="#">3</a></li>
+                <li class="page-item" data-page="4"><a class="page-link" href="#">4</a></li>
+                <li class="page-item" data-page="5"><a class="page-link" href="#">5</a></li>
+                <li class="page-item" data-page="-2">
                   <a class="page-link" href="#" aria-label="Next">
                     <span aria-hidden="true"><i class="fa-solid fa-caret-right"></i></span>
                   </a>
@@ -895,7 +894,7 @@
               <div class="button-modal">
                 <div class="row d-flex align-items-center">
                   <div class="col-3">
-                    <select class="quantity form-select">
+                    <select class="quantity form-select" id="quantity">
                       <option selected value="1">1</option>
                       <option value="2">2</option>
                       <option value="3">3</option>
@@ -1055,7 +1054,7 @@
     </div>
     <div class="total">
       <p class="title">Subtotal</p>
-      <span class="price">$89.00</span>
+      <span class="price" id="total-money">$89.00</span>
     </div>
     <div class="offcanva-footer">
       <a href="#" class="button-footer btn-checkout">Continue to Checkout</a>
@@ -1070,5 +1069,6 @@
   <script src="../js/slick.min.js"></script>
   <script src="../js/data.js"></script>
   <script src="../js/index.js"></script>
+  <script src="../../Home/js/index.js"></script>
 </body>
 </html>

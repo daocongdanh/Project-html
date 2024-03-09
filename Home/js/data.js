@@ -5,7 +5,12 @@ const products = [
     price: 123,
     sale: 12,
     color: "blue",
-    thumbnail: "203355576-1-midblue.jpg",
+    thumbnail:[
+      "203355576-1-midblue.jpg",
+      "203355576-2.jpg",
+      "203355576-3.jpg",
+      "203355576-4.jpg"
+    ],
     category: "T-shirts",
     season: "Summer",
     sizeList: ["XS", "S", "M", "L", "XL", "2XL"],
@@ -16,7 +21,12 @@ const products = [
     price: 122,
     sale: 11,
     color: "green",
-    thumbnail: "204396091-1-scarab.jpg",
+    thumbnail:[
+      "204396091-1-scarab.jpg",
+      "204396091-2.jpg",
+      "204396091-3.jpg",
+      "204396091-4.jpg"
+    ],
     category: "T-shirts",
     season: "Summer",
     sizeList: ["XS", "S", "M", "L", "XL", "2XL"],
@@ -27,7 +37,12 @@ const products = [
     price: 67,
     sale: 12,
     color: "black",
-    thumbnail: "205495942-1-black.jpg",
+    thumbnail:[
+      "205495942-1-black.jpg",
+      "205495942-2.jpg",
+      "205495942-3.jpg",
+      "205495942-4.jpg"
+    ],
     category: "T-shirts",
     season: "Summer",
     sizeList: ["XS", "S", "M", "L", "XL", "2XL"],
@@ -38,7 +53,12 @@ const products = [
     price: 45,
     sale: 13,
     color: "white",
-    thumbnail: "205495879-1-white.jpg",
+    thumbnail:[
+      "205495879-1-white.jpg",
+      "205495879-2.jpg",
+      "205495879-3.jpg",
+      "205495879-4.jpg"
+    ],
     category: "T-shirts",
     season: "Summer",
     sizeList: ["XS", "S", "M", "L", "XL", "2XL"],
@@ -49,7 +69,12 @@ const products = [
     price: 55,
     sale: 0,
     color: "black",
-    thumbnail: "203225616-1-black.jpg",
+    thumbnail:[
+      "203225616-1-black.jpg",
+      "203225616-2jpg",
+      "203225616-3.jpg",
+      "203225616-4.jpg"
+    ],
     category: "T-shirts",
     season: "Summer",
     sizeList: ["XS", "S", "M", "L", "XL", "2XL"],
@@ -60,7 +85,12 @@ const products = [
     price: 77,
     sale: 0,
     color: "grey",
-    thumbnail: "205579431-1-darkgrey.jpg",
+    thumbnail:[
+      "205579431-1-darkgrey.jpg",
+      "205579431-2.jpg",
+      "205579431-3.jpg",
+      "205579431-4.jpg"
+    ],
     category: "Shirts",
     season: "Summer",
     sizeList: ["XS", "S", "M", "L", "XL", "2XL"],
@@ -71,7 +101,12 @@ const products = [
     price: 65,
     sale: 11,
     color: "grey",
-    thumbnail: "204764411-1-asphalt.jpg",
+    thumbnail:[
+      "204764411-1-asphalt.jpg",
+      "204764411-2.jpg",
+      "204764411-3.jpg",
+      "204764411-4.jpg"
+    ],
     category: "Shirts",
     season: "Summer",
     sizeList: ["XS", "S", "M", "L", "XL", "2XL"],
@@ -82,7 +117,12 @@ const products = [
     price: 34,
     sale: 11,
     color: "black",
-    thumbnail: "205719100-1-galaxygrey.jpg",
+    thumbnail:[
+      "205719100-1-galaxygrey.jpg",
+      "205719100-2.jpg",
+      "205719100-3.jpg",
+      "205719100-4.jpg"
+    ],
     category: "Shirts",
     season: "Summer",
     sizeList: ["XS", "S", "M", "L", "XL", "2XL"],
@@ -93,7 +133,12 @@ const products = [
     price: 123,
     sale: 0,
     color: "green",
-    thumbnail: "205474048-1-green.jpg",
+    thumbnail:[
+      "205474048-1-green.jpg",
+      "205474048-2.jpg",
+      "205474048-3.jpg",
+      "205474048-4.jpg"
+    ],
     category: "Shirts",
     season: "Summer",
     sizeList: ["XS", "S", "M", "L", "XL", "2XL"],
@@ -104,7 +149,12 @@ const products = [
     price: 111,
     sale: 12,
     color: "black",
-    thumbnail: "201351725-1-black.jpg",
+    thumbnail:[
+      "201351725-1-black.jpg",
+      "201351725-2.jpg",
+      "201351725-3.jpg",
+      "201351725-4.jpg"
+    ],
     category: "Shirts",
     season: "Summer",
     sizeList: ["XS", "S", "M", "L", "XL", "2XL"],
@@ -115,7 +165,12 @@ const products = [
     price: 123,
     sale: 0,
     color: "purple",
-    thumbnail: "205006940-1-multi.jpg",
+    thumbnail:[
+      "205006940-1-multi.jpg",
+      "205006940-2.jpg",
+      "205006940-3.jpg",
+      "205006940-4.jpg"
+    ],
     category: "Jeans",
     season: "Winter",
     sizeList: ["31", "32", "33", "34", "35", "36", "37", "38"],
@@ -126,7 +181,13 @@ const products = [
     price: 123,
     sale: 0,
     color: "blue",
-    thumbnail: "205124926-1-midwashblue.jpg",
+    thumbnail:[
+      "205124926-1-midwashblue.jpg",
+      "205124926-2.jpg",
+      "205124926-3.jpg",
+      "205124926-4.jpg",
+      "205124926-5.jpg"
+    ],
     category: "Jeans",
     season: "Winter",
     sizeList: ["31", "32", "33", "34", "35", "36", "37", "38"],
@@ -137,7 +198,13 @@ const products = [
     price: 33,
     sale: 0,
     color: "green",
-    thumbnail: "205579299-1-greenwash.jpg",
+    thumbnail:[
+      "205579299-1-greenwash.jpg",
+      "205579299-2.jpg",
+      "205579299-3.jpg",
+      "205579299-4.jpg",
+      "205579299-5.jpg"
+    ],
     category: "Jeans",
     season: "Winter",
     sizeList: ["31", "32", "33", "34", "35", "36", "37", "38"],
@@ -148,7 +215,12 @@ const products = [
     price: 123,
     sale: 0,
     color: "blue",
-    thumbnail: "202083762-1-bluedenim.jpg",
+    thumbnail:[
+      "202083762-1-bluedenim.jpg",
+      "202083762-2.jpg",
+      "202083762-3.jpg",
+      "202083762-4.jpg"
+    ],
     category: "Jeans",
     season: "Winter",
     sizeList: ["31", "32", "33", "34", "35", "36", "37", "38"],
@@ -159,7 +231,12 @@ const products = [
     price: 432,
     sale: 11,
     color: "blue",
-    thumbnail: "200603634-1-midwashblue.jpg",
+    thumbnail:[
+      "200603634-1-midwashblue.jpg",
+      "200603634-2.jpg",
+      "200603634-3.jpg",
+      "200603634-4.jpg"
+    ],
     category: "Jeans",
     season: "Winter",
     sizeList: ["31", "32", "33", "34", "35", "36", "37", "38"],
@@ -170,7 +247,12 @@ const products = [
     price: 754,
     sale: 0,
     color: "blue",
-    thumbnail: "201741377-1-midwash.jpg",
+    thumbnail:[
+      "201741377-1-midwash.jpg",
+      "201741377-2.jpg",
+      "201741377-3.jpg",
+      "201741377-4.jpg"
+    ],
     category: "Jackets",
     season: "Winter",
     sizeList: ["XS", "S", "M", "L", "XL", "2XL"],
@@ -181,7 +263,12 @@ const products = [
     price: 345,
     sale: 12,
     color: "yellow",
-    thumbnail: "202820984-1-stone.jpg",
+    thumbnail:[
+      "202820984-1-stone.jpg",
+      "202820984-2.jpg",
+      "202820984-3.jpg",
+      "202820984-4.jpg"
+    ],
     category: "Jackets",
     season: "Winter",
     sizeList: ["XS", "S", "M", "L", "XL", "2XL"],
@@ -192,7 +279,12 @@ const products = [
     price: 342,
     sale: 12,
     color: "pink",
-    thumbnail: "205418286-1-pink.jpg",
+    thumbnail:[
+      "205418286-1-pink.jpg",
+      "205418286-2.jpg",
+      "205418286-3.jpg",
+      "205418286-4.jpg"
+    ],
     category: "Jackets",
     season: "Winter",
     sizeList: ["XS", "S", "M", "L", "XL", "2XL"],
@@ -203,7 +295,12 @@ const products = [
     price: 213,
     sale: 0,
     color: "yellow",
-    thumbnail: "205130940-1-beige.jpg",
+    thumbnail:[
+      "205130940-1-beige.jpg",
+      "205130940-2.jpg",
+      "205130940-3.jpg",
+      "205130940-4.jpg"
+    ],
     category: "Jackets",
     season: "Winter",
     sizeList: ["XS", "S", "M", "L", "XL", "2XL"],
@@ -214,7 +311,12 @@ const products = [
     price: 435,
     sale: 0,
     color: "black",
-    thumbnail: "204489764-1-black.jpg",
+    thumbnail:[
+      "204489764-1-black.jpg",
+      "204489764-2.jpg",
+      "204489764-3.jpg",
+      "204489764-4.jpg"
+    ],
     category: "Jackets",
     season: "Winter",
     sizeList: ["XS", "S", "M", "L", "XL", "2XL"],
@@ -225,7 +327,12 @@ const products = [
     price: 111,
     sale: 0,
     color: "black",
-    thumbnail: "205719173-1-jetblack.jpg",
+    thumbnail:[
+      "205719173-1-jetblack.jpg",
+      "205719173-2.jpg",
+      "205719173-3.jpg",
+      "205719173-4.jpg"
+    ],
     category: "Hoodies",
     season: "Winter",
     sizeList: ["XS", "S", "M", "L", "XL", "2XL"],
@@ -236,7 +343,12 @@ const products = [
     price: 324,
     sale: 0,
     color: "grey",
-    thumbnail: "205719844-1-cratergrey.jpg",
+    thumbnail:[
+      "205719844-1-cratergrey.jpg",
+      "205719844-2.jpg",
+      "205719844-3.jpg",
+      "205719844-4.jpg"
+    ],
     category: "Hoodies",
     season: "Winter",
     sizeList: ["XS", "S", "M", "L", "XL", "2XL"],
@@ -247,7 +359,12 @@ const products = [
     price: 233,
     sale: 0,
     color: "brown",
-    thumbnail: "204932606-1-peppercorn.jpg",
+    thumbnail:[
+      "204932606-1-peppercorn.jpg",
+      "204932606-2.jpg",
+      "204932606-3.jpg",
+      "204932606-4.jpg"
+    ],
     category: "Hoodies",
     season: "Winter",
     sizeList: ["XS", "S", "M", "L", "XL", "2XL"],
@@ -258,7 +375,12 @@ const products = [
     price: 123,
     sale: 34,
     color: "black",
-    thumbnail: "205194097-1-unexplored.jpg",
+    thumbnail:[
+      "205194097-1-unexplored.jpg",
+      "205194097-2.jpg",
+      "205194097-3.jpg",
+      "205194097-4.jpg"
+    ],
     category: "Hoodies",
     season: "Winter",
     sizeList: ["XS", "S", "M", "L", "XL", "2XL"],
@@ -269,7 +391,12 @@ const products = [
     price: 98,
     sale: 21,
     color: "black",
-    thumbnail: "205032476-1-black.jpg",
+    thumbnail:[
+      "205032476-1-black.jpg",
+      "205032476-2.jpg",
+      "205032476-3.jpg",
+      "205032476-4.jpg"
+    ],
     category: "Hoodies",
     season: "Winter",
     sizeList: ["XS", "S", "M", "L", "XL", "2XL"],
@@ -280,7 +407,12 @@ const products = [
     price: 123,
     sale: 0,
     color: "green",
-    thumbnail: "204749020-1-khaki.jpg",
+    thumbnail:[
+      "204749020-1-khaki.jpg",
+      "204749020-2.jpg",
+      "204749020-3.jpg",
+      "204749020-4.jpg"
+    ],
     category: "Cargo Trousers",
     season: "Summer",
     sizeList: ["31", "32", "33", "34", "35", "36", "37", "38"],
@@ -291,7 +423,13 @@ const products = [
     price: 342,
     sale: 12,
     color: "white",
-    thumbnail: "205502297-1-moonbeam.jpg",
+    thumbnail:[
+      "205502297-1-moonbeam.jpg",
+      "205502297-2.jpg",
+      "205502297-3.jpg",
+      "205502297-4.jpg",
+      "205502297-5.jpg"
+    ],
     category: "Cargo Trousers",
     season: "Summer",
     sizeList: ["31", "32", "33", "34", "35", "36", "37", "38"],
@@ -302,7 +440,13 @@ const products = [
     price: 432,
     sale: 33,
     color: "green",
-    thumbnail: "205502432-1-olivenight.jpg",
+    thumbnail:[
+      "205502432-1-olivenight.jpg",
+      "205502432-2.jpg",
+      "205502432-3.jpg",
+      "205502432-4.jpg",
+      "205502432-5.jpg"
+    ],
     category: "Cargo Trousers",
     season: "Summer",
     sizeList: ["31", "32", "33", "34", "35", "36", "37", "38"],
@@ -313,7 +457,13 @@ const products = [
     price: 533,
     sale: 0,
     color: "grey",
-    thumbnail: "205256052-1-asphalt.jpg",
+    thumbnail:[
+      "205256052-1-asphalt.jpg",
+      "205256052-2.jpg",
+      "205256052-3.jpg",
+      "205256052-4.jpg",
+      "205256052-5.jpg"
+    ],
     category: "Cargo Trousers",
     season: "Summer",
     sizeList: ["31", "32", "33", "34", "35", "36", "37", "38"],
@@ -324,7 +474,13 @@ const products = [
     price: 453,
     sale: 23,
     color: "green",
-    thumbnail: "205314358-1-khaki.jpg",
+    thumbnail:[
+      "205314358-1-khaki.jpg",
+      "205314358-2.jpg",
+      "205314358-3.jpg",
+      "205314358-4.jpg",
+      "205314358-5.jpg"
+    ],
     category: "Cargo Trousers",
     season: "Summer",
     sizeList: ["31", "32", "33", "34", "35", "36", "37", "38"],
