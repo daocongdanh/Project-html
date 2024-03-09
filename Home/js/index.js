@@ -143,7 +143,7 @@ $(document).ready(function () {
                                     <option ${item.quantity == 4 ? 'selected' : ''} value="4">4</option>
                                     <option ${item.quantity == 5 ? 'selected' : ''} value="5">5</option>
                                   </select>
-                                  <button class="cart-remove" ><i class="fa-solid fa-xmark"></i>Remove</button>
+                                  <a class="cart-remove" href="#" ><i class="fa-solid fa-xmark"></i>Remove</a>
                                 </div>
                               </div>
                             </div>
