@@ -199,13 +199,69 @@ $(document).ready(function () {
   $('.sec-two .slide-category').slick({
     infinite: true,
     slidesToShow: 5,
-    slidesToScroll: 1
+    slidesToScroll: 1,
+    responsive : [
+      {
+        breakpoint: 1200,
+        settings : {
+          slidesToShow: 4
+        }
+      },
+      {
+        breakpoint: 992,
+        settings : {
+          slidesToShow: 3,
+          arrows: false
+        }
+      },
+      {
+        breakpoint: 768,
+        settings : {
+          slidesToShow: 2,
+          arrows: false
+        }
+      },
+      {
+        breakpoint: 576,
+        settings : {
+          slidesToShow: 1,
+          arrows: false
+        }
+      }
+    ]
+
   });
   $('.sec-four .slide-category').slick({
     infinite: true,
     slidesToShow: 5,
     slidesToScroll: 1,
-    dots: true
+    dots: true,
+    responsive : [
+      {
+        breakpoint: 1200,
+        settings : {
+          slidesToShow: 4
+        }
+      },
+      {
+        breakpoint: 992,
+        settings : {
+          slidesToShow: 3
+        }
+      },
+      {
+        breakpoint: 768,
+        settings : {
+          slidesToShow: 2
+        }
+      },
+      {
+        breakpoint: 576,
+        settings : {
+          slidesToShow: 1
+        }
+      }
+    ]
   })
   $('.sec-five .slide-left').slick({
     slidesToShow: 1,
@@ -221,5 +277,20 @@ $(document).ready(function () {
     // centerMode: true,
     focusOnSelect: true
   });
-        
+  
+  $(".slide").slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    infinite: true,
+    fade: true,
+    arrows: true,
+    responsive : [
+      {
+        breakpoint: 992,
+        settings : {
+          arrows: false
+        }
+      }
+    ]
+  })
 });

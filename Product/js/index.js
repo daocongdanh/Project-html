@@ -92,6 +92,41 @@ $(document).ready(function () {
     var sort = $(this).val();
     pageProduct(1,sort);
   })
+
+  const getAllDefaultTag = () => {
+    var checkedList = Array.from(document.querySelectorAll(".form-check-input")).filter(x => x.checked);
+    var htmls = ``;
+    checkedList.forEach(tag => {
+      var label = tag.nextElementSibling;
+      htmls += `<span class="tag">${label.textContent}<i class="remove-tag fa-solid fa-xmark ms-2"></i></span>`
+    })
+    document.getElementById("tag").innerHTML = htmls;
+  }
+  getAllDefaultTag();
+  $(".form-check-input").click(function(){
+    var checked = $(this).attr('checked');
+    var tag = $(this).next().text(); // Lấy thẻ label
+    var tagList = $("#tag");
+    if(checked != undefined){ // Thêm mới
+      tagList.append(`<span class="tag">${tag}<i class="remove-tag fa-solid fa-xmark ms-2"></i></span>`);
+    }
+    else{ // Xóa
+      var element = Array.from(document.querySelectorAll(".tag")).filter(x => x.textContent === tag)[0];
+      element.remove();
+    }
+  })
+
+  $(document).on("click",".remove-tag",function(){
+    var span = $(this).parent(".tag");
+    var tag = span.text();
+    var element = Array.from(document.querySelectorAll(".tag")).filter(x => x.textContent === tag)[0];
+    element.remove(); // Xóa
+
+    // Xóa checked
+    var inputCheck = Array.from(document.querySelectorAll(".form-check-input")).filter(x => 
+      x.nextElementSibling.textContent === tag)[0];
+    inputCheck.checked = false;
+  })
 });
 
 

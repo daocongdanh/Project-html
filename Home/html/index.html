@@ -13,12 +13,12 @@
 <body>
   <!-- Header -->
   <header class="header">
-    <section class="py-3 bg-dark">
+    <section class="top bg-dark">
       <div class="text-center text-white">
-        <span class="text-uppercase">⚡️ Happy Holiday Deals on Everything ⚡️</span>
+        <span class="happy text-uppercase">⚡️ Happy Holiday Deals on Everything ⚡️</span>
       </div>
     </section>
-    <nav class="navbar navbar-expand-sm">
+    <nav class="navbar navbar-expand-xl">
       <div class="container">
         <a class="navbar-brand d-none" href="#">Shopper</a>
         <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
@@ -65,7 +65,7 @@
           </ul>
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link nav-pad" data-bs-toggle="offcanvas" href="#search"><i class="fa-solid fa-magnifying-glass"></i></a>
+              <a class="nav-link nav-pad" data-bs-toggle="offcanvas" href="#search"><i class="fa-solid fa-magnifying-glass m-0"></i></a>
             </li>
             <li class="nav-item">
               <a class="nav-link nav-pad" href="#"><i class="fa-regular fa-user"></i></a>
@@ -76,7 +76,7 @@
             <li class="nav-item">
               <a class="nav-link nav-pad" data-bs-toggle="offcanvas" href="#cart-modal">
                 <span id="cart" class="position-relative" data-cart="0">
-                  <i class="fa-solid fa-cart-shopping"></i>
+                  <i class="fa-solid fa-cart-shopping m-0"></i>
                 </span>
               </a>
             </li>
@@ -88,56 +88,44 @@
   <!-- End Header -->
 
   <!-- Slide -->
-  <div id="slide" class="carousel slide" data-bs-ride="carousel">
-
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <div class="item item-one">
-          <div class="container">
-            <div class="inner-item">
-              <h1 class="title">Summer Sale</h1>
-              <h2 class="sale">-70%</h2>
-              <p class="code">with promo code CN67EW*</p>
-              <button class="button">
-                Shop Now
-                <i class="fa-solid fa-arrow-right"></i>
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <div class="item item-two d-flex align-items-center">
-          <div class="container d-flex justify-content-end">
-            <div class="inner-item">
-              <h1 class="title">Summer Collection</h1>
-              <p class="content">So called give, one whales tree seas dry place own day, winged tree created spirit.</p>
-              <button class="button">
-                Shop Now
-                <i class="fa-solid fa-arrow-right"></i>
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <div class="item item-three d-flex align-items-center">
-          <div class="container">
-            <div class="inner-item d-flex flex-column align-items-center">
-              <h1 class="title">Summer Styles</h1>
-              <h2 class="sale">50% OFF</h2>
-            </div>
+  <div id="slide" class="slide">
+    <div class="item item-one">
+      <div class="container h-100">
+        <div class="inner-item d-flex flex-column justify-content-center h-100">
+          <h1 class="title">Summer Sale</h1>
+          <h2 class="sale">-70%</h2>
+          <p class="code">with promo code CN67EW*</p>
+          <div>
+            <button class="button">
+              Shop Now
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
           </div>
         </div>
       </div>
     </div>
-
-    <button class="carousel-control-prev" type="button" data-bs-target="#slide" data-bs-slide="prev">
-      <span class="text-black"><i class="fa-solid fa-angle-left m-0"></i></span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#slide" data-bs-slide="next">
-      <span class="text-black"><i class="fa-solid fa-angle-right m-0"></i></span>
-    </button>
+    <div class="item item-two d-flex align-items-center">
+      <div class="container h-100 d-flex justify-content-end">
+        <div class="inner-item d-flex flex-column justify-content-center h-100">
+          <h1 class="title">Summer Collection</h1>
+          <p class="content">So called give, one whales tree seas dry place own day, winged tree created spirit.</p>
+          <div>
+            <button class="button">
+              Shop Now
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="item item-three d-flex align-items-center">
+      <div class="container">
+        <div class="inner-item d-flex flex-column align-items-center">
+          <h1 class="title">Summer Styles</h1>
+          <h2 class="sale">50% OFF</h2>
+        </div>
+      </div>
+    </div>
   </div>
 
   <!-- End Slide -->
@@ -145,7 +133,7 @@
   <!-- Sec-one -->
   <div class="sec-one">
     <div class="row">
-      <div class="col-4">
+      <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-12 mb-3">
         <div class="item item-one">
           <h2 class="title">Summer Hats</h2>
           <div class="left">
@@ -156,7 +144,7 @@
           </div>
         </div>
       </div>
-      <div class="col-4">
+      <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-12 mb-3">
         <div class="item item-two">
           <h2 class="title">Men Hats</h2>
           <div class="left">
@@ -167,7 +155,7 @@
           </div>
         </div>
       </div>
-      <div class="col-4">
+      <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-12">
         <div class="item item-three">
           <h2 class="title">Floral Dresses</h2>
           <div class="left">
@@ -272,7 +260,7 @@
   <div class="sec-three">
     <div class="container">
       <div class="row">
-        <div class="col-6">
+        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
           <div class="item">
             <div class="image">
               <img src="../img/sec-three-1.jpg" class="w-100" alt="">
@@ -292,7 +280,7 @@
             </div>
           </div>
         </div>
-        <div class="col-6">
+        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
           <div class="item">
             <div class="image">
               <img src="../img/sec-three-2.jpg" class="w-100" alt="">
@@ -302,7 +290,7 @@
               <span class="new">$59.00</span>
             </div>
             <div class="mid">
-              <h2>Cropped Trousers</h2>
+              <h2>Leather Sneakers</h2>
               <div class="bottom">
                 <button class="button">
                   Shop Now
@@ -441,9 +429,9 @@
 
   <!-- Sec-five -->
   <div class="sec-five">
-    <div class="container" style="max-width: 992px;">
+    <div class="container">
       <div class="row align-items-center">
-        <div class="col-7">
+        <div class="col-xl-7 col-lg-7 col-md-7 col-sm-12 col-12">
           <div class="slide-left">
             <div class="item">
               <div class="image">
@@ -462,7 +450,7 @@
             </div>
           </div>
         </div>
-        <div class="col-5">
+        <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12 col-12">
           <h3 class="sub-title">PERFECT SUMMER</h3>
           <h1 class="title">Summer Days Look</h1>
           <div class="slide-right">
@@ -519,7 +507,7 @@
           <h3 class="sub-title">OUR BLOG</h3>
           <h1 class="title">Latest in Blog</h1>
         </div>
-        <div class="col-4">
+        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 mb-5">
           <div class="item">
             <div class="image">
               <img src="../img/sec-six-1.jpg" alt="">
@@ -530,7 +518,7 @@
             </div>
           </div>
         </div>
-        <div class="col-4">
+        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 mb-5">
           <div class="item">
             <div class="image">
               <img src="../img/sec-six-2.jpg" alt="">
@@ -541,7 +529,7 @@
             </div>
           </div>
         </div>
-        <div class="col-4">
+        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 mb-5">
           <div class="item">
             <div class="image">
               <img src="../img/sec-six-3.jpg" alt="">
@@ -564,7 +552,7 @@
   <div class="sec-util">
     <div class="container">
       <div class="row">
-        <div class="col-3">
+        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12 mb-4">
           <div class="item">
             <div class="left">
               <i class="fa-solid fa-truck"></i>
@@ -575,7 +563,7 @@
             </div>
           </div>
         </div>
-        <div class="col-3">
+        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12 mb-4">
           <div class="item">
             <div class="left">
               <i class="fa-solid fa-repeat"></i>
@@ -586,7 +574,7 @@
             </div>
           </div>
         </div>
-        <div class="col-3">
+        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12 mb-4">
           <div class="item">
             <div class="left">
               <i class="fa-solid fa-lock"></i>
@@ -597,7 +585,7 @@
             </div>
           </div>
         </div>
-        <div class="col-3">
+        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
           <div class="item">
             <div class="left">
               <i class="fa-solid fa-tag"></i>
@@ -628,7 +616,7 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-24">
+          <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12 mb-5">
             <h3 class="name">Shopper</h3>
             <div class="social">
               <span class="item"><i class="fa-brands fa-facebook-f"></i></span>
@@ -638,7 +626,7 @@
               <span class="item"><i class="fa-brands fa-medium"></i></span>
             </div>
           </div>
-          <div class="col-24">
+          <div class="col-xl-2 col-lg-2 col-md-2 col-sm-3 col-6 mb-4">
             <h3 class="title">SUPPORT</h3>
             <ul>
               <li>Contact Us</li>
@@ -647,7 +635,7 @@
               <li>Shipping & Returns</li>
             </ul>
           </div>
-          <div class="col-24">
+          <div class="col-xl-2 col-lg-2 col-md-2 col-sm-3 col-6 mb-4">
             <h3 class="title">SHOP</h3>
             <ul>
               <li>Men's Shopping</li>
@@ -656,7 +644,7 @@
               <li>Discounts</li>
             </ul>
           </div>
-          <div class="col-24">
+          <div class="col-xl-2 col-lg-2 col-md-2 col-sm-3 col-6">
             <h3 class="title">COMPANY</h3>
             <ul>
               <li>Our Story</li>
@@ -665,7 +653,7 @@
               <li>Privacy & Cookie policy</li>
             </ul>
           </div>
-          <div class="col-24">
+          <div class="col-xl-2 col-lg-2 col-md-2 col-sm-3 col-6">
             <h3 class="title">CONTACT</h3>
             <ul>
               <li>1-202-555-0105</li>
