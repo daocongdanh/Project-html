@@ -716,8 +716,6 @@
   background-color: #303030;
   border: 0;
   color: #ffffff;
-  width: 400px;
-  margin-right: 20px;
 }
 .footer .infor input[type="text"]:focus {
   border: none;

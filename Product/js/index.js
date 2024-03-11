@@ -37,7 +37,7 @@ $(document).ready(function () {
       pageCurrent = page;
     }
     productPagination.forEach(item => {
-      htmlProducts += `<div class="col-4">
+      htmlProducts += `<div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
                         <div class="item" data-id="${item.id}">
                           <div class="image">
                             <img src="../img/${item.thumbnail[0]}" class="image-front w-100" alt="">

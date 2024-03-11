@@ -2,10 +2,6 @@
 
 * {
   font-family: "Jost";
-  /* color: #1f1f1f; */
-}
-.container {
-  max-width: 1200px;
 }
 ul {
   margin: 0;
@@ -31,6 +27,13 @@ a {
   transform: translateX(5px);
 }
 /* Header */
+.header .top {
+  padding: 12px 0;
+}
+.header .happy {
+  font-size: 13px;
+  font-weight: 500;
+}
 .nav-item .nav-link {
   color: #1F1F1F;
   font-weight: 500;
@@ -46,6 +49,9 @@ a {
 .navbar-expand-sm .navbar-nav .nav-link.nav-pad{
   padding-left: 8px;
   padding-right: 8px;
+}
+.navbar-toggler {
+  padding: 0;
 }
 .logo {
   font-size: 28px;
@@ -81,8 +87,29 @@ a {
   align-items: center;
   top: -40%;
   left: 65%;
-
 }
+@media screen and (max-width: 1200px) {
+  .nav-item .nav-link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .header .logo{
+    display: none;
+  }
+  .navbar-brand {
+    display: inline !important;
+  }
+}
+@media screen and (max-width: 992px) {
+  .navbar-brand {
+    font-size: 24px;
+  }
+  .navbar-toggler-icon {
+    font-size: 18px;
+  }
+}
+
 /* End Header */
 
 /* Content */
@@ -421,8 +448,6 @@ a {
   background-color: #303030;
   border: 0;
   color: #ffffff;
-  width: 400px;
-  margin-right: 20px;
 }
 .footer .infor input[type="text"]:focus {
   border: none;
@@ -437,9 +462,6 @@ a {
 .footer .infor button:hover {
   background-color: #5e5a5a;
 
-}
-.col-24{
-  width: 20%;
 }
 .footer .infor ul {
   margin: 0;

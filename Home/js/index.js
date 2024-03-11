@@ -78,11 +78,13 @@ $(document).ready(function () {
     modal.find("#modal-image").attr('src','../img/' + product.thumbnail[0]);
   })
   // Add cart
-  const addToCart = (id,qty) => {
+  const addToCart = (id,qty,size) => {
     var product = getProductById(id);
     var cartItem = {
       product : product,
-      quantity : qty
+      quantity : qty,
+      color : product.color,
+      size : size
     }
     var cart = [];
     if(sessionStorage.getItem("cart") == null){
@@ -95,7 +97,9 @@ $(document).ready(function () {
       if(indexCartItem >= 0){
         cart[indexCartItem] = {
           product : product,
-          quantity: qty + cart[indexCartItem].quantity
+          quantity: qty + cart[indexCartItem].quantity,
+          color: cart[indexCartItem].color,
+          size : size
         }
       }
       else{
@@ -131,9 +135,11 @@ $(document).ready(function () {
                                 <img src="../img/${item.product.thumbnail[0]}" alt="">
                               </div>
                               <div class="col-8">
-                                <p class="name">Cropped cotton Top</p>
+                                <p class="name">${item.product.name}</p>
                                 <span class="price">$
                                 ${(item.product.price*(1-item.product.sale/100)).toFixed(0)}</span>
+                                <p class="m-0 price">Size: ${item.size}</p>
+                                <p class="m-0 price">Color: ${item.color}</p>
                                 <div class="action">
                                   <select class="qty form-select form-select-xxs w-auto">
                                     <option ${item.quantity == 1 ? 'selected' : ''} value="1">1</option>
@@ -159,7 +165,9 @@ $(document).ready(function () {
     var indexCartItem = cart.findIndex(item => item.product.id === id);
     cart[indexCartItem] = {
       product : cart[indexCartItem].product,
-      quantity: qty
+      quantity: qty,
+      color: cart[indexCartItem].color,
+      size : cart[indexCartItem].size
     }
     sessionStorage.setItem("cart",JSON.stringify(cart)); 
   }
@@ -182,7 +190,8 @@ $(document).ready(function () {
   $(".add-cart").click(function(){
     var id = $("#myModal").attr("data-id");
     var qty = $("#quantity").val();
-    addToCart(parseInt(id),parseInt(qty));
+    var size = $(".btn-check:checked + .size-input").text();
+    addToCart(parseInt(id),parseInt(qty), size);
     cartModal();
     $(".btn-close").click(); // giả lập click thoát
     setTimeout(() => {
