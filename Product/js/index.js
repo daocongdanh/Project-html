@@ -39,7 +39,7 @@ $(document).ready(function () {
     productPagination.forEach(item => {
       htmlProducts += `<div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
                         <div class="item" data-id="${item.id}">
-                          <div class="image">
+                          <a class="redirect image d-block" href="../../ProductDetail/html/product.html" data-id="${item.id}">
                             <img src="../img/${item.thumbnail[0]}" class="image-front w-100" alt="">
                             <img src="../img/${item.thumbnail[1]}" class="image-back w-100" alt="">
                             ${item.sale > 0 ? '<span class="sale">SALE</span>' : ''}
@@ -48,9 +48,9 @@ $(document).ready(function () {
                               <button class="action-item"><i class="fa-solid fa-cart-shopping"></i></button>
                               <button class="action-item"><i class="fa-regular fa-heart"></i></button>
                             </div>
-                          </div>
+                          </a>
                           <p class="cate">${item.category}</p>
-                          <p class="name">${item.name}</p>
+                          <a class="redirect name d-block" href="../../ProductDetail/html/product.html" data-id="${item.id}">${item.name}</a>
                           <p class="price">
                           `
                           if(item.sale === 0){
@@ -126,6 +126,10 @@ $(document).ready(function () {
     var inputCheck = Array.from(document.querySelectorAll(".form-check-input")).filter(x => 
       x.nextElementSibling.textContent === tag)[0];
     inputCheck.checked = false;
+  })
+  $(document).on("click",".redirect",function(){
+    var id = $(this).attr("data-id");
+    localStorage.setItem("idProduct",id);
   })
 });
 
