@@ -513,6 +513,46 @@ const categories = [
     image: "205314358-4.jpg",
   },
 ];
-// localStorage.setItem("products", JSON.stringify(products));
-// localStorage.setItem("categories",JSON.stringify(categories));
+
+const users = [
+  {
+    id: 1,
+    firstName: "Danh",
+    lastName: "Đẹp",
+    email: "daokhanhdu123zxc@gmail.com",
+    password: "123",
+    dayOfBirth: "2222-12-12",
+    gender: 1
+  },
+  { 
+    id: 2,
+    firstName: "Đào Đức",
+    lastName: "Danh",
+    email: "daocongdanh48@gmail.com",
+    password: "danh",
+    dayOfBirth: "2003-02-02",
+    gender: 0
+  },
+  { 
+    id: 3,
+    firstName: "Danh",
+    lastName: "Đẹp",
+    email: "daocongdanh47@gmail.com",
+    password: "danh123",
+    dayOfBirth: "2003-12-30",
+    gender: 1
+  },
+  { 
+    id: 4,
+    firstName: "Đào",
+    lastName: "Đức Danh",
+    email: "danhlaptrinh@gmail.com",
+    password: "danh",
+    dayOfBirth: "2003-09-01",
+    gender: 0
+  }
+]
+localStorage.setItem("products", JSON.stringify(products));
+localStorage.setItem("categories",JSON.stringify(categories));
+localStorage.setItem("user",JSON.stringify(users));
 // console.log(JSON.parse(localStorage.getItem("products")));

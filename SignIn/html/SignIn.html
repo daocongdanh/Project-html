@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign In</title>
+  <link rel="stylesheet" href="../../Common/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../../Common/css/all.min.css">
+  <link rel="stylesheet" href="../../Common/css/style.css">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="header">
+    <section class="top bg-dark">
+      <div class="text-center text-white">
+        <span class="happy text-uppercase">⚡️ Happy Holiday Deals on Everything ⚡️</span>
+      </div>
+    </section>
+    <nav class="navbar navbar-expand-xl">
+      <div class="container">
+        <a class="navbar-brand d-none" href="#">Shopper</a>
+        <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-between" id="collapsibleNavbar">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Catalog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Shop</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Pages</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Blogs</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Docs</a>
+            </li>
+          </ul>
+          <div class="logo mx-8" href="#">Shopper</div>
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#">United States
+                <i class="fa-solid fa-angle-down"></i>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link border-left" href="#">USD
+                <i class="fa-solid fa-angle-down"></i>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link border-left" href="#">EN
+                <i class="fa-solid fa-angle-down"></i>
+              </a>
+            </li>
+          </ul>
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link nav-pad" data-bs-toggle="offcanvas" href="#search"><i class="fa-solid fa-magnifying-glass m-0"></i></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-pad" href="../../SignIn/html/SignIn.html"><i class="fa-regular fa-user"></i></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-pad" href="#"><i class="fa-regular fa-heart"></i></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-pad" data-bs-toggle="offcanvas" href="#cart-modal">
+                <span id="cart" class="position-relative" data-cart="0">
+                  <i class="fa-solid fa-cart-shopping m-0"></i>
+                </span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!-- End Header -->
+
+  <!-- Content -->
+  <section class="login">
+    <div class="container">
+      <form action="" class="form">
+        <div class="row">
+          <div class="col-12">
+            <h1 class="title">Returning Customer</h1>
+          </div>
+          <div class="col-12">
+            <input id="input-email" type="email" class="email form-control" placeholder="Email Address *" required>
+          </div>
+          <div class="col-12 mt-2">
+            <input id="input-password" type="password" class="password form-control" placeholder="Password *" required>
+          </div>
+          <div class="col-12 d-flex justify-content-between mb-3">
+            <div class="left">
+              <input id="remember" class="form-check-input me-3" type="checkbox" id="check" name="option1" value="something">
+              <label class="form-check-label">Remember me</label>
+            </div>
+            <div class="right">
+              <a href="#FPModal" data-bs-toggle="modal">Forgot Password?</a>
+            </div>
+          </div>
+          <div class="col-12">
+            <button class="button" type="submit" id="submit">Sign In</button>
+          </div>
+        </div>
+      </form>
+      <div class="right">
+        <!-- Modal -->
+        <div class="modal fade" tabindex="-1" id="FPModal" role="dialog" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+
+            <!-- Modal content-->
+            <div class=" modal-content">
+
+              <!-- Header -->
+              <div class="modal-header lh-fixed fs-lg">
+                <strong class="ms-auto">Forgot Password?</strong>
+                <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close">
+                </button>
+              </div>
+
+              <!-- Body -->
+              <div class="modal-body text-center">
+
+                <!-- Text -->
+                <p class="mb-7 fs-sm text-gray-500">
+                  Please enter your Email Address. You will receive a link
+                  to create a new password via Email.
+                </p>
+
+                <!-- Form -->
+                <form action="">
+                  <!-- Email -->
+                  <div class="form-group">
+                    <label class="visually-hidden" for="modalPasswordResetEmail">
+                      Email Address *
+                    </label>
+                    <input class="form-control form-control-sm" id="modalPasswordResetEmail" type="email"
+                      placeholder="Email Address *" required>
+                  </div>
+
+                  <!-- Button -->
+                  <button id="forgot" type="submit" class="btn btn-sm btn-dark">
+                    Reset Password
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="infor">
+      <div class="container">
+        <div class="row justify-content-center" style="margin-bottom: 80px;">
+          <div class="col-xl-10 col-lg-8 col-md-6 cold-sm-12 col-12  d-flex justify-content-center flex-column align-items-center">
+            <h1 class="mail">Wants style Ideas and Treats?</h1>
+            <div class="row">
+              <div class="col-xl-7 col-lg-7 col-md-7 col-sm-12 col-12 mb-3">
+                <input type="text" class="w-100" placeholder="Enter Email *">
+              </div>
+              <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12 col-12">
+                <button class="w-100">Subscribe</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12 mb-5">
+            <h3 class="name">Shopper</h3>
+            <div class="social">
+              <span class="item"><i class="fa-brands fa-facebook-f"></i></span>
+              <span class="item"><i class="fa-brands fa-youtube"></i></span>
+              <span class="item"><i class="fa-brands fa-twitter"></i></span>
+              <span class="item"><i class="fa-brands fa-instagram"></i></span>
+              <span class="item"><i class="fa-brands fa-medium"></i></span>
+            </div>
+          </div>
+          <div class="col-xl-2 col-lg-2 col-md-2 col-sm-3 col-6 mb-4">
+            <h3 class="title">SUPPORT</h3>
+            <ul>
+              <li>Contact Us</li>
+              <li>FAQs</li>
+              <li>Size Guide</li>
+              <li>Shipping & Returns</li>
+            </ul>
+          </div>
+          <div class="col-xl-2 col-lg-2 col-md-2 col-sm-3 col-6 mb-4">
+            <h3 class="title">SHOP</h3>
+            <ul>
+              <li>Men's Shopping</li>
+              <li>Women's Shopping</li>
+              <li>Kid's Shopping</li>
+              <li>Discounts</li>
+            </ul>
+          </div>
+          <div class="col-xl-2 col-lg-2 col-md-2 col-sm-3 col-6">
+            <h3 class="title">COMPANY</h3>
+            <ul>
+              <li>Our Story</li>
+              <li>Careers</li>
+              <li>Terms & Conditions</li>
+              <li>Privacy & Cookie policy</li>
+            </ul>
+          </div>
+          <div class="col-xl-2 col-lg-2 col-md-2 col-sm-3 col-6">
+            <h3 class="title">CONTACT</h3>
+            <ul>
+              <li>1-202-555-0105</li>
+              <li>1-202-555-0106</li>
+              <li>help@shopper.com</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="payment">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 d-flex justify-content-between">
+            <p>© 2019 All rights reserved. Designed by Unvab.</p>
+            <div class="list">
+              <span class="card-item"><img src="../../Common/img/card-1.svg" alt=""></span>
+              <span class="card-item"><img src="../../Common/img/card-2.svg" alt=""></span>
+              <span class="card-item"><img src="../../Common/img/card-3.svg" alt=""></span>
+              <span class="card-item"><img src="../../Common/img/card-4.svg" alt=""></span>
+              <span class="card-item"><img src="../../Common/img/card-5.svg" alt=""></span>
+              <span class="card-item"><img src="../../Common/img/card-6.svg" alt=""></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- End Footer -->
+
+  <!-- Search -->
+  <div class="search offcanvas offcanvas-end"  id="search">
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    <div class="offcanvas-header justify-content-center">
+      <h2 class="title">Search Products</h2>
+    </div>
+    <div class="offcanva-body">
+      <form action="">
+        <select class="form-select">
+          <option value="All Categories" checked>All Categories</option>
+          <option value="Women">Women</option>
+          <option value="Men">Men</option>
+          <option value="Kids">Kids</option>
+        </select>
+        <div class="input-group">
+          <input class="form-control" type="text" placeholder="Search">
+          <div class="input-group-append d-flex">
+            <button class="button-search" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="offcanva-footer">
+      <p class="title">Search Results:</p>
+      <ul class="list">
+        <li class="item">
+          <div class="row align-items-center">
+            <div class="col-3">
+              <img src="../../Common/img/search-1.jpg" alt="">
+            </div>
+            <div class="col-9">
+              <p class="name">Leather mid-heel Sandals</p>
+              <span class="price">$129.00</span>
+            </div>
+          </div>
+        </li>
+        <li class="item">
+          <div class="row align-items-center">
+            <div class="col-3">
+              <img src="../../Common/img/search-2.jpg" alt="">
+            </div>
+            <div class="col-9">
+              <p class="name">Cotton floral print Dress</p>
+              <span class="price">$40.00</span>
+            </div>
+          </div>
+        </li>
+        <li class="item">
+          <div class="row align-items-center">
+            <div class="col-3">
+              <img src="../../Common/img/search-3.jpg" alt="">
+            </div>
+            <div class="col-9">
+              <p class="name">Leather Sneakers</p>
+              <span class="price">$85.00</span>
+            </div>
+          </div>
+        </li>
+        <li class="item">
+          <div class="row align-items-center">
+            <div class="col-3">
+              <img src="../../Common/img/search-4.jpg" alt="">
+            </div>
+            <div class="col-9">
+              <p class="name">Cropped cotton Top</p>
+              <span class="price">$29.00</span>
+            </div>
+          </div>
+        </li>
+        <li class="item">
+          <div class="row align-items-center">
+            <div class="col-3">
+              <img src="../../Common/img/search-5.jpg" alt="">
+            </div>
+            <div class="col-9">
+              <p class="name">Floral print midi Dress</p>
+              <span class="price">$50.00</span>
+            </div>
+          </div>
+        </li>
+      </ul>
+      <button class="view">View All<i class="fa-solid fa-arrow-right"></i></button>
+    </div>
+  </div>
+  <!-- End Search -->
+
+  <!-- Cart -->
+  <div class="cart offcanvas offcanvas-end" id="cart-modal">
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    <div class="offcanvas-header justify-content-center">
+      <h2 class="title">Your Cart (0)</h2>
+    </div>
+    <div class="offcanva-body">
+      <ul class="list">
+        <li class="item">
+          <div class="row align-items-center">
+            <div class="col-4">
+              <img src="../../Common/img/cart-1.jpg" alt="">
+            </div>
+            <div class="col-8">
+              <p class="name">Cropped cotton Top</p>
+              <span class="price">$29.00</span>
+              <div class="action">
+                <select class="form-select form-select-xxs w-auto">
+                  <option value="1" checked>1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                </select>
+                <a href="#"><i class="fa-solid fa-xmark"></i>Remove</a>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="item">
+          <div class="row align-items-center">
+            <div class="col-4">
+              <img src="../../Common/img/cart-2.jpg" alt="">
+            </div>
+            <div class="col-8">
+              <p class="name">Suede cross body Bag</p>
+              <span class="price">$49.00</span>
+              <div class="action">
+                <select class="form-select form-select-xxs w-auto">
+                  <option value="1" checked>1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                </select>
+                <a href="#"><i class="fa-solid fa-xmark"></i>Remove</a>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="total">
+      <p class="title">Subtotal</p>
+      <span class="price" id="total-money">$89.00</span>
+    </div>
+    <div class="offcanva-footer">
+      <a href="#" class="button-footer btn-checkout">Continue to Checkout</a>
+      <a href="../../Cart/html/shopping-cart.html" class="button-footer btn-view">View Cart</a>
+    </div>
+  </div>
+  <!-- End Cart -->
+  
+  <script src="../../Common/js/bootstrap.bundle.min.js"></script>
+  <script src="../../Common/js/jquery.min.js"></script>
+  <script src="../../Common/js/jquery-1.11.0.min.js"></script>
+  <script src="../../Common/js/jquery-migrate-1.2.1.min.js"></script>
+  <script src="../../Common/js/data.js"></script>
+  <script src="../js/index.js"></script>
+  
+</body>
+
+</html>

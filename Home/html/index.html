@@ -4,10 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Home page</title>
-  <link rel="stylesheet" href="../css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="../css/slick.css">
-  <link rel="stylesheet" href="../css/slick-theme.css">
+  <link rel="stylesheet" href="../../Common/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../../Common/css/all.min.css" />
+  <link rel="stylesheet" href="../../Common/css/slick.css">
+  <link rel="stylesheet" href="../../Common/css/slick-theme.css">
+  <link rel="stylesheet" href="../../Common/css/style.css">
   <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
@@ -690,7 +691,7 @@
   <div class="modal modal-xl" id="myModal" data-id="-1">
     <div class="modal-dialog">
       <div class="modal-content">
-        <div class="row">
+        <div class="row m-0">
           <div class="col-5 p-0">
             <div class="left">
               <div class="image">
@@ -707,7 +708,7 @@
                 <span> (In Stock)</span>
               </p>
               <p class="color">Color: <span id="color">White</span></p>
-              <div class="image">
+              <div class="image" id="imageModal">
                 <input class="rd-img" type="radio" id="image1" name="image" checked value="1" />
                 <label class="lb1" for="image1"></label>
                 <input class="rd-img" type="radio" id="image2" name="image" value="2"/>
@@ -865,7 +866,7 @@
     </div>
     <div class="offcanva-body">
       <ul class="list">
-        <!-- <li class="item">
+        <li class="item">
           <div class="row align-items-center">
             <div class="col-4">
               <img src="../img/cart-1.jpg" alt="">
@@ -902,7 +903,7 @@
               </div>
             </div>
           </div>
-        </li> -->
+        </li>
       </ul>
     </div>
     <div class="total">
@@ -915,12 +916,12 @@
     </div>
   </div>
   <!-- End Cart -->
-  <script src="../js/bootstrap.bundle.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="../js/jquery-1.11.0.min.js"></script>
-  <script src="../js/jquery-migrate-1.2.1.min.js"></script>
-  <script src="../js/slick.min.js"></script>
-  <script src="../js/data.js"></script>
+  <script src="../../Common/js/bootstrap.bundle.min.js"></script>
+  <script src="../../Common/js/jquery.min.js"></script>
+  <script src="../../Common/js/jquery-1.11.0.min.js"></script>
+  <script src="../../Common/js/jquery-migrate-1.2.1.min.js"></script>
+  <script src="../../Common/js/slick.min.js"></script>
+  <script src="../../Common/js/data.js"></script>
   <script src="../js/index.js"></script>
 </body>
 </html>
