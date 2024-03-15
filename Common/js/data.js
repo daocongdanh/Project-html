@@ -514,6 +514,7 @@ const users = [
     firstName: "Danh",
     lastName: "Đẹp",
     email: "daokhanhdu123zxc@gmail.com",
+    phone: "0123456789",
     password: "123",
     dayOfBirth: "2222-12-12",
     gender: 1,
@@ -523,6 +524,7 @@ const users = [
     firstName: "Đào Đức",
     lastName: "Danh",
     email: "daocongdanh48@gmail.com",
+    phone: "0123456789",
     password: "danh",
     dayOfBirth: "2003-02-02",
     gender: 0,
@@ -532,6 +534,7 @@ const users = [
     firstName: "Danh",
     lastName: "Đẹp",
     email: "daocongdanh47@gmail.com",
+    phone: "0123456789",
     password: "danh123",
     dayOfBirth: "2003-12-30",
     gender: 1,
@@ -541,6 +544,7 @@ const users = [
     firstName: "Đào",
     lastName: "Đức Danh",
     email: "danhlaptrinh@gmail.com",
+    phone: "0123456789",
     password: "danh",
     dayOfBirth: "2003-09-01",
     gender: 0,
@@ -676,8 +680,149 @@ var reviews = [
     time: "23-12-2023",
   },
 ];
-localStorage.setItem("products", JSON.stringify(products));
-localStorage.setItem("categories", JSON.stringify(categories));
-localStorage.setItem("user", JSON.stringify(users));
-localStorage.setItem("reviews",JSON.stringify(reviews));
+const shippingDetails = [
+  {
+    id: 1,
+    title: "Standard Shipping",
+    description: "Delivery in 5 - 7 working days",
+    price: 8,
+  },
+  {
+    id: 2,
+    title: "Express Shipping",
+    description: "Delivery in 3 - 5 working days",
+    price: 12,
+  },
+  {
+    id: 3,
+    title: "1 - 2 Shipping",
+    description: "Delivery in 1 - 2 working days",
+    price: 18,
+  },
+  {
+    id: 4,
+    title: "Free Shipping",
+    description:
+      "Living won't the He one every subdue meat replenish face was you morning firmament darkness.",
+    price: 0,
+  },
+];
+const orders = [
+  {
+    id: 10000,
+    userId: 1,
+    orderDate: "2024-03-02",
+    shippingDetailId: 1,
+    firstName: "Đào Đức",
+    lastName : "Danh",
+    phone: "0123456789",
+    address: "206/18, đường số 20, phường 5, Gò Vấp, Hồ Chí Minh",
+    status: "In Processing",
+    total: 1024 
+  },
+  {
+    id: 10001,
+    userId: 1,
+    orderDate: "2024-03-02",
+    shippingDetailId: 2,
+    firstName: "Đào Đức",
+    lastName : "Danh",
+    phone: "0123456789",
+    address: "206/18, đường số 20, phường 5, Gò Vấp, Hồ Chí Minh",
+    status: "Awating Delivery",
+    total: 1024 
+  },
+  {
+    id: 10002,
+    userId: 1,
+    orderDate: "2024-03-02",
+    shippingDetailId: 3,
+    firstName: "Đào Đức",
+    lastName : "Danh",
+    phone: "0123456789",
+    address: "206/18, đường số 20, phường 5, Gò Vấp, Hồ Chí Minh",
+    status: "Delivered",
+    total: 1024 
+  },
+  {
+    id: 10003,
+    userId: 1,
+    orderDate: "2024-03-02",
+    shippingDetailId: 4,
+    firstName: "Đào Đức",
+    lastName : "Danh",
+    phone: "0123456789",
+    address: "206/18, đường số 20, phường 5, Gò Vấp, Hồ Chí Minh",
+    status: "In Processing",
+    total: 1024 
+  },
+  {
+    id: 10004,
+    userId: 1,
+    orderDate: "2024-03-02",
+    shippingDetailId: 1,
+    firstName: "Đào Đức",
+    lastName : "Danh",
+    phone: "0123456789",
+    address: "206/18, đường số 20, phường 5, Gò Vấp, Hồ Chí Minh",
+    status: "In Processing",
+    total: 1024 
+  },
+  {
+    id: 10005,
+    userId: 1,
+    orderDate: "2024-03-02",
+    shippingDetailId: 2,
+    firstName: "Đào Đức",
+    lastName : "Danh",
+    phone: "0123456789",
+    address: "206/18, đường số 20, phường 5, Gò Vấp, Hồ Chí Minh",
+    status: "In Processing",
+    total: 1024 
+  }
+]
+const orderDetails = [
+  {
+    id: 1,
+    productId: 1,
+    orderId: 10000,
+    quantity: 3,
+    size : "XL"
+  },
+  {
+    id: 2,
+    productId: 2,
+    orderId: 10000,
+    quantity: 1,
+    size : "XL"
+  },
+  {
+    id: 3,
+    productId: 3,
+    orderId: 10000,
+    quantity: 2,
+    size : "XL"
+  },
+  {
+    id: 4,
+    productId: 4,
+    orderId: 10000,
+    quantity: 1,
+    size : "XL"
+  },
+  {
+    id: 5,
+    productId: 5,
+    orderId: 10000,
+    quantity: 5,
+    size : "XL"
+  }
+]
+// localStorage.setItem("products", JSON.stringify(products));
+// localStorage.setItem("categories", JSON.stringify(categories));
+// localStorage.setItem("users", JSON.stringify(users));
+// localStorage.setItem("reviews",JSON.stringify(reviews));
+// localStorage.setItem("shippingDetails",JSON.stringify(shippingDetails));
+// localStorage.setItem("orders",JSON.stringify(orders));
+// localStorage.setItem("orderDetails",JSON.stringify(orderDetails));
 // console.log(JSON.parse(localStorage.getItem("products")));
