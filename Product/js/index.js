@@ -46,7 +46,7 @@ $(document).ready(function () {
                             <div class="action">
                               <button class="btn-quick-view action-item" data-bs-toggle="modal" data-bs-target="#myModal"><i class="fa-regular fa-eye"></i></button>
                               <button class="action-item"><i class="fa-solid fa-cart-shopping"></i></button>
-                              <button class="action-item"><i class="fa-regular fa-heart"></i></button>
+                              <button class="wish action-item"><i class="fa-regular fa-heart"></i></button>
                             </div>
                           </div>
                           <p class="cate">${item.category}</p>

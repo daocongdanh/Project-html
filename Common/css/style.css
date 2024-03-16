@@ -310,12 +310,7 @@
   background-size: cover; 
   margin-right: 10px;
 }
-/* .modal .right .image .lb1 {
-  background-image: url(../img/modal-1.jpg);
-}
-.modal .right .image .lb2 {
-  background-image: url(../img/modal-2.jpg);
-} */
+
 .modal .right .image {
   margin-bottom: 40px;
 }
@@ -409,6 +404,7 @@
   padding: 0;
   display: flex;
   align-items: center;
+  color: #1C1C1C;
 }
 .search .offcanva-footer .view i {
   margin-left: 15px;
@@ -417,6 +413,62 @@
 .search .offcanva-footer .view:hover.view i{
   transform: translateX(5px);
 }
+
+/* Wish List */
+
+.wishList .btn-close{
+  position: absolute;
+  top: 3%;
+  right: 6%;
+}
+.wishList .btn-close:focus {
+  box-shadow: none;
+}
+.wishList .offcanvas-header {
+  padding: 24px 32px;
+  border-bottom: 1px solid #ddd;
+}
+.wishList .offcanvas-header .title {
+  margin: 0;
+  font-size: 18px;
+  text-align: center;
+}
+.wishList .offcanva-body {
+  padding: 32px;
+}
+.wishList .offcanva-body .list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.wishList .offcanva-body .list .item {
+  margin-bottom: 15px;
+}
+.wishList .offcanva-body .list .item img {
+  width: 100%;
+}
+.wishList .offcanva-body .list .item .name {
+  font-weight: 500;
+  margin: 0;
+  font-size: 15px;
+}
+.wishList .offcanva-body .list .item .price {
+  color: #767676;
+  font-weight: 500;
+  font-size: 15px;
+}
+.wishList .offcanva-body .list .item a{
+  text-decoration: none;
+  color: #767676;
+  font-size: 14px;
+}
+.wishList .offcanva-body .list .item a i {
+  margin-right: 10px;
+}
+.wishList .offcanva-body .list .item a:hover{
+  color: #545252;
+}
+/* EndWish List */
 
 /* Cart */
 .cart .offcanvas-header {
