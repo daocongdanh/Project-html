@@ -1,6 +1,7 @@
 $(document).ready(function () {
   const loadDataWishList = () => {
     var wishLists = JSON.parse(localStorage.getItem("wishLists"));
+    $("#wishh").attr("data-wish",wishLists == null ? 0 : wishLists.length)
     $("#wishList .title").text(`Wish List (${wishLists == null ? 0 : wishLists.length })`)
     var htmlWishLists = ``;
     if(wishLists != null){
@@ -61,6 +62,7 @@ $(document).ready(function () {
       localStorage.removeItem("wishLists");
       $("#wishList .title").text(`Wish List (0)`)
     }
+    $("#wishh").attr("data-wish",wishListNew == null ? 0 : wishListNew.length)
     $(this).closest("li").remove();
   })
 });

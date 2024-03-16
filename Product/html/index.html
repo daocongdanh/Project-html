@@ -72,7 +72,11 @@
               <a class="nav-link nav-pad" href="#"><i class="fa-regular fa-user"></i></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link nav-pad" href="#"><i class="fa-regular fa-heart"></i></a>
+              <a class="nav-link nav-pad" data-bs-toggle="offcanvas" href="#wishList">
+                <span id="wishh" class="position-relative" data-wish="0">
+                  <i class="fa-regular fa-heart"></i>
+                </span>
+              </a>
             </li>
             <li class="nav-item">
               <a class="nav-link nav-pad" data-bs-toggle="offcanvas" href="#cart-modal">
@@ -966,7 +970,34 @@
     </div>
   </div>
   <!-- End Search -->
-
+  <!-- Wish List -->
+  <div class="wishList offcanvas offcanvas-end"  id="wishList">
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    <div class="offcanvas-header justify-content-center">
+      <h2 class="title">Wish List (2)</h2>
+    </div>
+    <div class="offcanva-body">
+      <ul class="list" id="wishListResult">
+        <!-- <li class="item">
+          <div class="row">
+            <div class="col-3">
+              <img src="../img/search-5.jpg" alt="">
+            </div>
+            <div class="col-9 d-flex flex-column justify-content-between">
+              <div class="top">
+                <p class="name">Floral print midi Dress</p>
+                <span class="price">$50.00</span>
+              </div>
+              <div class="bot">
+                <a href="#"><i class="fa-solid fa-xmark"></i>Remove</a>
+              </div>
+            </div>
+          </div>
+        </li> -->
+      </ul>
+    </div>
+  </div>
+  <!-- End Wish List -->
   <!-- Cart -->
   <div class="cart offcanvas offcanvas-end" id="cart-modal">
     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>

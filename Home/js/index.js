@@ -35,7 +35,7 @@ $(document).ready(function () {
                           <i class="fa-regular fa-eye"></i>
                           <span>Quick View</span>
                         </button>
-                        <div class="wish">
+                        <div class="wish" >
                           <i class="fa-regular fa-heart"></i>
                         </div>
                         ${item.sale > 0 ? '<span class="sale">SALE</span>' : ''}

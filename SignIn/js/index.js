@@ -43,6 +43,7 @@ $(document).ready(function () {
       alert("Tài khoản hoặc mật khẩu không chính xác");
     }
     else{
+      user = user[0];
       localStorage.setItem("user",JSON.stringify(user));
       if(remember){
         setCookie("email",email,1);

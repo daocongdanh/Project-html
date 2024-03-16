@@ -1,6 +1,5 @@
 $(document).ready(function () {
   var productList = JSON.parse(localStorage.getItem("products"));
-  var reviewList = JSON.parse(localStorage.getItem("reviews"));
   var idProduct = parseInt(localStorage.getItem("idProduct"));
   var product = productList.filter(item => item.id ==idProduct)[0];
   const loadData = () => {
@@ -28,8 +27,14 @@ $(document).ready(function () {
     $("#productName").text(product.name);
     $("#color").text(product.color);
 
-    // Bình luận
+  }
+  const loadReviews = () =>{
+     // Bình luận
+    var reviewList = JSON.parse(localStorage.getItem("reviews"));
     var reviewsByProduct = reviewList.filter(item => item.productId == idProduct);
+    $(".review-count").each(function(){
+      $(this).text(`Reviews (${reviewsByProduct.length})`)
+    })
     var htmlReview = ``;
     reviewsByProduct.forEach(item => {
       htmlReview += `<div class="mb-4 box-review">
@@ -87,6 +92,7 @@ $(document).ready(function () {
     $("#review").html(htmlReview);
   }
   loadData();
+  loadReviews();
   $('.radio-sneaker').click(function (state) { 
     document.querySelectorAll('.radio-sneaker').forEach((e) => {
       e.classList.remove('selected');
@@ -143,6 +149,7 @@ $(document).ready(function () {
 
   $('.star').click(function (state) {
     let value = state.currentTarget.value;
+    $(this).closest("ul").attr("data-star",value);
     let mangSao = document.querySelectorAll('.star');
     Array.from(mangSao).map((e) => {
       if (e.value <= value) {
@@ -154,7 +161,38 @@ $(document).ready(function () {
     })
   });
 
-  
+  // Post comment
+  $("#postReview").click(function(e){
+    e.preventDefault();
+    var user = localStorage.getItem("user");
+    if(user == null){
+      window.location = "../../SignIn/html/SignIn.html"
+    }
+    else{
+      user = JSON.parse(user);
+      console.log(user);
+      var reviewList = JSON.parse(localStorage.getItem("reviews"));
+      var name = $("#nameReview").val()
+      var email = $("#emailReview").val()
+      var title = $("#titleReview").val()
+      var comment = $("#areaReview").val()
+      var rate = parseInt($("#stars").attr("data-star"));
+      const review = {
+        id: reviewList.length + 1,
+        userName : user.firstName + " " + user.lastName,
+        productId : parseInt(JSON.parse(localStorage.getItem("idProduct"))),
+        rate: rate,
+        time : new Date().toLocaleDateString(),
+        title : title,
+        comment : comment
+      }
+      reviewList.push(review);
+      localStorage.setItem("reviews", JSON.stringify(reviewList));
+      $("#comment").removeClass("show");
+      alert("Đánh giá thành công");
+      loadReviews();
+    }
+  })
 });
 
 
