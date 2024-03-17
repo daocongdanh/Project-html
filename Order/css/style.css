@@ -87,3 +87,6 @@
   font-size: 15px;
   font-weight: 500;
 }
+.list-group-item-action:focus, .list-group-item-action:hover{
+  background-color: #ffffff;
+}

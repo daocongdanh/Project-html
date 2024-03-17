@@ -9,6 +9,7 @@ $(document).ready(function () {
     var id = $(this).closest(".item").attr("data-id"); // Tìm thẻ item là cha gần nhất của button
     var product = getProductById(id);
     var modal = $("#myModal");
+    modal.find(".wish").closest(".item").attr("data-id",id);
     modal.attr("data-id",product.id);
     modal.find(".name").text(product.name);
     if(product.sale == 0){

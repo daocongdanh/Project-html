@@ -216,4 +216,13 @@ $(document).ready(function () {
     shoppingCart();
     loadOrderItem();
   })
+
+  $(document).on("click",".addCart",function(){
+    var id = parseInt($(this).closest(".item").attr("data-id"));
+    addToCart(id,1,"XL");
+    cartModal();
+    setTimeout(() => {
+      alert("Thêm sản phẩm vào giỏ hàng thành công"); 
+    },100)
+  })
 });

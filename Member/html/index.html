@@ -4,9 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sign In</title>
+  <title></title>
   <link rel="stylesheet" href="../../Common/css/bootstrap.min.css">
-  <link rel="stylesheet" href="../../Common/css/all.min.css">
+  <link rel="stylesheet" href="../../Common/css/all.min.css" />
   <link rel="stylesheet" href="../../Common/css/style.css">
   <link rel="stylesheet" href="../css/style.css">
 </head>
@@ -69,7 +69,7 @@
               <a class="nav-link nav-pad" data-bs-toggle="offcanvas" href="#search"><i class="fa-solid fa-magnifying-glass m-0"></i></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link nav-pad" href="../../SignIn/html/SignIn.html"><i class="fa-regular fa-user"></i></a>
+              <a class="nav-link nav-pad" href="#"><i class="fa-regular fa-user"></i></a>
             </li>
             <li class="nav-item">
               <a class="nav-link nav-pad" data-bs-toggle="offcanvas" href="#wishList">
@@ -91,82 +91,84 @@
     </nav>
   </header>
   <!-- End Header -->
-
-  <!-- Content -->
-  <section class="login">
+  <!-- Info -->
+  <div class="team-members">
     <div class="container">
-      <form action="" class="form">
-        <div class="row">
-          <div class="col-12">
-            <h1 class="title">Returning Customer</h1>
-          </div>
-          <div class="col-12">
-            <input id="input-email" type="email" class="email form-control" placeholder="Email Address *" required>
-          </div>
-          <div class="col-12 mt-2">
-            <input id="input-password" type="password" class="password form-control" placeholder="Password *" required>
-          </div>
-          <div class="col-12 d-flex justify-content-between mb-3">
-            <div class="left">
-              <input id="remember" class="form-check-input me-3" type="checkbox" name="option1" value="something">
-              <label class="form-check-label" for="remember">Remember me</label>
+      <div class="row">
+        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
+          <div class="card border-0">
+            <div class="card-img">
+              <img src="../img/danhkhung.jpg" class="card-img-top" alt="...">
+              <img src="../img/ribbon.png" alt="" class="ribbon">
             </div>
-            <div class="right">
-              <a href="#FPModal" data-bs-toggle="modal">Forgot Password?</a>
+            <div class="card-body">
+              <h5 class="card-title">Đào Đức Danh</h5>
+              <p class="card-text">MSSV: 22731781</p>
             </div>
-          </div>
-          <div class="col-12">
-            <button class="button" type="submit" id="submit">Sign In</button>
           </div>
         </div>
-      </form>
-      <div class="right">
-        <!-- Modal -->
-        <div class="modal fade" tabindex="-1" id="FPModal" role="dialog" aria-hidden="true">
-          <div class="modal-dialog modal-dialog-centered" role="document">
-
-            <!-- Modal content-->
-            <div class=" modal-content">
-
-              <!-- Header -->
-              <div class="modal-header lh-fixed fs-lg">
-                <strong class="ms-auto">Forgot Password?</strong>
-                <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close">
-                </button>
-              </div>
-
-              <!-- Body -->
-              <div class="modal-body text-center">
-
-                <!-- Text -->
-                <p class="mb-7 fs-sm text-gray-500">
-                  Please enter your Email Address. You will receive a link
-                  to create a new password via Email.
-                </p>
-
-                <!-- Form -->
-                <form action="">
-                  <!-- Email -->
-                  <div class="form-group">
-                    <label class="visually-hidden" for="modalPasswordResetEmail">
-                      Email Address *
-                    </label>
-                    <input class="form-control form-control-sm" id="modalPasswordResetEmail" type="email"
-                      placeholder="Email Address *" required>
-                  </div>
-
-                  <!-- Button -->
-                  <button id="forgot" type="submit" class="btn btn-sm btn-dark">
-                    Reset Password
-                  </button>
-                </form>
-              </div>
+        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
+          <div class="card border-0">
+            <div class="card-img">
+              <img src="../img/hieu.jpg" class="card-img-top" alt="...">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Nguyễn Huỳnh Minh Hiếu</h5>
+              <p class="card-text">MSSV: 22671131</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
+          <div class="card border-0">
+            <div class="card-img">
+              <img src="../img/chuong.jpg" class="card-img-top" alt="...">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Phan Khánh Chương</h5>
+              <p class="card-text">MSSV: 22674951</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
+          <div class="card border-0">
+            <div class="card-img">
+              <img src="../img/lehon.jpg" class="card-img-top" alt="...">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Lê Việt Hoàng</h5>
+              <p class="card-text">MSSV: 22679731</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
+          <div class="card border-0">
+            <div class="card-img">
+              <img src="../img/huynhhoaithanh.jpg" class="card-img-top" alt="...">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Huỳnh Hoài Thanh</h5>
+              <p class="card-text">MSSV: 23633801</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
+          <div class="card border-0">
+            <div class="card-img">
+              <img src="../img/giapviethoang.jpg" classs="card-img-top" alt="...">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Giáp Việt Hoàng</h5>
+              <p class="card-text">MSSV: 22659371
+              </p>
             </div>
           </div>
         </div>
       </div>
+
     </div>
-  </section>
+  </div>
+  <!-- Info -->
+
   <!-- Footer -->
   <footer class="footer">
     <div class="infor">
@@ -252,6 +254,90 @@
     </div>
   </footer>
   <!-- End Footer -->
+  <!-- Modal -->
+  <div class="modal modal-xl" id="myModal" data-id="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="row m-0">
+          <div class="col-5 p-0">
+            <div class="left">
+              <div class="image">
+                <img id="modal-image" src="../../Common/img/modal-1.jpg" alt="">
+              </div>
+              <button class="product-info">More Product Info <span><i class="fa-solid fa-circle-info"></i></span></button>
+            </div>
+          </div>
+          <div class="col-7 p-0">
+            <div class="right">
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              <h2 class="name">Leather Sneakers</h2>
+              <p class="price">$85.00
+                <span> (In Stock)</span>
+              </p>
+              <p class="color">Color: <span id="color">White</span></p>
+              <div class="image" id="imageModal">
+                <input class="rd-img" type="radio" id="image1" name="image" checked value="1" />
+                <label class="lb1" for="image1"></label>
+                <input class="rd-img" type="radio" id="image2" name="image" value="2"/>
+                <label class="lb2" for="image2"></label>
+              </div>
+              <p class="size">Size: <span id="size">8 US</span></p>
+              <div class="size-list">
+                <input type="radio" class="btn-check" name="options-base" id="size1" autocomplete="off">
+                <label class="size-input btn" for="size1">6</label>
+                <input type="radio" class="btn-check" name="options-base" id="size2" autocomplete="off" disabled>
+                <label class="size-input through btn" for="size2">6.5</label>
+                <input type="radio" class="btn-check" name="options-base" id="size3" autocomplete="off" >
+                <label class="size-input btn" for="size3">7</label>
+                <input type="radio" class="btn-check" name="options-base" id="size4" autocomplete="off" >
+                <label class="size-input btn" for="size4">7.5</label>
+                <input type="radio" class="btn-check" name="options-base" id="size5" autocomplete="off" checked>
+                <label class="size-input btn" for="size5">8</label>
+                <input type="radio" class="btn-check" name="options-base" id="size6" autocomplete="off" >
+                <label class="size-input btn" for="size6">8.5</label>
+                <input type="radio" class="btn-check" name="options-base" id="size7" autocomplete="off" disabled>
+                <label class="size-input through btn" for="size7">9</label>
+                <input type="radio" class="btn-check" name="options-base" id="size8" autocomplete="off" disabled>
+                <label class="size-input through btn" for="size8">9.5</label>
+                <input type="radio" class="btn-check" name="options-base" id="size9" autocomplete="off" >
+                <label class="size-input btn" for="size9">10</label>
+                <input type="radio" class="btn-check" name="options-base" id="size10" autocomplete="off" >
+                <label class="size-input btn" for="size10">10.5</label>
+                <input type="radio" class="btn-check" name="options-base" id="size11" autocomplete="off" >
+                <label class="size-input btn" for="size11">11</label>
+                <input type="radio" class="btn-check" name="options-base" id="size12" autocomplete="off" >
+                <label class="size-input btn" for="size12">12</label>
+                <input type="radio" class="btn-check" name="options-base" id="size13" autocomplete="off" >
+                <label class="size-input btn" for="size13">13</label>
+                <input type="radio" class="btn-check" name="options-base" id="size14" autocomplete="off" >
+                <label class="size-input btn" for="size14">14</label>
+              </div>
+              <div class="button-modal">
+                <div class="row d-flex align-items-center">
+                  <div class="col-3">
+                    <select class="quantity form-select" id="quantity">
+                      <option selected value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                    </select>
+                  </div>
+                  <div class="col-6">
+                    <button class="add-cart w-100">Add to Cart <span><i class="fa-solid fa-cart-shopping"></i></span></button>
+                  </div>
+                  <div class="col-3">
+                    <button class="wish">Wish <span><i class="fa-regular fa-heart"></i></span></button>
+                  </div>  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Modal -->
 
   <!-- Search -->
   <div class="search offcanvas offcanvas-end"  id="search">
@@ -296,6 +382,7 @@
     </div>
   </div>
   <!-- End Search -->
+
   <!-- Wish List -->
   <div class="wishList offcanvas offcanvas-end"  id="wishList">
     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -324,6 +411,7 @@
     </div>
   </div>
   <!-- End Wish List -->
+
   <!-- Cart -->
   <div class="cart offcanvas offcanvas-end" id="cart-modal">
     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -335,7 +423,7 @@
         <li class="item">
           <div class="row align-items-center">
             <div class="col-4">
-              <img src="../../Common/img/cart-1.jpg" alt="">
+              <img src="../img/cart-1.jpg" alt="">
             </div>
             <div class="col-8">
               <p class="name">Cropped cotton Top</p>
@@ -354,7 +442,7 @@
         <li class="item">
           <div class="row align-items-center">
             <div class="col-4">
-              <img src="../../Common/img/cart-2.jpg" alt="">
+              <img src="../img/cart-2.jpg" alt="">
             </div>
             <div class="col-8">
               <p class="name">Suede cross body Bag</p>
@@ -382,17 +470,14 @@
     </div>
   </div>
   <!-- End Cart -->
-  
+
   <script src="../../Common/js/bootstrap.bundle.min.js"></script>
   <script src="../../Common/js/jquery.min.js"></script>
-  <script src="../../Common/js/jquery-1.11.0.min.js"></script>
-  <script src="../../Common/js/jquery-migrate-1.2.1.min.js"></script>
   <script src="../../Common/js/data.js"></script>
   <script src="../../Common/js/modal.js"></script>
   <script src="../../Common/js/cart.js"></script>
   <script src="../../Common/js/search.js"></script>
-  <script src="../js/index.js"></script>
-  
+  <script src="../../Common/js/wishList.js"></script>
 </body>
 
 </html>

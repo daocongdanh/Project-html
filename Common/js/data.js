@@ -537,7 +537,7 @@ const users = [
     phone: "0123456789",
     password: "danh123",
     dayOfBirth: "2003-12-30",
-    gender: 1,
+    gender: 0,
   },
   {
     id: 4,
@@ -714,11 +714,11 @@ const orders = [
     orderDate: "2024-03-02",
     shippingDetailId: 1,
     firstName: "Đào Đức",
-    lastName : "Danh",
+    lastName: "Danh",
     phone: "0123456789",
     address: "206/18, đường số 20, phường 5, Gò Vấp, Hồ Chí Minh",
     status: "In Processing",
-    total: 1024 
+    total: 1024,
   },
   {
     id: 10001,
@@ -726,11 +726,11 @@ const orders = [
     orderDate: "2024-03-02",
     shippingDetailId: 2,
     firstName: "Đào Đức",
-    lastName : "Danh",
+    lastName: "Danh",
     phone: "0123456789",
     address: "206/18, đường số 20, phường 5, Gò Vấp, Hồ Chí Minh",
     status: "Awating Delivery",
-    total: 1024 
+    total: 1024,
   },
   {
     id: 10002,
@@ -738,11 +738,11 @@ const orders = [
     orderDate: "2024-03-02",
     shippingDetailId: 3,
     firstName: "Đào Đức",
-    lastName : "Danh",
+    lastName: "Danh",
     phone: "0123456789",
     address: "206/18, đường số 20, phường 5, Gò Vấp, Hồ Chí Minh",
     status: "Delivered",
-    total: 1024 
+    total: 1024,
   },
   {
     id: 10003,
@@ -750,11 +750,11 @@ const orders = [
     orderDate: "2024-03-02",
     shippingDetailId: 4,
     firstName: "Đào Đức",
-    lastName : "Danh",
+    lastName: "Danh",
     phone: "0123456789",
     address: "206/18, đường số 20, phường 5, Gò Vấp, Hồ Chí Minh",
     status: "In Processing",
-    total: 1024 
+    total: 1024,
   },
   {
     id: 10004,
@@ -762,11 +762,11 @@ const orders = [
     orderDate: "2024-03-02",
     shippingDetailId: 1,
     firstName: "Đào Đức",
-    lastName : "Danh",
+    lastName: "Danh",
     phone: "0123456789",
     address: "206/18, đường số 20, phường 5, Gò Vấp, Hồ Chí Minh",
     status: "In Processing",
-    total: 1024 
+    total: 1024,
   },
   {
     id: 10005,
@@ -774,50 +774,133 @@ const orders = [
     orderDate: "2024-03-02",
     shippingDetailId: 2,
     firstName: "Đào Đức",
-    lastName : "Danh",
+    lastName: "Danh",
     phone: "0123456789",
     address: "206/18, đường số 20, phường 5, Gò Vấp, Hồ Chí Minh",
     status: "In Processing",
-    total: 1024 
-  }
-]
+    total: 1024,
+  },
+  {
+    address: "Hồ Chí Minh",
+    email: "daocongdanh47@gmail.com",
+    firstName: "Đào Đức ",
+    id: 7,
+    lastName: "Danh",
+    orderDate: "3/17/2024",
+    phone: "0392406660",
+    shippingDetailId: 3,
+    status: "In Processing",
+    total: 2020,
+    userId: 3,
+  },
+];
 const orderDetails = [
   {
     id: 1,
     productId: 1,
     orderId: 10000,
     quantity: 3,
-    size : "XL"
+    size: "XL",
   },
   {
     id: 2,
     productId: 2,
     orderId: 10000,
     quantity: 1,
-    size : "XL"
+    size: "XL",
   },
   {
     id: 3,
     productId: 3,
     orderId: 10000,
     quantity: 2,
-    size : "XL"
+    size: "XL",
   },
   {
     id: 4,
     productId: 4,
     orderId: 10000,
     quantity: 1,
-    size : "XL"
+    size: "XL",
   },
   {
     id: 5,
     productId: 5,
     orderId: 10000,
     quantity: 5,
-    size : "XL"
-  }
-]
+    size: "XL",
+  },
+  {
+    id: 6,
+    productId: 11,
+    orderId: 10001,
+    quantity: 3,
+    size: "XL",
+  },
+  {
+    id: 7,
+    productId: 12,
+    orderId: 10001,
+    quantity: 1,
+    size: "XL",
+  },
+  {
+    id: 8,
+    productId: 13,
+    orderId: 10001,
+    quantity: 2,
+    size: "XL",
+  },
+  {
+    id: 9,
+    productId: 14,
+    orderId: 10001,
+    quantity: 1,
+    size: "XL",
+  },
+  {
+    id: 10,
+    productId: 15,
+    orderId: 10001,
+    quantity: 5,
+    size: "XL",
+  },
+  {
+    id: 11,
+    productId: 20,
+    orderId: 10001,
+    quantity: 5,
+    size: "XL",
+  },
+  {
+    id: 12,
+    productId: 23,
+    orderId: 7,
+    quantity: 4,
+    size: "8",
+  },
+  {
+    id: 13,
+    productId: 33,
+    orderId: 7,
+    quantity: 4,
+    size: "8",
+  },
+  {
+    id: 14,
+    productId: 35,
+    orderId: 7,
+    quantity: 1,
+    size: "8",
+  },
+  {
+    id: 15,
+    productId: 12,
+    orderId: 7,
+    quantity: 4,
+    size: "8",
+  },
+];
 // localStorage.setItem("products", JSON.stringify(products));
 // localStorage.setItem("categories", JSON.stringify(categories));
 // localStorage.setItem("users", JSON.stringify(users));

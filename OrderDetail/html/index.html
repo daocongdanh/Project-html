@@ -103,7 +103,6 @@
         </nav>
       </div>
     </article>
-
     <article>
       <div class="container">
         <div class="row mb-4">
@@ -124,8 +123,7 @@
                   Wishlist
                   <i class="fa-solid fa-angle-right"></i>
                 </a>
-                <a class="list-group-item list-group-item-action"
-                  href="#">
+                <a class="list-group-item list-group-item-action" href="../html/information.html">
                   Personal Info
                   <i class="fa-solid fa-angle-right"></i>
                 </a>
@@ -144,76 +142,155 @@
               </div>
             </div>
           </div>
-          <!-- Orders -->
-          <div class="col-12 col-md-9 col-lg-8 offset-lg-1 orders-list" id="order-list">
-            <div class="card mb-3" style="width: 100%; padding: 32px; border-radius: 0px;">
-              <div class="card-body" style="background-color: #EEEEEE;">
-                <div class="row justify-content-center">
-                  <div class="col-6 col-lg-3">
-                    <h6 class="text-muted titleForm">Order No:</h6>
-                    <p class="valueForm">
-                      673290789
-                    </p>
-                  </div>
-                  <div class="col-6 col-lg-3">
-                    <h6 class="text-muted titleForm">Shipped date:</h6>
-                    <p class="valueForm">                
+          <!--Order Details-->
+          <div class="col-12 col-md-9 col-lg-8 offset-lg-1">
+            <div id="orderDetail" style="border-radius: 0px;">
+              <div class="mb-4" style="border: 1px solid #E5E5E5; padding: 32px; ">
+                <!--Infor Order-->
+                <div class="card-body" style="background-color: #EEEEEE;">
+                  <div class="row justify-content-center">
+                    <div class="col-6 col-lg-3">
+                      <h6 class="text-muted titleForm">Order No:</h6>
+                      <p class="valueForm">
+                        673290789
+                      </p>
+                    </div>
+                    <div class="col-6 col-lg-3">
+                      <h6 class="text-muted titleForm">Shipped date:</h6>
+                      <p class="valueForm">
                         01 Oct, 2019
-                    </p>
-                  </div>
-                  <div class="col-6 col-lg-3">
-                    <h6 class="text-muted titleForm">Status:</h6>
-                    <p class="valueForm">
-                      Awating Delivery
-                    </p>
-                  </div>
-                  <div class="col-6 col-lg-3">
-                    <h6 class="text-muted titleForm">Order Amount:</h6>
-                    <p class="valueForm">
-                      $259.00
-                    </p>
+                      </p>
+                    </div>
+                    <div class="col-6 col-lg-3">
+                      <h6 class="text-muted titleForm">Status:</h6>
+                      <p class="valueForm">
+                        Awating Delivery
+                      </p>
+                    </div>
+                    <div class="col-6 col-lg-3">
+                      <h6 class="text-muted titleForm">Order Amount:</h6>
+                      <p class="valueForm">
+                        $259.00
+                      </p>
+                    </div>
                   </div>
                 </div>
+                <!--Item list-->
+                <ul class="list-group item-list">
+                  <h5 class="pb-4 mt-4 " style=" border-bottom: 1px solid #E5E5E5 !important;">Order Items (<span>3</span>)</h5>
+                  <li class="list-group-item">
+                    <div class="row align-items-center">
+                      <div class="col-4 col-md-3 col-xl-2">
+                        <img src="../img/product-6.jpg" alt="" class="w-100">
+                      </div>
+                      <div class="col">
+                        <p class="mb-4 fs-sm fw-bold">
+                          <a class="text-body" href="product.html">Cotton floral print Dress x 1</a> <br>
+                          <span class="text-muted price">$40.00</span>
+                        </p>
+                        <div class="fs-sm text-muted">
+                          Size: M <br>
+                          Color: Red
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="list-group-item">
+                    <div class="row align-items-center">
+                      <div class="col-4 col-md-3 col-xl-2">
+                        <img src="../img/product-10.jpg" alt="" class="w-100">
+                      </div>
+                      <div class="col">
+                        <p class="mb-4 fs-sm fw-bold">
+                          <a class="text-body" href="product.html">Suede cross body Bag x 1</a> <br>
+                          <span class="text-muted price">$49.00</span>
+                        </p>
+                        <div class="fs-sm text-muted">
+                          Color: Brown
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="list-group-item">
+                    <div class="row align-items-center">
+                      <div class="col-4 col-md-3 col-xl-2">
+                        <img src="../img/product-48.jpg" alt="" class="w-100">
+                      </div>
+                      <div class="col">
+                        <p class="mb-4 fs-sm fw-bold">
+                          <a class="text-body" href="product.html">Sweatshirt with Pocket x 1</a> <br>
+                          <span class="text-muted price">$39.00</span>
+                        </p>
+                        <div class="fs-sm text-muted">
+                          Size: M <br>
+                          Color: Brown
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
               </div>
-              <div class="card-footer" style="border: 0px; background-color: white;">
-                <div class="row align-items-center">
-                  <div class="col-12 col-lg-6">
-                    <div class="row gx-5 mb-5 mb-lg-0">
-                      <div class="col-3">
-                        <div class="box-img">
-                          <img src="../img/product-10.jpg" alt="">
-                        </div>
-                      </div>
-                      <div class="col-3">
-                        <div class="box-img ">
-                          <img src="../img/product-120.jpg" alt="">
-                        </div>
-                      </div>
-                      <div class="col-3">
-                        <div class="box-img">
-                          <img src="../img/product-8.jpg" alt="">
-                        </div>
-                      </div>
-                      <div class="col-3">
-                        <div class="box-img d-flex justify-content-center align-items-center">
-                          <p style="font-weight: 500; font-size: 13px; margin: 0px;">+2<br>more</p>
-                        </div>
-                      </div>
-                    </div>
+              <!--Price list-->
+              <div class="price-list mb-4" style="border: 1px solid #E5E5E5; padding: 32px; ">
+                <h5 class="pb-4 ">Order Total</h5>
+                <ul class="list-group">
+                  <li class="list-group-item d-flex mb-1 border-0" style="padding: 20px 0px;">
+                    <span>Subtotal</span> <span class="ms-auto fs-sm">$128.00</span>
+                  </li>
+                  <li class="list-group-item d-flex mb-1 border-0" style="padding: 20px 0px;">
+                    <span>Tax</span> <span class="ms-auto fs-sm">$00.00</span>
+                  </li>
+                  <li class="list-group-item d-flex mb-1 border-0" style="padding: 20px 0px;">
+                    <span>Shipping</span> <span class="ms-auto fs-sm">$8.00</span>
+                  </li>
+                  <li class="list-group-item d-flex mb-1 border-0" style="padding: 20px 0px;">
+                    <span style="font-size: 18px; font-weight: 500;">Total</span> <span class="ms-auto fs-sm"
+                      style="font-size: 18px; font-weight: 500;">$136.00</span>
+                  </li>
+                </ul>
+              </div>
+              <!--Shipping Address-->
+              <div class="shipping-address" style="border: 1px solid #E5E5E5; padding: 32px; ">
+                <h5 class="mb-3">Order Items (<span>3</span>)</h5>
+                <div class="row">
+                  <div class="col-12 col-md-4">
+                    <p style="font-weight: 500;" class="mb-2">
+                      Billing Address:
+                    </p>
+                    <p class="mb-md-0 text-gray-500">
+                      Daniel Robinson, <br>
+                      3997 Raccoon Run, <br>
+                      Kingston, 45644, <br>
+                      United States, <br>
+                      6146389574
+                    </p>
                   </div>
-                  <div class="col-12 col-lg-6">
-                    <div class="row row-button">
-                      <div class="col-6" style="padding: 0px 10px !important;">
-                        <a class="btn btn-sm w-100 btn-outline-dark" href="../html/orderdetail.html">
-                          Order Details
-                        </a>
-                      </div>
-                      <div class="col-6" style="padding: 0px 10px !important;">
-                        <a class="btn btn-sm w-100 btn-outline-dark" href="#">
-                          Track order
-                        </a>
-                      </div>
-                    </div>
+                  <div class="col-12 col-md-4">
+                    <p style="font-weight: 500;" class="mb-2">
+                      Shipping Address:
+                    </p>
+                    <p class="mb-md-0 text-gray-500">
+                      Daniel Robinson, <br>
+                      3997 Raccoon Run, <br>
+                      Kingston, 45644, <br>
+                      United States, <br>
+                      6146389574
+                    </p>
+                  </div>
+                  <div class="col-12 col-md-4">
+                    <p style="font-weight: 500;" class="mb-2">
+                      Shipping Method:
+                    </p>
+                    <p class="mb-4 text-gray-500">
+                      Standart Shipping <br>
+                      (5 - 7 days)
+                    </p>
+                    <p style="font-weight: 500;" class="mb-2">
+                      Payment Method:
+                    </p>
+                    <p class="mb-0 text-gray-500">
+                      Debit Mastercard
+                    </p>
                   </div>
                 </div>
               </div>

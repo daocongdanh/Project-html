@@ -83,7 +83,7 @@ $(document).ready(function(){
     var shippingDetailId = parseInt($(".shipping").prev().filter(":checked").attr("data-id"));
     var orderDate = new Date().toLocaleDateString();
     var total = parseInt($("#total").text().substring(1));
-    var user = JSON.parse(localStorage.getItem("user"))[0];
+    var user = JSON.parse(localStorage.getItem("user"));
     var shipping = shippingDetails.filter(item => item.id == shippingDetailId)[0];
     const order = {
       id: orders.length + 1,
