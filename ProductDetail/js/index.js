@@ -1,13 +1,15 @@
+
 $(document).ready(function () {
   var productList = JSON.parse(localStorage.getItem("products"));
   var idProduct = parseInt(localStorage.getItem("idProduct"));
   var product = productList.filter(item => item.id ==idProduct)[0];
   const loadData = () => {
+
     // Hình ảnh và tên sản phẩm 
     $("#hinhanhminhhoa").attr("src",`../../Common/img/${product.thumbnail[0]}`);
     var htmlOptionImage =``;
     product.thumbnail.forEach((item, index) => {
-      htmlOptionImage += `<div class="box-item">
+      htmlOptionImage += `<div class="box-item mb-2">
                             <img style="border-bottom: 2px solid transparent;box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;" src="../../Common/img/${item}" class="opimg ${index == 0 ? 'selected' : ''}" alt="../../Common/img/${item}">
                           </div>`
     })
@@ -26,15 +28,52 @@ $(document).ready(function () {
     $("#categoryName").text(product.category);
     $("#productName").text(product.name);
     $("#color").text(product.color);
+    $("#wish").attr("data-id",product.id);
 
   }
-  const loadReviews = () =>{
+  const loadReviews = (page) =>{
      // Bình luận
     var reviewList = JSON.parse(localStorage.getItem("reviews"));
     var reviewsByProduct = reviewList.filter(item => item.productId == idProduct);
+
+    // Rate avg
+    var tong = 0;
+    reviewsByProduct.forEach(item => {
+      tong += item.rate;
+    })
+    tong = Math.ceil(tong / (reviewsByProduct.length));
+    var htmlRateAvg = ``;
+    for(let i=1;i<=5;i++){
+      if(i <= tong)
+        htmlRateAvg += `<i class="fa fa-star "></i>`;
+      else 
+        htmlRateAvg += `<i class="fa fa-star" style="color: #CCCCCC;"></i>`;
+    }
+    $("#avgRate1").html(htmlRateAvg + `<p class="review-count mb-0 ms-3">Reviews (${reviewsByProduct.length})</p>`);
+    $("#avgRate2").html(htmlRateAvg);
     $(".review-count").each(function(){
       $(this).text(`Reviews (${reviewsByProduct.length})`)
     })
+
+    var totalPage = Math.floor((reviewsByProduct.length)/3) + (((reviewsByProduct.length) % 3 == 0) ? 0 : 1);
+    var pagination = $("#pagination");
+    var pageActive = parseInt(pagination.find(".page-item.active").text());
+    var pageCurrent = pageActive;
+    // Pagination
+    if(page == -1 && pageActive == 1 || page == -2 && pageActive == totalPage)
+      return;
+    if(page == -1){ // prev
+      reviewsByProduct = reviewsByProduct.slice((pageActive-1 - 1)*3,(pageActive-1 - 1)*3+3);
+      pageCurrent = pageActive - 1;
+    }
+    else if(page == -2){ // next
+      reviewsByProduct = reviewsByProduct.slice((pageActive-1 + 1)*3,(pageActive-1 + 1)*3+3);
+      pageCurrent = pageActive + 1;
+    }
+    else{
+      reviewsByProduct = reviewsByProduct.slice((page-1)*3,(page-1)*3+3);
+      pageCurrent = page;
+    }
     var htmlReview = ``;
     reviewsByProduct.forEach(item => {
       htmlReview += `<div class="mb-4 box-review">
@@ -42,7 +81,7 @@ $(document).ready(function () {
                         <div class="row g-0">
                           <!--Avt-->
                           <div class="col-12 col-md-auto">
-                            <div class="d-flex justify-content-center align-items-center">
+                            <div class="d-flex mb-3">
                               <span class="rounded-circle box-avt"><i class="fa-solid fa-user"
                                   style="color : #CCCCCC; font-size: 30px"></i></span>
                             </div>
@@ -90,9 +129,79 @@ $(document).ready(function () {
                     </div>`
     })
     $("#review").html(htmlReview);
+    var htmlPagination = `<li class="page-item" data-page="-1">
+                            <span class="page-link" aria-label="Previous">
+                              <span aria-hidden="true"><i class="fa-solid fa-caret-left"></i></span>
+                            </span>
+                          </li>
+                          `
+        for(let i=1;i<=totalPage;i++){
+          htmlPagination += `<li class="page-item ${pageCurrent == i ? 'active' : ''}" data-page="${i}"><span class="page-link">${i}</span></li>`
+        }
+          htmlPagination +=
+                          `
+                          <li class="page-item" data-page="-2">
+                            <span class="page-link" aria-label="Next">
+                              <span aria-hidden="true"><i class="fa-solid fa-caret-right"></i></span>
+                            </span>
+                          </li>`;
+    pagination.html(htmlPagination)
   }
   loadData();
-  loadReviews();
+  loadReviews(1);
+
+  $(document).on("click",".page-item",function(){
+    var page = parseInt($(this).attr("data-page"));
+    loadReviews(page);
+  })
+  // Random 4 sp
+  const randomProduct = () => {
+    var productRandom = [];
+    while(1){
+      var index = Math.floor(Math.random() * productList.length);
+      var product = productList[index];
+      if(!productRandom.includes(product))
+        productRandom.push(product);
+      if(productRandom.length == 4)
+        break;
+    }
+
+    var htmlRandom = ``;
+    productRandom.forEach(item => {
+      htmlRandom += `<div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-12">
+                      <div class="item" data-id="${item.id}">
+                        <div class="redirect image" href="../../ProductDetail/html/product.html" data-id="${item.id}">
+                          <img src="../../Common/img/${item.thumbnail[0]}" class="image-front w-100" alt="">
+                          <img src="../../Common/img/${item.thumbnail[1]}" class="image-back w-100" alt="">
+                          ${item.sale > 0 ? '<span class="sale">SALE</span>' : ''}
+                          <div class="action">
+                            <button class="btn-quick-view action-item" data-bs-toggle="modal" data-bs-target="#myModal"><i class="fa-regular fa-eye"></i></button>
+                            <button class="addCart action-item"><i class="fa-solid fa-cart-shopping"></i></button>
+                            <button class="wish action-item"><i class="fa-regular fa-heart"></i></button>
+                          </div>
+                        </div>
+                        <p class="cate">${item.category}</p>
+                        <a class="redirect name d-block" href="../../ProductDetail/html/index.html" data-id="${item.id}">${item.name}</a>
+                        <p class="price">
+                        `
+                        if(item.sale === 0){
+                          htmlRandom += `<span class="price-only">$${item.price}</span>`
+                        }
+                        else{
+                          htmlRandom += `<span class="old">$${item.price}</span>
+                                  <span class="new">$${(item.price * (1-item.sale/100)).toFixed(0)}</span>`
+                        }
+                        htmlRandom += 
+                                        `
+                                        </p>
+                                      </div>
+                                    </div>`
+    })
+    $("#product-list").html(htmlRandom);
+  }
+  randomProduct();
+
+
   $('.radio-sneaker').click(function (state) { 
     document.querySelectorAll('.radio-sneaker').forEach((e) => {
       e.classList.remove('selected');
@@ -190,9 +299,10 @@ $(document).ready(function () {
       localStorage.setItem("reviews", JSON.stringify(reviewList));
       $("#comment").removeClass("show");
       alert("Đánh giá thành công");
-      loadReviews();
+      loadReviews(1);
     }
   })
+
+  // Add cart
+
 });
-
-

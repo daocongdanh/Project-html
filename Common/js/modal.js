@@ -30,6 +30,6 @@ $(document).ready(function () {
   // Image Modal
   $(document).on("click","#myModal .image .rd-img",function(){
     var img = $(this).attr("id");
-    $(".image #modal-image").attr("src",`../img/${img}`);
+    $(".image #modal-image").attr("src",`../../Common/img/${img}`);
   })
 });

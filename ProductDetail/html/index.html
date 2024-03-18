@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="../../Common/css/slick.css">
   <link rel="stylesheet" href="../../Common/css/slick-theme.css">
   <link rel="stylesheet" href="../../Common/css/style.css">
-  <link rel="stylesheet" href="../css/product.css">
+  <link rel="stylesheet" href="../css/style.css">
 </head>
 
 <body>
@@ -23,23 +23,23 @@
     </section>
     <nav class="navbar navbar-expand-xl">
       <div class="container">
-        <a class="navbar-brand d-none" href="#">Shopper</a>
+        <a class="navbar-brand d-none" href="../../Home/html/index.html">Shopper</a>
         <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse justify-content-between" id="collapsibleNavbar">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link" href="#">Home</a>
+              <a class="nav-link" href="../../Home/html/index.html">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Catalog</a>
+              <a class="nav-link" href="../../Product/html/index.html">Product</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Shop</a>
+              <a class="nav-link" href="../../About/html/index.html">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Pages</a>
+              <a class="nav-link" href="../../Member/html/index.html">Member</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Blogs</a>
@@ -50,20 +50,52 @@
           </ul>
           <div class="logo mx-8" href="#">Shopper</div>
           <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" href="#">United States
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">United States
                 <i class="fa-solid fa-angle-down"></i>
               </a>
+              <div class="dropdown-menu">
+                <div class="card">
+                  <div class="card-body">
+                    <ul class="list-group">
+                      <li class="list-group-item"><a href="#">United States</a></li>
+                      <li class="list-group-item"><a href="#">Canada</a></li>
+                      <li class="list-group-item"><a href="#">Germany</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
             </li>
-            <li class="nav-item">
-              <a class="nav-link border-left" href="#">USD
+            <li class="nav-item dropdown">
+              <a class="nav-link border-left dropdown-toggle" data-bs-toggle="dropdown" href="#">USD
                 <i class="fa-solid fa-angle-down"></i>
               </a>
+              <div class="dropdown-menu">
+                <div class="card">
+                  <div class="card-body">
+                    <ul class="list-group">
+                      <li class="list-group-item"><a href="#">USD</a></li>
+                      <li class="list-group-item"><a href="#">EUR</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
             </li>
-            <li class="nav-item">
-              <a class="nav-link border-left" href="#">EN
+            <li class="nav-item dropdown-item">
+              <a class="nav-link border-left dropdown-toggle" data-bs-toggle="dropdown" href="#">EN
                 <i class="fa-solid fa-angle-down"></i>
               </a>
+              <div class="dropdown-menu">
+                <div class="card">
+                  <div class="card-body">
+                    <ul class="list-group">
+                      <li class="list-group-item"><a href="#">English</a></li>
+                      <li class="list-group-item"><a href="#">French</a></li>
+                      <li class="list-group-item"><a href="#">German</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
             </li>
           </ul>
           <ul class="navbar-nav">
@@ -110,18 +142,20 @@
             <div class="row g-0">
               <!--Image left-->
               <div class="col-md-6">
-                <img src="../img/img-sneaker-white.jpg" style="box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;" class="img-fluid" alt="..." id="hinhanhminhhoa">
+                <img src="../img/img-sneaker-white.jpg" style="box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;"
+                  class="img-fluid" alt="..." id="hinhanhminhhoa">
                 <div id="sale" class="badge bg-primary card-badge" style="position: absolute; left: 0px; top: 23px; 
                 border-radius: 0px; background-color: #FF6F61 !important;">SALE</div>
                 <!--Option image-->
                 <div class="row mt-3" id="optionImage">
-                  <div class="box-item">
-                    <img src="../img/img-sneaker-white.jpg" style="border-bottom: 1px solid transparent;" class="opimg selected" alt="img-sneaker-white.jpg">
+                  <div class="box-item mb-2">
+                    <img src="../img/img-sneaker-white.jpg" style="border-bottom: 1px solid transparent;"
+                      class="opimg selected" alt="img-sneaker-white.jpg">
                   </div>
-                  <div class="box-item">
+                  <div class="box-item mb-2">
                     <img src="../img/product-122.jpg" class="opimg" alt="product-122.jpg">
                   </div>
-                  <div class="box-item">
+                  <div class="box-item mb-2">
                     <img src="../img/img-sneaker.jpg" class="opimg" alt="img-sneaker.jpg">
                   </div>
                 </div>
@@ -133,7 +167,7 @@
                   <div class="row d-flex">
                     <div class="d-flex justify-content-between align-items-center">
                       <a href="#" style="text-decoration: none; color: #838583;" id="categoryName">Sneakers</a>
-                      <div class="d-flex justify-content-end align-items-center">
+                      <div class="d-flex justify-content-end align-items-center" id="avgRate1">
                         <i class="fa fa-star "></i>
                         <i class="fa fa-star"></i>
                         <i class="fa fa-star"></i>
@@ -145,7 +179,8 @@
                   </div>
                   <h1 class="card-title" id="productName">Leather Sneakers</h1>
                   <div class="price" id="price">
-                    <span class="text-decoration-line-through text-gray-350 fw-bold" style="color:#838583">$115.00</span>
+                    <span class="text-decoration-line-through text-gray-350 fw-bold"
+                      style="color:#838583">$115.00</span>
                     <span class="ms-1 fs-5 fw-bolder " style="color:#FF6F61">$85.00</span>
                     <span>(In stock)</span>
                   </div>
@@ -154,12 +189,12 @@
                     <!--Color-->
                     <div class="mb-3">
                       <label for="color" class="form-label">Color: </label>
-                      <b id="color">White</b>
+                      <b id="color" style="font-weight: 500;">White</b>
                     </div>
                     <!--Size-->
                     <div class="mb-3">
                       <label for="size" class="form-label">Size: </label>
-                      <b id="sizeChoose">7.5 US</b>
+                      <b id="sizeChoose" style="font-weight: 500;">7.5 US</b>
                     </div>
                     <!--Option size-->
                     <div class="mb-3">
@@ -249,7 +284,7 @@
 
                                   </div>
                                 </div>
-                                <table class="table table-size">
+                                <table class="table table-size table-hover">
                                   <thead>
                                     <tr>
                                       <th class="fw-medium">Size</th>
@@ -315,7 +350,7 @@
                                 </div>
                                 <div class="row">
                                   <div class="col">
-                                    <table class="table table-size">
+                                    <table class="table table-size table-hover">
                                       <thead>
                                         <tr>
                                           <th class="fw-medium">Size</th>
@@ -361,7 +396,7 @@
                                     </table>
                                   </div>
                                   <div class="col">
-                                    <table class="table table-size">
+                                    <table class="table table-size table-hover">
                                       <thead>
                                         <tr>
                                           <th class="fw-medium">Size</th>
@@ -408,9 +443,9 @@
                     <!--Button box-->
                     <div class="mb-3 box-button">
                       <div class="row">
-                        <div class="col-12 col-lg-auto">
-                          <select class="form-select form-select-lg mb-3  btn-form w-100"
-                            aria-label=".form-select-lg example" style="padding: 14px 72px 14px 24px;">
+                        <div class="col-12 col-lg-auto mb-1">
+                          <select class="form-select form-select-lg mb-3 btn-form w-100 selectQuantity"
+                            aria-label=".form-select-lg example" style="padding: 14px 72px 14px 24px; font-size: 16px;">
                             <option value="1" selected>1</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
@@ -418,15 +453,15 @@
                             <option value="5">5</option>
                           </select>
                         </div>
-                        <div class="col-12 col-lg">
-                          <button class="btn btn-dark btn-form w-100" type="submit">
-                            <h5>Add to Cart</h5>
+                        <div class="col-12 col-lg mb-1">
+                          <button class="btn btn-dark btn-form w-100">
+                            <h5 style="font-size: 16px;">Add to Cart</h5>
                             <i class="fa-solid fa-cart-shopping"></i>
                           </button>
                         </div>
-                        <div class="col-12 col-lg-auto">
-                          <button class="btn btn-outline-dark btn-form w-100">
-                            <h5>Wishlist</h5>
+                        <div class="item col-12 col-lg-auto mb-1"  id="wish" data-id="0">
+                          <button class="wish btn btn-outline-dark btn-form w-100">
+                            <h5 style="font-size: 16px;">Wishlist</h5>
                             <i class="fa-regular fa-heart"></i>
                           </button>
                         </div>
@@ -523,7 +558,7 @@
                   </div>
                   <!--Share button-->
                   <span class="d-flex align-items-center">
-                    <p class="me-2">Share:</p>
+                    <p class="m-0 me-2">Share:</p>
                     <ul class="list-unstyled d-flex">
                       <li class="share-icon"><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
                       <li class="share-icon"><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
@@ -608,7 +643,7 @@
           </div>
           <div class="collapse" id="shipAndReturn">
             <div class="card card-body" style="max-width: 800px; margin-left: auto; margin-right: auto;">
-              <table class="table table-size">
+              <table class="table table-size table-hover">
                 <thead>
                   <tr>
                     <th class="fw-medium">Shipping Options</th>
@@ -649,69 +684,85 @@
       </div>
     </article>
 
-    <article style="margin-top: 100px;">
+    <article style="margin-top: 100px;" id="productList">
       <div class="container">
         <h3 class="text-center mb-5">You might also like</h3>
-        <div class="row">
-          <div class="col">
-            <div class="card">
-              <div class="card-img">
-                <a href="#">
-                  <img src="../img/product-5.jpg" class="w-100" alt="">
-                </a>
+        <div class="row" id="product-list">
+          <div class="col-xl-3 col-lg-3 col-md-6">
+            <div class="item">
+              <div class="image">
+                <img src="../../Common/img/200579348-1-white.jpg" class="image-front w-100" alt="">
+                <img src="../../Common/img/200579348-2.jpg" class="image-back w-100" alt="">
+                <div class="action">
+                  <button class="action-item" data-bs-toggle="modal" data-bs-target="#myModal"><i class="fa-regular fa-eye"></i></button>
+                  <button class="action-item"><i class="fa-solid fa-cart-shopping"></i></button>
+                  <button class="action-item"><i class="fa-regular fa-heart"></i></button>
+                </div>
               </div>
-              <div class="card-body">
-                <p class="mb-1">Shoes</p>
-                <h5 class="mb-1">Leather mid-heel Sandals</h5>
-                <h6>$129.00</h6>
-              </div>
+              <p class="cate">Shoes</p>
+              <p class="name">Leather mid-heel Sandals</p>
+              <p class="price">
+                <span class="price-only">$129.00</span>
+              </p>
             </div>
           </div>
-          <div class="col">
-            <div class="card">
-              <div class="card-img">
-                <a href="#">
-                  <img src="../img/product-6.jpg" class="w-100" alt="">
-                </a>
+          <div class="col-xl-3 col-lg-3 col-md-6">
+            <div class="item">
+              <div class="image">
+                <img src="../../Common/img/200603634-1-midwashblue.jpg" class="image-front w-100" alt="">
+                <img src="../../Common/img/200603634-2.jpg" class="image-back w-100" alt="">
+                <div class="action">
+                  <button class="action-item"><i class="fa-regular fa-eye"></i></button>
+                  <button class="action-item"><i class="fa-solid fa-cart-shopping"></i></button>
+                  <button class="action-item"><i class="fa-regular fa-heart"></i></button>
+                </div>
               </div>
-              <div class="card-body">
-                <p class="mb-1">Shoes</p>
-                <h5 class="mb-1">Leather mid-heel Sandals</h5>
-                <h6>$129.00</h6>
-              </div>
+              <p class="cate">Dresses</p>
+              <p class="name">Cotton floral print Dress</p>
+              <p class="price">
+                <span class="price-only">$40.00</span>
+              </p>
             </div>
           </div>
-          <div class="col">
-            <div class="card">
-              <div class="card-img">
-                <a href="#">
-                  <img src="../img/img-sneaker-white.jpg" class="w-100" alt="">
-                </a>
+          <div class="col-xl-3 col-lg-3 col-md-6">
+            <div class="item">
+              <div class="image">
+                <img src="../../Common/img/200895910-1-lightwashblue.jpg" class="image-front w-100" alt="">
+                <img src="../../Common/img/200895910-2.jpg" class="image-back w-100" alt="">
+                <div class="action">
+                  <button class="action-item"><i class="fa-regular fa-eye"></i></button>
+                  <button class="action-item"><i class="fa-solid fa-cart-shopping"></i></button>
+                  <button class="action-item"><i class="fa-regular fa-heart"></i></button>
+                </div>
               </div>
-              <div class="card-body">
-                <p class="mb-1">Shoes</p>
-                <h5 class="mb-1">Leather mid-heel Sandals</h5>
-                <h6>$129.00</h6>
-              </div>
+              <p class="cate">Shoes</p>
+              <p class="name">Leather Sneakers</p>
+              <p class="price">
+                <span class="old">$85.00</span>
+                <span class="new">$60.00</span>
+              </p>
             </div>
           </div>
-          <div class="col">
-            <div class="card">
-              <div class="card-img">
-                <a href="#">
-                  <img src="../img/product-8.jpg" class="w-100" alt="">
-                </a>
+          <div class="col-xl-3 col-lg-3 col-md-6">
+            <div class="item">
+              <div class="image">
+                <img src="../../Common/img/201351725-1-black.jpg" class="image-front w-100" alt="">
+                <img src="../../Common/img/201351725-2.jpg" class="image-back w-100" alt="">
+                <div class="action">
+                  <button class="action-item"><i class="fa-regular fa-eye"></i></button>
+                  <button class="action-item"><i class="fa-solid fa-cart-shopping"></i></button>
+                  <button class="action-item"><i class="fa-regular fa-heart"></i></button>
+                </div>
               </div>
-              <div class="card-body">
-                <p class="mb-1">Shoes</p>
-                <h5 class="mb-1">Leather mid-heel Sandals</h5>
-                <h6>$129.00</h6>
-              </div>
+              <p class="cate">Bags</p>
+              <p class="name">Suede cross body Bag</p>
+              <p class="price">
+                <span class="old">$79.00</span>
+                <span class="new">$49.00</span>
+              </p>
+              </p>
             </div>
           </div>
-
-
-
         </div>
       </div>
 
@@ -729,17 +780,15 @@
               <option value="2">Oldest</option>
             </select>
           </div>
-          <div class="col-12 col-md text-md-center">
-            <div class="row d-flex">
-              <div class="d-flex justify-content-center align-items-center">
-                <i class="fa fa-star "></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star" style="color: #CCCCCC;"></i>
-                <p class="review-count mb-0 ms-3">Reviews (3)</p>
-              </div>
+          <div class="col-12 col-md star-comment">
+            <div class="d-flex justify-content-center align-items-center" id="avgRate2">
+              <i class="fa fa-star" style="font-size: 18px;"></i>
+              <i class="fa fa-star" style="font-size: 18px;"></i>
+              <i class="fa fa-star" style="font-size: 18px;"></i>
+              <i class="fa fa-star" style="font-size: 18px;"></i>
+              <i class="fa fa-star" style="color: #CCCCCC; font-size: 18px;"></i>
             </div>
+            <b class="review-count mb-0 ms-3" style="margin: 8px !important; font-size: 15px; font-weight: 500;">Reviews (3)</b>
           </div>
           <div class="col-12 col-md-auto">
             <button class="btn btn-dark btn-lg" type="button" data-bs-toggle="collapse" data-bs-target="#comment"
@@ -748,7 +797,7 @@
             </button>
           </div>
         </div>
-         <!--Collapse Review-->
+        <!--Collapse Review-->
         <div class="row">
           <div class="collapse collapse-comment" id="comment">
             <!--Form Review-->
@@ -760,13 +809,13 @@
                     <p class="m-0">Score:</p>
                     <ul id='stars' class="p-0 list-unstyled d-flex" data-star="3">
                       <li class='star' value="1">
-                        <i class='fa fa-star star-review' ></i>
+                        <i class='fa fa-star star-review'></i>
                       </li>
                       <li class='star' value="2">
-                        <i class='fa fa-star star-review' ></i>
+                        <i class='fa fa-star star-review'></i>
                       </li>
                       <li class='star' value="3">
-                        <i class='fa fa-star star-review' ></i>
+                        <i class='fa fa-star star-review'></i>
                       </li>
                       <li class='star' value="4">
                         <i class='fa fa-star star-review' style="color: #CCCCCC;"></i>
@@ -797,7 +846,7 @@
                       </div>
                     </div>
                   </div>
-                  
+
                   <div class="w-100 d-flex justify-content-center align-items-center">
                     <button id="postReview" type="submit" class="btn btn-outline-dark btn-lg"> Post Review</button>
                   </div>
@@ -813,7 +862,7 @@
               <div class="row g-0">
                 <!--Avt-->
                 <div class="col-12 col-md-auto">
-                  <div class="d-flex justify-content-center align-items-center">
+                  <div class="d-flex mb-3">
                     <span class="rounded-circle box-avt"><i class="fa-solid fa-user"
                         style="color : #CCCCCC; font-size: 30px"></i></span>
                   </div>
@@ -835,7 +884,8 @@
                     </div>
                   </div>
                   <h5 class="mb-2" style="font-size: 18px;">So cute!</h5>
-                  <p class="text-gray-500 mb-5">Justo ut diam erat hendrerit. Morbi porttitor, per eu. Sodales curabitur diam
+                  <p class="text-gray-500 mb-5">Justo ut diam erat hendrerit. Morbi porttitor, per eu. Sodales curabitur
+                    diam
                     sociis. Taciti lobortis nascetur. Ante laoreet odio hendrerit. Dictumst curabitur nascetur lectus
                     potenti dis sollicitudin habitant quis vestibulum.
                   </p>
@@ -861,11 +911,32 @@
             </div>
           </div>
         </div>
+        <div class="d-flex justify-content-center mb-5">
+          <nav aria-label="Page navigation example">
+            <ul class="pagination" id="pagination">
+              <li class="page-item" data-page="-1">
+                <a class="page-link" href="#" aria-label="Previous">
+                  <span aria-hidden="true"><i class="fa-solid fa-caret-left"></i></span>
+                </a>
+              </li>
+              <li class="page-item active" data-page="1"><a class="page-link" href="#">1</a></li>
+              <li class="page-item" data-page="2"><a class="page-link" href="#">2</a></li>
+              <li class="page-item" data-page="3"><a class="page-link" href="#">3</a></li>
+              <li class="page-item" data-page="4"><a class="page-link" href="#">4</a></li>
+              <li class="page-item" data-page="5"><a class="page-link" href="#">5</a></li>
+              <li class="page-item" data-page="-2">
+                <a class="page-link" href="#" aria-label="Next">
+                  <span aria-hidden="true"><i class="fa-solid fa-caret-right"></i></span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
       </div>
     </article>
   </section>
   <!-- Sec-util -->
-  <div class="sec-util" style="background: #f5f5f5;">
+  <div class="sec-util" style="background-color: #f5f5f5;">
     <div class="container">
       <div class="row">
         <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12 mb-4">
@@ -989,12 +1060,12 @@
           <div class="col-12 d-flex justify-content-between">
             <p>© 2019 All rights reserved. Designed by Unvab.</p>
             <div class="list">
-              <span class="card-item"><img src="../img/card-1.svg" alt=""></span>
-              <span class="card-item"><img src="../img/card-2.svg" alt=""></span>
-              <span class="card-item"><img src="../img/card-3.svg" alt=""></span>
-              <span class="card-item"><img src="../img/card-4.svg" alt=""></span>
-              <span class="card-item"><img src="../img/card-5.svg" alt=""></span>
-              <span class="card-item"><img src="../img/card-6.svg" alt=""></span>
+              <span class="card-item"><img src="../../Common/img/card-1.svg" alt=""></span>
+              <span class="card-item"><img src="../../Common/img/card-2.svg" alt=""></span>
+              <span class="card-item"><img src="../../Common/img/card-3.svg" alt=""></span>
+              <span class="card-item"><img src="../../Common/img/card-4.svg" alt=""></span>
+              <span class="card-item"><img src="../../Common/img/card-5.svg" alt=""></span>
+              <span class="card-item"><img src="../../Common/img/card-6.svg" alt=""></span>
             </div>
           </div>
         </div>
@@ -1002,6 +1073,90 @@
     </div>
   </footer>
   <!-- End Footer -->
+  <!-- Modal -->
+  <div class="modal modal-xl" id="myModal" data-id="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="row m-0">
+          <div class="col-5 p-0">
+            <div class="left">
+              <div class="image">
+                <img id="modal-image" src="../../Common/img/modal-1.jpg" alt="">
+              </div>
+              <button class="product-info">More Product Info <span><i class="fa-solid fa-circle-info"></i></span></button>
+            </div>
+          </div>
+          <div class="col-7 p-0">
+            <div class="right">
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              <h2 class="name">Leather Sneakers</h2>
+              <p class="price">$85.00
+                <span> (In Stock)</span>
+              </p>
+              <p class="color">Color: <span id="color">White</span></p>
+              <div class="image" id="imageModal">
+                <input class="rd-img" type="radio" id="image1" name="image" checked value="1" />
+                <label class="lb1" for="image1"></label>
+                <input class="rd-img" type="radio" id="image2" name="image" value="2"/>
+                <label class="lb2" for="image2"></label>
+              </div>
+              <p class="size">Size: <span id="size">8 US</span></p>
+              <div class="size-list">
+                <input type="radio" class="btn-check" name="options-base" id="size1" autocomplete="off">
+                <label class="size-input btn" for="size1">6</label>
+                <input type="radio" class="btn-check" name="options-base" id="size2" autocomplete="off" disabled>
+                <label class="size-input through btn" for="size2">6.5</label>
+                <input type="radio" class="btn-check" name="options-base" id="size3" autocomplete="off" >
+                <label class="size-input btn" for="size3">7</label>
+                <input type="radio" class="btn-check" name="options-base" id="size4" autocomplete="off">
+                <label class="size-input btn" for="size4">7.5</label>
+                <input type="radio" class="btn-check" name="options-base" id="size5" autocomplete="off" checked>
+                <label class="size-input btn" for="size5">8</label>
+                <input type="radio" class="btn-check" name="options-base" id="size6" autocomplete="off" >
+                <label class="size-input btn" for="size6">8.5</label>
+                <input type="radio" class="btn-check" name="options-base" id="size7" autocomplete="off" disabled>
+                <label class="size-input through btn" for="size7">9</label>
+                <input type="radio" class="btn-check" name="options-base" id="size8" autocomplete="off" disabled>
+                <label class="size-input through btn" for="size8">9.5</label>
+                <input type="radio" class="btn-check" name="options-base" id="size9" autocomplete="off" >
+                <label class="size-input btn" for="size9">10</label>
+                <input type="radio" class="btn-check" name="options-base" id="size10" autocomplete="off" >
+                <label class="size-input btn" for="size10">10.5</label>
+                <input type="radio" class="btn-check" name="options-base" id="size11" autocomplete="off" >
+                <label class="size-input btn" for="size11">11</label>
+                <input type="radio" class="btn-check" name="options-base" id="size12" autocomplete="off" >
+                <label class="size-input btn" for="size12">12</label>
+                <input type="radio" class="btn-check" name="options-base" id="size13" autocomplete="off" >
+                <label class="size-input btn" for="size13">13</label>
+                <input type="radio" class="btn-check" name="options-base" id="size14" autocomplete="off" >
+                <label class="size-input btn" for="size14">14</label>
+              </div>
+              <div class="button-modal">
+                <div class="row d-flex align-items-center">
+                  <div class="col-3">
+                    <select class="quantity form-select" id="quantity">
+                      <option selected value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                    </select>
+                  </div>
+                  <div class="col-6">
+                    <button class="add-cart w-100">Add to Cart <span><i class="fa-solid fa-cart-shopping"></i></span></button>
+                  </div>
+                  <div class="item col-3" data-id="1">
+                    <button class="wish">Wish <span><i class="fa-regular fa-heart"></i></span></button>
+                  </div>  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Modal -->
 
   <!-- Search -->
   <div class="search offcanvas offcanvas-end"  id="search">
@@ -1046,6 +1201,7 @@
     </div>
   </div>
   <!-- End Search -->
+
   <!-- Wish List -->
   <div class="wishList offcanvas offcanvas-end"  id="wishList">
     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -1074,6 +1230,7 @@
     </div>
   </div>
   <!-- End Wish List -->
+
   <!-- Cart -->
   <div class="cart offcanvas offcanvas-end" id="cart-modal">
     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -1142,6 +1299,8 @@
   <script src="../../Common/js/modal.js"></script>
   <script src="../../Common/js/cart.js"></script>
   <script src="../../Common/js/search.js"></script>
-  <script src="../js/product.js"></script>
+  <script src="../../Common/js/wishList.js"></script>
+  <script type="module" src="../js/index.js"></script>
 </body>
+
 </html>

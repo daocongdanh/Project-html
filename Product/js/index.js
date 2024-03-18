@@ -68,8 +68,8 @@ $(document).ready(function () {
       htmlProducts += `<div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
                         <div class="item" data-id="${item.id}">
                           <div class="redirect image" href="../../ProductDetail/html/product.html" data-id="${item.id}">
-                            <img src="../img/${item.thumbnail[0]}" class="image-front w-100" alt="">
-                            <img src="../img/${item.thumbnail[1]}" class="image-back w-100" alt="">
+                            <img src="../../Common/img/${item.thumbnail[0]}" class="image-front w-100" alt="">
+                            <img src="../../Common/img/${item.thumbnail[1]}" class="image-back w-100" alt="">
                             ${item.sale > 0 ? '<span class="sale">SALE</span>' : ''}
                             <div class="action">
                               <button class="btn-quick-view action-item" data-bs-toggle="modal" data-bs-target="#myModal"><i class="fa-regular fa-eye"></i></button>
@@ -78,7 +78,7 @@ $(document).ready(function () {
                             </div>
                           </div>
                           <p class="cate">${item.category}</p>
-                          <a class="redirect name d-block" href="../../ProductDetail/html/product.html" data-id="${item.id}">${item.name}</a>
+                          <a class="redirect name d-block" href="../../ProductDetail/html/index.html" data-id="${item.id}">${item.name}</a>
                           <p class="price">
                           `
                           if(item.sale === 0){
