@@ -42,7 +42,7 @@ $(document).ready(function () {
                   <h5 class="pb-4 mt-4 " style=" border-bottom: 1px solid #E5E5E5 !important;">Order Items (<span>${orderDetailsByOrder.length}</span>)</h5>
                   `
                   orderDetailsByOrder.forEach(od => {
-                    var product = productList.filter(p => p.id == od.productId)[0];
+                    var product = productList.filter(p => p.id === od.productId)[0];
                     html += `<li class="list-group-item">
                               <div class="row align-items-center">
                                 <div class="col-4 col-md-3 col-xl-2">

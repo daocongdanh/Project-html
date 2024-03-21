@@ -65,7 +65,7 @@ $(document).ready(function () {
                           <div class="col-12 col-lg-6">
                             <div class="row row-button">
                               <div class="col-6" style="padding: 0px 10px !important;">
-                                <a class="btn btn-sm w-100 btn-outline-dark" href="../html/orderdetail.html" data-id="${item.id}">
+                                <a class="more btn btn-sm w-100 btn-outline-dark" href="../../OrderDetail/html/index.html" data-id="${item.id}">
                                   Order Details
                                 </a>
                               </div>

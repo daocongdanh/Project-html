@@ -59,11 +59,11 @@ $(document).ready(function () {
       cart.forEach(item => {
         htmlCartModal += `<li class="item" data-id="${item.product.id}">
                             <div class="row align-items-center">
-                              <div class="col-4">
+                              <a class="redirect col-4 d-block" href="../../ProductDetail/html/index.html" data-id="${item.product.id}">
                                 <img src="../../Common/img/${item.product.thumbnail[0]}" alt="">
-                              </div>
+                              </a>
                               <div class="col-8">
-                                <p class="name">${item.product.name}</p>
+                                <a class="redirect name d-block" href="../../ProductDetail/html/index.html" data-id="${item.product.id}">${item.product.name}</a>
                                 <span class="price">$
                                 ${(item.product.price*(1-item.product.sale/100)).toFixed(0)}</span>
                                 <p class="m-0 price">Size: ${item.size}</p>

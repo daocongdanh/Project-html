@@ -450,9 +450,9 @@
                     <label class="form-check-label" for="check53">$200.00 and Up</label>
                   </div>
                   <div id="price-filter" class="d-flex justify-content-between align-items-center mt-3">
-                    <input type="number" class="form-control" placeholder="$10.00">
+                    <input type="number" min="10" max="350" class="form-control" placeholder="$10.00">
                     <div class="text-gray-350 mx-2">-</div>
-                    <input type="number" class="form-control" placeholder="$350.00">
+                    <input type="number" min="10" max="350" class="form-control" placeholder="$350.00">
                   </div>
                 </div>
               </div>
@@ -509,7 +509,7 @@
             </div>
             <div class="col-xl-3 col-lg-3 col-md-4 col-sm-12 col-12 mb-3">
               <select class="form-select" id="filter-sort">
-                <option value="All">All</option>
+                <option value="Default">Default</option>
                 <option value="Highest price">Highest price</option>
                 <option value="Lowest price">Lowest price</option>
               </select>
@@ -643,7 +643,7 @@
   <!-- End Content -->
 
   <!-- Sec-util -->
-  <div class="sec-util">
+  <div class="sec-util" style="background-color: #f5f5f5;">
     <div class="container">
       <div class="row">
         <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12 mb-4">
@@ -791,7 +791,7 @@
               <div class="image">
                 <img id="modal-image" src="../../Common/img/modal-1.jpg" alt="">
               </div>
-              <button class="product-info">More Product Info <span><i class="fa-solid fa-circle-info"></i></span></button>
+              <a id="more-info" class="product-info redirect d-block text-center" data-id="0" href="../../ProductDetail/html/index.html">More Product Info <span><i class="fa-solid fa-circle-info"></i></span></a>
             </div>
           </div>
           <div class="col-7 p-0">
@@ -810,34 +810,34 @@
               </div>
               <p class="size">Size: <span id="size">8 US</span></p>
               <div class="size-list">
-                <input type="radio" class="btn-check" name="options-base" id="size200" autocomplete="off">
-                <label class="size-input btn" for="size200">6</label>
-                <input type="radio" class="btn-check" name="options-base" id="size201" autocomplete="off" disabled>
-                <label class="size-input through btn" for="size201">6.5</label>
-                <input type="radio" class="btn-check" name="options-base" id="size203" autocomplete="off" >
-                <label class="size-input btn" for="size203">7</label>
-                <input type="radio" class="btn-check" name="options-base" id="size204" autocomplete="off" >
-                <label class="size-input btn" for="size204">7.5</label>
-                <input type="radio" class="btn-check" name="options-base" id="size205" autocomplete="off" checked>
-                <label class="size-input btn" for="size205">8</label>
-                <input type="radio" class="btn-check" name="options-base" id="size206" autocomplete="off" >
-                <label class="size-input btn" for="size206">8.5</label>
-                <input type="radio" class="btn-check" name="options-base" id="size207" autocomplete="off" disabled>
-                <label class="size-input through btn" for="size207">9</label>
-                <input type="radio" class="btn-check" name="options-base" id="size208" autocomplete="off" disabled>
-                <label class="size-input through btn" for="size208">9.5</label>
-                <input type="radio" class="btn-check" name="options-base" id="size209" autocomplete="off" >
-                <label class="size-input btn" for="size209">10</label>
-                <input type="radio" class="btn-check" name="options-base" id="size210" autocomplete="off" >
-                <label class="size-input btn" for="size210">10.5</label>
-                <input type="radio" class="btn-check" name="options-base" id="size211" autocomplete="off" >
-                <label class="size-input btn" for="size211">11</label>
-                <input type="radio" class="btn-check" name="options-base" id="size212" autocomplete="off" >
-                <label class="size-input btn" for="size212">12</label>
-                <input type="radio" class="btn-check" name="options-base" id="size213" autocomplete="off" >
-                <label class="size-input btn" for="size213">13</label>
-                <input type="radio" class="btn-check" name="options-base" id="size214" autocomplete="off" >
-                <label class="size-input btn" for="size214">14</label>
+                <input type="radio" class="btn-check" name="options-base" id="size1" autocomplete="off">
+                <label class="size-input btn" for="size1">6</label>
+                <input type="radio" class="btn-check" name="options-base" id="size2" autocomplete="off" disabled>
+                <label class="size-input through btn" for="size2">6.5</label>
+                <input type="radio" class="btn-check" name="options-base" id="size3" autocomplete="off" >
+                <label class="size-input btn" for="size3">7</label>
+                <input type="radio" class="btn-check" name="options-base" id="size4" autocomplete="off" >
+                <label class="size-input btn" for="size4">7.5</label>
+                <input type="radio" class="btn-check" name="options-base" id="size5" autocomplete="off" checked>
+                <label class="size-input btn" for="size5">8</label>
+                <input type="radio" class="btn-check" name="options-base" id="size6" autocomplete="off" >
+                <label class="size-input btn" for="size6">8.5</label>
+                <input type="radio" class="btn-check" name="options-base" id="size7" autocomplete="off" disabled>
+                <label class="size-input through btn" for="size7">9</label>
+                <input type="radio" class="btn-check" name="options-base" id="size8" autocomplete="off" disabled>
+                <label class="size-input through btn" for="size8">9.5</label>
+                <input type="radio" class="btn-check" name="options-base" id="size9" autocomplete="off" >
+                <label class="size-input btn" for="size9">10</label>
+                <input type="radio" class="btn-check" name="options-base" id="size10" autocomplete="off" >
+                <label class="size-input btn" for="size10">10.5</label>
+                <input type="radio" class="btn-check" name="options-base" id="size11" autocomplete="off" >
+                <label class="size-input btn" for="size11">11</label>
+                <input type="radio" class="btn-check" name="options-base" id="size12" autocomplete="off" >
+                <label class="size-input btn" for="size12">12</label>
+                <input type="radio" class="btn-check" name="options-base" id="size13" autocomplete="off" >
+                <label class="size-input btn" for="size13">13</label>
+                <input type="radio" class="btn-check" name="options-base" id="size14" autocomplete="off" >
+                <label class="size-input btn" for="size14">14</label>
               </div>
               <div class="button-modal">
                 <div class="row d-flex align-items-center">
@@ -1005,6 +1005,7 @@
   <script src="../../Common/js/cart.js"></script>
   <script src="../../Common/js/search.js"></script>
   <script src="../../Common/js/wishList.js"></script>
+  <script src="../../Common/js/redirect.js"></script>
   <script src="../js/index.js"></script>
 </body>
 </html>

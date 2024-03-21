@@ -40,7 +40,7 @@ $(document).ready(function () {
                         </div>
                         ${item.sale > 0 ? '<span class="sale">SALE</span>' : ''}
                       </div>
-                      <p class="name">${item.name}</p>
+                      <a class="redirect name d-block" href="../../ProductDetail/html/index.html" data-id="${item.id}">${item.name}</a>
                       <p class="price">
                       `;
                       if(item.sale === 0){

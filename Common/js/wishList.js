@@ -8,12 +8,12 @@ $(document).ready(function () {
       wishLists.forEach(item => {
         htmlWishLists += `<li class="item">
                             <div class="row">
-                              <div class="col-3">
+                              <a class="redirect col-3 d-block" href="../../ProductDetail/html/index.html" data-id="${item.id}">
                                 <img src="../../Common/img/${item.thumbnail[0]}" alt="">
-                              </div>
+                              </a>
                               <div class="col-9 d-flex flex-column justify-content-between">
                                 <div class="top">
-                                  <p class="name">${item.name}</p>
+                                  <a class=" redirect name d-block" href="../../ProductDetail/html/index.html" data-id="${item.id}">${item.name}</a>
                                   <span class="price">$${(item.price*(1-item.sale/100)).toFixed(0)}</span>
                                 </div>
                                 <div class="bot">

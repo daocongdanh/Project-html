@@ -21,12 +21,64 @@ $(document).ready(function () {
       element.remove();
     }
   })
+  // Search
+  $("#allProducts").click(function(){
+    const tagList = $(".tag");
+    const all = tagList.filter(function(){
+      return $(this).attr("data-value") == "all";
+    }).map(function(){
+      return $(this).text();
+    }).toArray();
+
+    const categoryList = tagList.filter(function(){
+      return $(this).attr("data-value") == "category";
+    }).map(function(){
+      return $(this).text();
+    }).toArray();
+
+    const seasonList = tagList.filter(function(){
+      return $(this).attr("data-value") == "season";
+    }).map(function(){
+      return $(this).text();
+    }).toArray();
+
+    const sizeList = tagList.filter(function(){
+      return $(this).attr("data-value") == "size";
+    }).map(function(){
+      return $(this).text();
+    }).toArray();
+
+    const colorList = tagList.filter(function(){
+      return $(this).attr("data-value") == "color";
+    }).map(function(){
+      return $(this).text();
+    }).toArray();
+
+    const brandList = tagList.filter(function(){
+      return $(this).attr("data-value") == "brand";
+    }).map(function(){
+      return $(this).text();
+    }).toArray();
+
+    var priceArray = [];
+    const priceList = tagList.filter(function(){
+      return $(this).attr("data-value") == "price";
+    }).toArray();
+    priceList.forEach(item => {
+      priceArray.push(item.getAttribute("data-from"));
+      priceArray.push(item.getAttribute("data-to"));
+    })
+    priceArray = priceArray.map(item => parseInt(item)).sort((o1,o2) => o1-o2);
+    var sort = $("#filter-sort").val();
+    search(all,sort,1,categoryList,seasonList,sizeList,colorList,brandList, priceArray);
+  })
+
   const search = (all, sort, page, category, season, size, color, brand, price ) =>{
     var products = JSON.parse(localStorage.getItem("products"));
     var productFilter = [];
     var htmlProducts = ``;
 
-    if(all.length > 0 || sort == "All"){
+    if(all.length > 0){
       productFilter = products;
     }
     if(sort === "Highest price"){
@@ -351,11 +403,6 @@ $(document).ready(function () {
     var sort = $("#filter-sort").val();
     search(all,sort,1,categoryList,seasonList,sizeList,colorList,brandList, priceArray);
   })
-  $(document).on("click",".redirect",function(){
-    var id = $(this).attr("data-id");
-    localStorage.setItem("idProduct",id);
-  })
-
 });
 
 

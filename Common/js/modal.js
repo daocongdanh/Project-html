@@ -12,6 +12,7 @@ $(document).ready(function () {
     modal.find(".wish").closest(".item").attr("data-id",id);
     modal.attr("data-id",product.id);
     modal.find(".name").text(product.name);
+    modal.find("#more-info").attr("data-id",id);
     if(product.sale == 0){
       modal.find(".price").html(`$${product.price} <span> (In Stock)</span>`);
     }

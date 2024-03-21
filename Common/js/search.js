@@ -12,11 +12,11 @@ $(document).ready(function () {
     result.forEach(item => {
       htmlSearch += `<li class="item">
                       <div class="row align-items-center">
-                        <div class="col-3">
+                        <a class="redirect d-block col-3" href="../../ProductDetail/html/index.html" data-id="${item.id}">
                           <img src="../../Common/img/${item.thumbnail[0]}" alt="">
-                        </div>
+                        </a>
                         <div class="col-9">
-                          <p class="name">${item.name}</p>
+                          <a class="name redirect d-block" href="../../ProductDetail/html/index.html" data-id="${item.id}">${item.name}</a>
                           <span class="price">$${(item.price*(1-item.sale/100)).toFixed(0)}</span>
                         </div>
                       </div>

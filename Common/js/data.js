@@ -867,7 +867,7 @@ const orderDetails = [
   },
   {
     id: 11,
-    productId: 20,
+    productId: 21,
     orderId: 10001,
     quantity: 5,
     size: "XL",
