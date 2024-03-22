@@ -3,6 +3,7 @@ $(document).ready(function () {
   var productList = JSON.parse(localStorage.getItem("products"));
   var idProduct = parseInt(localStorage.getItem("idProduct"));
   var product = productList.filter(item => item.id ==idProduct)[0];
+  // Product detail
   const loadData = () => {
 
     // Hình ảnh và tên sản phẩm 
@@ -31,6 +32,8 @@ $(document).ready(function () {
     $("#wish").attr("data-id",product.id);
 
   }
+
+  // Bình luận
   const loadReviews = (page) =>{
      // Bình luận
     var reviewList = JSON.parse(localStorage.getItem("reviews"));
@@ -150,6 +153,7 @@ $(document).ready(function () {
   loadData();
   loadReviews(1);
 
+  // Chuyển trang
   $(document).on("click",".page-item",function(){
     var page = parseInt($(this).attr("data-page"));
     loadReviews(page);
@@ -201,7 +205,7 @@ $(document).ready(function () {
   }
   randomProduct();
 
-
+  // Thay đổi hình ảnh
   $('.radio-sneaker').click(function (state) { 
     document.querySelectorAll('.radio-sneaker').forEach((e) => {
       e.classList.remove('selected');
@@ -303,6 +307,5 @@ $(document).ready(function () {
     }
   })
 
-  // Add cart
 
 });

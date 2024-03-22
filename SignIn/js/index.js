@@ -1,13 +1,16 @@
 $(document).ready(function () {
   const users = JSON.parse(localStorage.getItem("users"));
 
+
+  // set cookie
   function setCookie(cname, cvalue, exdays) {
     const d = new Date();
     d.setTime(d.getTime() + (exdays*24*60*60*1000));
     let expires = "expires="+ d.toUTCString();
     document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
   }
-
+  
+  // getcookie
   function getCookie(cname) {
     let name = cname + "=";
     let decodedCookie = decodeURIComponent(document.cookie);
@@ -32,6 +35,7 @@ $(document).ready(function () {
     document.getElementById("remember").checked = true;
   }
 
+  // Submit form đăng nhập
   $("#submit").click(function(e){
     e.preventDefault()
     var email = $("#input-email").val();
@@ -57,6 +61,7 @@ $(document).ready(function () {
     }
     
   })
+  // Gửi mail lấy lại mật khẩu
   const sendMail = (password,email) => {
     (function(){
       emailjs.init("BUmcFUr7c4RgKqioc");
@@ -77,6 +82,8 @@ $(document).ready(function () {
       })
       .catch();
   }
+
+  // Quên mật khẩu
   $("#forgot").click(function(e){
     e.preventDefault();
     var email = $("#modalPasswordResetEmail").val();

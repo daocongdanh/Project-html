@@ -1,9 +1,6 @@
 $(document).ready(function(){
-  $('.radioPayment').on('change', function(){
-      $('.collapse').collapse('hide');
-      $($(this).data('bs-target')).collapse('show');
-  });
 
+  // Tính tổng tiền trong giỏ hàng
   const totalMoney = () => {
     var tong = 0;
     var cart = localStorage.getItem("cart") != null ? JSON.parse(localStorage.getItem("cart")) : null;
@@ -14,6 +11,7 @@ $(document).ready(function(){
     })
     return tong.toFixed(0);
   }
+  // Load tiền và ship
   const loadTotal = () => {
     var total = parseInt(totalMoney());
     var ship = parseInt($("#ship").attr("data-price"));
@@ -21,6 +19,7 @@ $(document).ready(function(){
     $("#total").html(`$${total + ship}`);
   }
   
+  // Load shippingdetail
   const loadShippingDetail = () => {
     var shippingDetails = JSON.parse(localStorage.getItem("shippingDetails"));
     var htmlShippingDetail = ``;
@@ -43,29 +42,41 @@ $(document).ready(function(){
   }
   loadShippingDetail();
 
+
+  // Khi chọn 1 shipping sẽ cập nhật lại giá bên bảng total
   $(document).on("click",".shipping",function(){
     var price = $(this).attr("data-price");
     $("#ship").attr("data-price",price);
     $("#ship").html(`$${price}`);
     loadTotal();
   });
-  // $(".shipping").click(function(){
-  //   var price = $(this).attr("data-price");
-  //   $("#ship").attr("data-price",price);
-  //   $("#ship").html(`$${price}`);
-  //   loadTotal();
-  // })
-  const loadInfor = () => {
-    const user = JSON.parse(localStorage.getItem("user")) == null ? null : JSON.parse(localStorage.getItem("user"))[0];
-    if(user != null){
-      $("#firstName").val(user.firstName);
-      $("#lastName").val(user.lastName);
-      $("#email").val(user.email);
-      $("#phone").val(user.phone);
-    }
-  }
-  loadInfor();
 
+  // Load address của user
+  const loadAddress = () => {
+    var user = JSON.parse(localStorage.getItem("user"));
+    var addressList = JSON.parse(localStorage.getItem("address"));
+    const addressByUser = addressList.filter(item => item.userId == user.id);
+    var htmlOption = `<option value="Your Address" class="d-none" checked>Your Address</option>`;
+    addressByUser.forEach(item => {
+      htmlOption += `<option value="${item.id}">${item.firstName + ' ' + item.lastName + ', ' + item.address + ', ' + item.phone}</option>`
+    })
+    $("#yourAddress").html(htmlOption);
+  }
+  loadAddress();
+
+  // Đẩy 1 address user chọn lên form
+  $(document).on("change","#yourAddress",function(){
+    var id = parseInt($(this).val());
+    var addressList = JSON.parse(localStorage.getItem("address"));
+    var addressById = addressList.filter(item => item.id == id)[0];
+    $("#firstName").val(addressById.firstName);
+    $("#lastName").val(addressById.lastName);
+    $("#email").val(addressById.email);
+    $("#phone").val(addressById.phone);
+    $("#address").val(addressById.address); 
+  })
+
+  // Đặt hàng
   $(document).on("click","#placeOrder",function(e){
     (function(){
       emailjs.init("BUmcFUr7c4RgKqioc");
@@ -77,7 +88,6 @@ $(document).ready(function(){
     const shippingDetails = JSON.parse(localStorage.getItem("shippingDetails"));
     var firstName = $("#firstName").val();
     var lastName = $("#lastName").val();
-    var email = $("#email").val();
     var address = $("#address").val();
     var phone = $("#phone").val();
     var shippingDetailId = parseInt($(".shipping").prev().filter(":checked").attr("data-id"));
@@ -94,7 +104,6 @@ $(document).ready(function(){
       lastName: lastName,
       phone: phone,
       address: address,
-      email : email,
       status : "In Processing",
       total : total
     }

@@ -513,7 +513,7 @@ const users = [
     id: 1,
     firstName: "Danh",
     lastName: "Đẹp",
-    email: "daokhanhdu123zxc@gmail.com",
+    email: "danhlaptrinh@gmail.com",
     phone: "0123456789",
     password: "123",
     dayOfBirth: "2222-12-12",
@@ -543,7 +543,7 @@ const users = [
     id: 4,
     firstName: "Đào",
     lastName: "Đức Danh",
-    email: "danhlaptrinh@gmail.com",
+    email: "daokhanhdu123zxc@gmail.com",
     phone: "0123456789",
     password: "danh",
     dayOfBirth: "2003-09-01",
@@ -730,7 +730,7 @@ const orders = [
     phone: "0123456789",
     address: "206/18, đường số 20, phường 5, Gò Vấp, Hồ Chí Minh",
     status: "Awating Delivery",
-    total: 1024,
+    total: 123,
   },
   {
     id: 10002,
@@ -742,7 +742,7 @@ const orders = [
     phone: "0123456789",
     address: "206/18, đường số 20, phường 5, Gò Vấp, Hồ Chí Minh",
     status: "Delivered",
-    total: 1024,
+    total: 2343,
   },
   {
     id: 10003,
@@ -754,7 +754,7 @@ const orders = [
     phone: "0123456789",
     address: "206/18, đường số 20, phường 5, Gò Vấp, Hồ Chí Minh",
     status: "In Processing",
-    total: 1024,
+    total: 2222,
   },
   {
     id: 10004,
@@ -766,7 +766,7 @@ const orders = [
     phone: "0123456789",
     address: "206/18, đường số 20, phường 5, Gò Vấp, Hồ Chí Minh",
     status: "In Processing",
-    total: 1024,
+    total: 3333,
   },
   {
     id: 10005,
@@ -778,7 +778,7 @@ const orders = [
     phone: "0123456789",
     address: "206/18, đường số 20, phường 5, Gò Vấp, Hồ Chí Minh",
     status: "In Processing",
-    total: 1024,
+    total: 528,
   },
   {
     address: "Hồ Chí Minh",
@@ -874,33 +874,97 @@ const orderDetails = [
   },
   {
     id: 12,
-    productId: 23,
-    orderId: 7,
-    quantity: 4,
-    size: "8",
+    productId: 22,
+    orderId: 10002,
+    quantity: 5,
+    size: "XL",
   },
   {
     id: 13,
-    productId: 33,
-    orderId: 7,
-    quantity: 4,
-    size: "8",
+    productId: 23,
+    orderId: 10002,
+    quantity: 5,
+    size: "XL",
   },
   {
     id: 14,
-    productId: 35,
-    orderId: 7,
-    quantity: 1,
-    size: "8",
+    productId: 31,
+    orderId: 10003,
+    quantity: 5,
+    size: "XL",
   },
   {
     id: 15,
-    productId: 12,
-    orderId: 7,
-    quantity: 4,
-    size: "8",
+    productId: 32,
+    orderId: 10003,
+    quantity: 5,
+    size: "XL",
+  },
+  {
+    id: 16,
+    productId: 33,
+    orderId: 10004,
+    quantity: 5,
+    size: "XL",
+  },
+  {
+    id: 17,
+    productId: 41,
+    orderId: 10005,
+    quantity: 5,
+    size: "XL",
+  },
+  {
+    id: 18,
+    productId: 42,
+    orderId: 10005,
+    quantity: 5,
+    size: "XL",
   },
 ];
+const address = [
+  {
+    id: 1,
+    userId: 1,
+    firstName: "Danh",
+    lastName: "Đào Đức",
+    phone: "0392406660",
+    address: "Thôn 8, xã Diên Binh, huyện Đăk Tô, tỉnh Kon Tum"
+  },
+  {
+    id: 2,
+    userId: 1,
+    firstName: "Nguyễn",
+    lastName: "Đức Duy",
+    phone: "0392406660",
+    address: "Thôn 8, xã Diên Binh, huyện Đăk Tô, tỉnh Kon Tum"
+  },
+  {
+    id: 3,
+    userId: 1,
+    firstName: "Trương",
+    lastName: "Đức Phúc",
+    phone: "0392406660",
+    address: "206/18, đường số 20, phường 5, Gò Vấp, HCM"
+  },
+  {
+    id: 4,
+    userId: 1,
+    firstName: "Đào",
+    lastName: "Đức Danh",
+    phone: "0392406660",
+    address: "206/18, đường số 20, phường 5, Gò Vấp, HCM"
+  }
+  ,
+  {
+    id: 5,
+    userId: 2,
+    firstName: "Đào",
+    lastName: "Đức Danh",
+    phone: "0392406660",
+    address: "206/18, đường số 20, phường 5, Gò Vấp, HCM"
+  }
+]
 // localStorage.setItem("products", JSON.stringify(products));
 // localStorage.setItem("categories", JSON.stringify(categories));
 // localStorage.setItem("users", JSON.stringify(users));
@@ -908,4 +972,5 @@ const orderDetails = [
 // localStorage.setItem("shippingDetails",JSON.stringify(shippingDetails));
 // localStorage.setItem("orders",JSON.stringify(orders));
 // localStorage.setItem("orderDetails",JSON.stringify(orderDetails));
+// localStorage.setItem("address",JSON.stringify(address));
 // console.log(JSON.parse(localStorage.getItem("products")));

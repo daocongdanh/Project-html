@@ -1,9 +1,13 @@
 $(document).ready(function () {
+  // Lấy danh sách product có trong localStorage
   var productList = JSON.parse(localStorage.getItem("products"));
+
+  // Lấy product theo id
   const getProductById = (id) => {
     var product = productList.filter(item => item.id == id)[0];
     return product;
   }
+
   // Modal
   $(document).on("click",".btn-quick-view",function(){
     var id = $(this).closest(".item").attr("data-id"); // Tìm thẻ item là cha gần nhất của button
@@ -28,6 +32,7 @@ $(document).ready(function () {
     })
     modal.find("#imageModal").html(htmlImageModal)
   })
+  
   // Image Modal
   $(document).on("click","#myModal .image .rd-img",function(){
     var img = $(this).attr("id");

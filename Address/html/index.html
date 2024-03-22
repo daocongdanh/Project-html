@@ -135,6 +135,7 @@
         </nav>
       </div>
     </article>
+
     <article>
       <div class="container">
         <div class="row mb-4">
@@ -155,12 +156,12 @@
                   Wishlist
                   <i class="fa-solid fa-angle-right"></i>
                 </a>
-                <a class="list-group-item list-group-item-action active"
+                <a class="list-group-item list-group-item-action"
                   href="../../Information/html/index.html">
                   Personal Info
                   <i class="fa-solid fa-angle-right"></i>
                 </a>
-                <a class="list-group-item list-group-item-action" href="../../Address/html/index.html">
+                <a class="list-group-item list-group-item-action active" href="../../Address/html/index.html">
                   Addresses
                   <i class="fa-solid fa-angle-right"></i>
                 </a>
@@ -175,73 +176,148 @@
               </div>
             </div>
           </div>
-          <!-- Info -->
-          <div class="col-12 col-md-9 col-lg-8 offset-lg-1">
-            <div class="row">
-              <div class="col-12 col-md-6">
-                <div class="mb-4">
-                  <label for="fName" class="form-label">First Name *</label>
-                  <input type="text" class="form-control form-control-sm" id="fName" placeholder="First Name *">
-                </div>
-              </div>
-              <div class="col-12 col-md-6">
-                <div class="mb-4">
-                  <label for="lName" class="form-label">Last Name *</label>
-                  <input type="text" class="form-control form-control-sm" id="lName" placeholder="Last Name *">
-                </div>
-              </div>
-              <div class="col-12">
-                <div class="mb-4">
-                  <label for="mail" class="form-label">Email *</label>
-                  <input type="email" class="form-control form-control-sm" id="mail" placeholder="Email Address *">
-                </div>
-              </div>
-              <div class="col-12">
-                <div class="mb-4">
-                  <label for="phone" class="form-label">Phone *</label>
-                  <input type="text" class="form-control form-control-sm" id="phone" placeholder="Email Address *">
-                </div>
-              </div>
-              <div class="col-12 col-md-6">
-                <div class="mb-4">
-                  <label for="cPass" class="form-label">Current Password *</label>
-                  <input type="password" class="form-control form-control-sm" id="cPass"
-                    placeholder="Current Password *">
-                </div>
-              </div>
-              <div class="col-12 col-md-6">
-                <div class="mb-4">
-                  <label for="nPass" class="form-label">New Password *</label>
-                  <input type="password" class="form-control form-control-sm" id="nPass"
-                    placeholder="New Password *">
-                </div>             
-              </div>
-              <div class="col-12 col-lg-6">
-                <div class="form-group">
-                  <label class="form-label" for="birthDay">Date of Birth</label>
-                  <input type="date" id="birthDay"  class="form-control" value="2000-01-01">
-                </div>
-              </div>
-              <div class="col-12 col-lg-6">
-                <div class="form-group">
-                  <label class="form-label">Gender</label>
-                  <div>
-                    <input class="gender btn-check" type="radio" name="gender" id="1" checked>
-                    <label class="btn btn-sm btn-outline-border buttonAccount" for="1">Male</label>
-                    <input class="gender btn-check" type="radio" name="gender" id="0">
-                    <label class="btn btn-sm btn-outline-border buttonAccount" for="0">Female</label>
+          <!-- Address -->
+          <div class="col-1"></div>
+          <div class="address col-8">
+            <div class="row" id="addre">
+              <div class="col-6">
+                <div class="item">
+                  <div class="head">
+                    <h2 class="title">Address 1</h2>
+                    <div class="act">
+                      <button class="edit"><i class="fa-solid fa-pen m-0"></i></button>
+                      <button class="delete"><i class="fa-solid fa-xmark m-0"></i></button>
+                    </div>
+                  </div>
+                  <div class="content">
+                    <p class="m-0 text-muted">Đào Đức Danh</p>
+                    <p class="m-0 text-muted">206/18, đường số 20, phường 5, Gò Vấp, Hồ Chí Minh</p>
+                    <p class="m-0 text-muted">0392406660</p>
                   </div>
                 </div>
               </div>
-              <div class="col-12 mt-4">
-                <button id="save" class="btn btn-dark" style="padding: 14px 28px; border-radius: 0px;" type="submit">Save Changes</button>
+              <div class="col-6 mb-5">
+                <div class="item">
+                  <div class="head">
+                    <h2 class="title">Address 1</h2>
+                    <div class="act">
+                      <button class="edit"><i class="fa-solid fa-pen m-0"></i></button>
+                      <button class="delete"><i class="fa-solid fa-xmark m-0"></i></button>
+                    </div>
+                  </div>
+                  <div class="content">
+                    <p class="m-0 text-muted">Đào Đức Danh</p>
+                    <p class="m-0 text-muted">206/18, đường số 20, phường 5, Gò Vấp, Hồ Chí Minh</p>
+                    <p class="m-0 text-muted">0392406660</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12">
+                <button class="add" data-bs-toggle="modal" data-bs-target="#addressModalAdd">Add Address + </button>
               </div>
             </div>
           </div>
         </div>
+      </div>
     </article>
   </section>
+  <!-- Add Address -->
+  <div class="modal fade" tabindex="-1" id="addressModalAdd" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class=" modal-content">
 
+        <!-- Header -->
+        <div class="modal-header lh-fixed fs-lg">
+          <strong class="ms-auto fs-5">Add Address + </strong>
+          <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close">
+          </button>
+        </div>
+        <!-- Body -->
+        <div class="modal-body p-4">
+          <form action="">
+            <div class="row">
+              <div class="col-12 col-md-6">
+                <div class="mb-4">
+                  <label for="firstName1" class="form-label">First Name *</label>
+                  <input type="text" class="form-control form-control-sm" id="firstName1" placeholder="First Name" required>
+                </div>
+              </div>
+              <div class="col-12 col-md-6">
+                <div class="mb-4">
+                  <label for="lastName1" class="form-label">Last Name *</label>
+                  <input type="text" class="form-control form-control-sm" id="lastName1" placeholder="Last Name" required>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="mb-4">
+                  <label for="address1" class="form-label">Address</label>
+                  <input type="text" class="form-control form-control-sm" id="address1" placeholder="Address" required>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="mb-4">
+                  <label for="phone1" class="form-label">Mobile Phone *</label>
+                  <input type="text" class="form-control form-control-sm" id="phone1" placeholder="Mobile Phone" required>
+                </div>
+              </div>
+              <div class="col-12 text-center">
+                <button type="submit" class="btn-address" id="btn-address">Add Address</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Update Addres -->
+  <div class="modal fade" tabindex="-1" id="addressModalUpdate" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class=" modal-content">
+
+        <!-- Header -->
+        <div class="modal-header lh-fixed fs-lg">
+          <strong class="ms-auto fs-5">Update Address</strong>
+          <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close">
+          </button>
+        </div>
+        <!-- Body -->
+        <div class="modal-body p-4">
+          <form action="">
+            <div class="row">
+              <div class="col-12 col-md-6">
+                <div class="mb-4">
+                  <label for="firstName2" class="form-label">First Name *</label>
+                  <input type="text" class="form-control form-control-sm" id="firstName2" placeholder="First Name" required>
+                </div>
+              </div>
+              <div class="col-12 col-md-6">
+                <div class="mb-4">
+                  <label for="lastName2" class="form-label">Last Name *</label>
+                  <input type="text" class="form-control form-control-sm" id="lastName2" placeholder="Last Name" required>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="mb-4">
+                  <label for="address2" class="form-label">Address</label>
+                  <input type="text" class="form-control form-control-sm" id="address2" placeholder="Address" required>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="mb-4">
+                  <label for="phone2" class="form-label">Mobile Phone *</label>
+                  <input type="text" class="form-control form-control-sm" id="phone2" placeholder="Mobile Phone" required>
+                </div>
+              </div>
+              <div class="col-12 text-center">
+                <button type="submit" class="btn-address" id="btn-update" data-id="0">Update Address</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
   <!-- Footer -->
   <footer class="footer">
     <div class="infor">

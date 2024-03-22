@@ -23,6 +23,10 @@ a {
   font-size: 13px;
   font-weight: 500;
 }
+.header .logo{
+  display: block;
+  color: #1f1f1f;
+}
 .nav-item .nav-link {
   color: #1F1F1F;
   font-weight: 500;

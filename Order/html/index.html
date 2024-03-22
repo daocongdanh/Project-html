@@ -21,23 +21,23 @@
     </section>
     <nav class="navbar navbar-expand-xl">
       <div class="container">
-        <a class="navbar-brand d-none" href="#">Shopper</a>
+        <a class="navbar-brand d-none" href="../../Home/html/index.html">Shopper</a>
         <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse justify-content-between" id="collapsibleNavbar">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link" href="#">Home</a>
+              <a class="nav-link" href="../../Home/html/index.html">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Catalog</a>
+              <a class="nav-link" href="../../Product/html/index.html">Product</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Shop</a>
+              <a class="nav-link" href="../../About/html/index.html">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Pages</a>
+              <a class="nav-link" href="../../Member/html/index.html">Member</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Blogs</a>
@@ -46,22 +46,54 @@
               <a class="nav-link" href="#">Docs</a>
             </li>
           </ul>
-          <div class="logo mx-8" href="#">Shopper</div>
+          <a class="logo mx-8"  href="../../Home/html/index.html">Shopper</a>
           <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" href="#">United States
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">United States
                 <i class="fa-solid fa-angle-down"></i>
               </a>
+              <div class="dropdown-menu">
+                <div class="card">
+                  <div class="card-body">
+                    <ul class="list-group">
+                      <li class="list-group-item"><a href="#">United States</a></li>
+                      <li class="list-group-item"><a href="#">Canada</a></li>
+                      <li class="list-group-item"><a href="#">Germany</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
             </li>
-            <li class="nav-item">
-              <a class="nav-link border-left" href="#">USD
+            <li class="nav-item dropdown">
+              <a class="nav-link border-left dropdown-toggle" data-bs-toggle="dropdown" href="#">USD
                 <i class="fa-solid fa-angle-down"></i>
               </a>
+              <div class="dropdown-menu">
+                <div class="card">
+                  <div class="card-body">
+                    <ul class="list-group">
+                      <li class="list-group-item"><a href="#">USD</a></li>
+                      <li class="list-group-item"><a href="#">EUR</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
             </li>
-            <li class="nav-item">
-              <a class="nav-link border-left" href="#">EN
+            <li class="nav-item dropdown">
+              <a class="nav-link border-left dropdown-toggle" data-bs-toggle="dropdown" href="#">EN
                 <i class="fa-solid fa-angle-down"></i>
               </a>
+              <div class="dropdown-menu">
+                <div class="card">
+                  <div class="card-body">
+                    <ul class="list-group">
+                      <li class="list-group-item"><a href="#">English</a></li>
+                      <li class="list-group-item"><a href="#">French</a></li>
+                      <li class="list-group-item"><a href="#">German</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
             </li>
           </ul>
           <ul class="navbar-nav">
@@ -69,7 +101,7 @@
               <a class="nav-link nav-pad" data-bs-toggle="offcanvas" href="#search"><i class="fa-solid fa-magnifying-glass m-0"></i></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link nav-pad" href="#"><i class="fa-regular fa-user"></i></a>
+              <a class="nav-link nav-pad" href="../../Information/html/index.html"><i class="fa-regular fa-user"></i></a>
             </li>
             <li class="nav-item">
               <a class="nav-link nav-pad" data-bs-toggle="offcanvas" href="#wishList">
@@ -116,7 +148,7 @@
           <div class="col-12 col-md-3">
             <div class="link-left">
               <div class="list-group">
-                <a class="list-group-item list-group-item-action active" href="../html/orders.html">
+                <a class="list-group-item list-group-item-action active" href="../../Order/html/index.html">
                   Orders
                   <i class="fa-solid fa-angle-right"></i>
                 </a>
@@ -125,11 +157,11 @@
                   <i class="fa-solid fa-angle-right"></i>
                 </a>
                 <a class="list-group-item list-group-item-action"
-                  href="#">
+                  href="../../Information/html/index.html">
                   Personal Info
                   <i class="fa-solid fa-angle-right"></i>
                 </a>
-                <a class="list-group-item list-group-item-action" href="#">
+                <a class="list-group-item list-group-item-action" href="../../Address/html/index.html">
                   Addresses
                   <i class="fa-solid fa-angle-right"></i>
                 </a>
@@ -137,7 +169,7 @@
                   Payment Methods
                   <i class="fa-solid fa-angle-right"></i>
                 </a>
-                <a class="list-group-item list-group-item-action" href="#">
+                <a class="list-group-item list-group-item-action " id="logout" href="#">
                   Logout
                   <i class="fa-solid fa-angle-right"></i>
                 </a>
@@ -218,6 +250,27 @@
                 </div>
               </div>
             </div>
+          </div>
+          <div class="d-flex justify-content-end my-2">
+            <nav aria-label="Page navigation example">
+              <ul class="pagination" id="pagination">
+                <li class="page-item" data-page="-1">
+                  <a class="page-link" href="#" aria-label="Previous">
+                    <span aria-hidden="true"><i class="fa-solid fa-caret-left"></i></span>
+                  </a>
+                </li>
+                <li class="page-item active" data-page="1"><a class="page-link" href="#">1</a></li>
+                <li class="page-item" data-page="2"><a class="page-link" href="#">2</a></li>
+                <li class="page-item" data-page="3"><a class="page-link" href="#">3</a></li>
+                <li class="page-item" data-page="4"><a class="page-link" href="#">4</a></li>
+                <li class="page-item" data-page="5"><a class="page-link" href="#">5</a></li>
+                <li class="page-item" data-page="-2">
+                  <a class="page-link" href="#" aria-label="Next">
+                    <span aria-hidden="true"><i class="fa-solid fa-caret-right"></i></span>
+                  </a>
+                </li>
+              </ul>
+            </nav>
           </div>
         </div>
       </div>
@@ -441,9 +494,9 @@
     </div>
   </div>
   <!-- End Cart -->
-
   <script src="../../Common/js/bootstrap.bundle.min.js"></script>
   <script src="../../Common/js/jquery.min.js"></script>
+  <script src="../../Common/js/logout.js"></script>
   <script src="../../Common/js/data.js"></script>
   <script src="../../Common/js/modal.js"></script>
   <script src="../../Common/js/cart.js"></script>

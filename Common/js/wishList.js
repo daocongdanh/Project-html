@@ -1,4 +1,6 @@
 $(document).ready(function () {
+
+  // WishList ở header
   const loadDataWishList = () => {
     var wishLists = JSON.parse(localStorage.getItem("wishLists"));
     $("#wishh").attr("data-wish",wishLists == null ? 0 : wishLists.length)
@@ -27,6 +29,8 @@ $(document).ready(function () {
     $("#wishListResult").html(htmlWishLists);
   }
   loadDataWishList();
+
+  // Thêm sản phẩm yêu thích
   $(document).on("click",".wish",function(){
     var productList = JSON.parse(localStorage.getItem("products"));
     var id = parseInt($(this).closest(".item").attr("data-id"));
@@ -50,6 +54,8 @@ $(document).ready(function () {
     loadDataWishList();
     alert("Thêm thành công sản phẩm vào danh mục yêu thích");
   })
+
+  // Xóa sản phẩm yêu thích
   $(document).on("click",".remove-wish",function(){
     var wishLists = JSON.parse(localStorage.getItem("wishLists"));
     var id = parseInt($(this).attr("data-id"));

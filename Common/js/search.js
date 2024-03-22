@@ -1,5 +1,8 @@
 $(document).ready(function () {
+  // Lấy danh sách product có trong localStorage
   var productList = JSON.parse(localStorage.getItem("products"));
+
+  // Hàm search ở header
   const loadDataSearch = (category,keyword) => {
     var htmlSearch = ``;
     var result;
@@ -24,12 +27,17 @@ $(document).ready(function () {
     })
     $("#searchResult").html(htmlSearch);
   }
+
   loadDataSearch("All Categories","");
+
+  // Sự kiện Select thay đổi
   $(document).on("change","#search select", function(){
     var category = $(this).val();
     var keyword = $("#search input").val();
     loadDataSearch(category,keyword);
   })
+
+  // Sự kiện input thay đổi
   $(document).on("input","#search input",function(){
     var keyword = $(this).val();
     var category = $("#search select").val();

@@ -90,3 +90,41 @@
 .list-group-item-action:focus, .list-group-item-action:hover{
   background-color: #ffffff;
 }
+
+/* Paginaton */
+.page-link {
+  border: 0;
+  padding: 8px 16px;
+  color: #909090;
+  font-weight: 500;
+  border-bottom: 1px solid #ddd;
+  transition: all .2s;
+  cursor: pointer;
+}
+.active>.page-link, .page-link.active {
+  background-color: #ffffff;
+  color: #ff6f61;
+  border-bottom: 1px solid #ff6f61;
+}
+.page-link:hover {
+  color: #ff6f61;
+  background-color: #ffffff;
+}
+.page-item:first-child .page-link:hover span i {
+  color: #ff6f61;
+}
+.page-item:last-child .page-link:hover span i {
+  color: #ff6f61;
+}
+.page-item:first-child .page-link, .page-item:last-child .page-link{
+  border: 0;
+  transition: all .2s;
+}
+.page-item:first-child .page-link i, .page-item:last-child .page-link i{
+  color: #909090;
+}
+.page-link:focus {
+  background-color: #ffffff;
+  box-shadow: none;
+  color: #ff6f61;
+}

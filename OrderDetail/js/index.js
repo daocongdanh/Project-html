@@ -1,4 +1,6 @@
 $(document).ready(function () {
+
+  // Lấy tất cả orderDetail của order là đẩy lên trang html
   var orders = JSON.parse(localStorage.getItem("orders"));
   var orderDetails = JSON.parse(localStorage.getItem("orderDetails"));
   var productList = JSON.parse(localStorage.getItem("products"));

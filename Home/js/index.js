@@ -1,6 +1,12 @@
 $(document).ready(function () {
+
+  // Lấy danh sách product trong localStorage
   var productList = JSON.parse(localStorage.getItem("products"));
+
+  // Lây danh sách category trong localStorage
   var categoryList = JSON.parse(localStorage.getItem("categories"));
+
+  // Đẩy dữ liệu category lên trang html = js
   var htmlCategories = ``;
   categoryList.forEach(item => {
     htmlCategories += `<div class="item">
@@ -15,6 +21,7 @@ $(document).ready(function () {
   $("#slide-category").html(htmlCategories);
 
 
+
   // Random 7 sp
   var productRandom1 = [];
   while(1){
@@ -26,6 +33,7 @@ $(document).ready(function () {
       break;
   }
 
+  // Đẩy dữ liệu của 7 product random lên trang html
   var htmlProducts = ``;
   productRandom1.forEach(item => {
     htmlProducts += `<div class="item" data-id="${item.id}">
@@ -56,6 +64,7 @@ $(document).ready(function () {
   })
   $("#slide-product-hot").html(htmlProducts);
 
+  // Slider và reponsive -- https://kenwheeler.github.io/slick/
   $('.sec-two .slide-category').slick({
     infinite: true,
     slidesToShow: 5,

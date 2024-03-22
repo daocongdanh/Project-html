@@ -1,4 +1,6 @@
 $(document).ready(function () {
+
+  // Đăng kí
   document.getElementById("register").onclick = (e) => {
     const users = JSON.parse(localStorage.getItem("users"));
     e.preventDefault();

@@ -1,11 +1,14 @@
 $(document).ready(function () {
+  // Lấy tất cả product có trong localStorage
   var productList = JSON.parse(localStorage.getItem("products"));
 
+  // Lấy product theo id
   const getProductById = (id) => {
     var product = productList.filter(item => item.id == id)[0];
     return product;
   }
-  // Add cart
+
+  // Thêm sản phẩm vào giỏ hàng với id product, số lượng và size
   const addToCart = (id,qty,size) => {
     var product = getProductById(id);
     var cartItem = {
@@ -36,6 +39,8 @@ $(document).ready(function () {
     }
     localStorage.setItem("cart",JSON.stringify(cart));
   }
+
+  // Tính tổng tiền có trong giỏ hàng
   const totalMoney = () => {
     var tong = 0;
     var cart = localStorage.getItem("cart") != null ? JSON.parse(localStorage.getItem("cart")) : null;
@@ -46,6 +51,8 @@ $(document).ready(function () {
     })
     return tong.toFixed(0);
   }
+
+   // Load cartModal
   const cartModal = () => {
     var cart = localStorage.getItem("cart") != null ? JSON.parse(localStorage.getItem("cart")) : null;
     var count =  cart != null ? cart.length : 0;
@@ -88,6 +95,7 @@ $(document).ready(function () {
   }
   cartModal();
 
+  // Load page cart
   const shoppingCart = () => {
     var cart = localStorage.getItem("cart") != null ? JSON.parse(localStorage.getItem("cart")) : null;
     var shoppingCart = $("#shoppingCart");
@@ -133,6 +141,8 @@ $(document).ready(function () {
     $(".subTotal").text(`$${totalMoney()}`);
   }
   shoppingCart();
+
+  // Load trang checkout phần orderItem
   const loadOrderItem = () => {
     var cart = localStorage.getItem("cart") != null ? JSON.parse(localStorage.getItem("cart")) : null;
     var count =  cart != null ? cart.length : 0;
@@ -168,6 +178,8 @@ $(document).ready(function () {
     $("#total").html(`$${total + ship}`);
   }
   loadOrderItem();
+
+  // Update cart
   const updateCart = (id, qty) =>{
     cart = JSON.parse(localStorage.getItem("cart"));
     var indexCartItem = cart.findIndex(item => item.product.id === id);
@@ -179,6 +191,8 @@ $(document).ready(function () {
     }
     localStorage.setItem("cart",JSON.stringify(cart)); 
   }
+
+  // Remove cart
   const removeCart = (id) => {
     var cart = JSON.parse(localStorage.getItem("cart"));
     var cartNew = cart.filter(item => item.product.id != id);
@@ -189,7 +203,10 @@ $(document).ready(function () {
       localStorage.removeItem("cart");
     }
   }
+
+
   // Gắn sự kiện cho button remove mới đẩy lên lại
+  // Xử lý sự kiện click rồi gọi hàm removeCart
   $(document).on("click",".cart-remove",function(){
     var id = $(this).closest("li").attr("data-id");
     removeCart(parseInt(id));
@@ -197,6 +214,8 @@ $(document).ready(function () {
     shoppingCart();
     loadOrderItem();
   })
+
+  // Xử lý sự kiện click rồi gọi hàm addToCart
   $(".add-cart").click(function(){
     var id = $("#myModal").attr("data-id");
     var qty = $("#quantity").val();
@@ -208,6 +227,8 @@ $(document).ready(function () {
       alert("Thêm sản phẩm vào giỏ hàng thành công"); 
     },100)
   })
+
+  // Xử lý sự kiện click rồi gọi hàm updateCart
   $(document).on("change",".qty",function(){
     var id = $(this).closest("li").attr("data-id");
     var qty = $(this).val();
@@ -217,6 +238,7 @@ $(document).ready(function () {
     loadOrderItem();
   })
 
+  // Add cart ở trang product mặc địn số lượng = 1 và size = XL
   $(document).on("click",".addCart",function(){
     var id = parseInt($(this).closest(".item").attr("data-id"));
     addToCart(id,1,"XL");

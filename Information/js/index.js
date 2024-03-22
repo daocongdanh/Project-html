@@ -1,4 +1,6 @@
 $(document).ready(function () {
+
+  // Load thông tin cá nhân lên trang html
   const loadData = () => {
     var user = JSON.parse(localStorage.getItem("user"));
     $("#fName").val(user.firstName);
@@ -14,6 +16,7 @@ $(document).ready(function () {
   }
   loadData();
 
+  // Cập nhật thông tin
   $("#save").click(function(){
     var user = JSON.parse(localStorage.getItem("user"));
     var firstName = $("#fName").val();
