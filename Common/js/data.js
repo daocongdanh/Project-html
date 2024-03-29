@@ -559,7 +559,7 @@ var reviews = [
       "?Khác với các phiên bản khác của Black Rouge thì đây là bảng có những thay đổi mới lạ về bao bì và kiểu dáng. Dòng Son Kem Lì Black Rouge Air Fit Velvet Tint với bao bì đỏ long lanh, sang chảnh. Dòng son kẹo bông Black Rouge Cotton Lip với bao bì tinh tế.?",
     rate: 2,
     title: "Sản phẩm đẹp quá",
-    time: "18-12-2023",
+    time: "12/18/2023"
   },
   {
     id: 2,
@@ -569,7 +569,7 @@ var reviews = [
       "Mặt hàng này rất đẹp, xứng đáng 10 điểm. Mặc rất thoải mái không nóng. Nói chung 100 điểm",
     rate: 3,
     title: "Tiêu đề",
-    time: "18-12-2023",
+    time: "12/18/2023",
   },
   {
     id: 3,
@@ -579,7 +579,7 @@ var reviews = [
       "Mặt hàng này rất đẹp, xứng đáng 10 điểm. Mặc rất thoải mái không nóng. Nói chung 100 điểm",
     rate: 3,
     title: "Tiêu đề",
-    time: "18-12-2023",
+    time: "12/18/2023",
   },
   {
     id: 4,
@@ -588,7 +588,7 @@ var reviews = [
     comment: "dadas",
     rate: 3,
     title: "dasd",
-    time: "18-12-2023",
+    time: "12/18/2023",
   },
   {
     id: 5,
@@ -598,7 +598,7 @@ var reviews = [
       "Màu S05 Milky Latte: đỏ nâu.Trong các bộ siêu tập son gần đây từ các hãng thì tông đỏ đất để khép lại bảng màu. Nói như vậy để biết được độ hot của sắc son trong giới Beauty Guru, màu son tông da, trắng răng, khuôn mặt như bừng sáng hẳn. Đây là một ưu điểm tuyệt vời của màu đỏ đất siêu hot này.",
     rate: 5,
     title: "Tuyệt vời cú mèo",
-    time: "18-12-2023",
+    time: "12/18/2023",
   },
   {
     id: 6,
@@ -608,7 +608,7 @@ var reviews = [
       "vỏ giấy được tô hồng phấn điểm trắng như đám mây hồng bồng bềnh.\r\nDòng chữ Black Rouge chạy ngang thân son có màu hologram. Dưới nắp hộp còn dán màu son và tên để các nàng phân biệt.",
     rate: 5,
     title: "Sản phẩm này quá chất lượng",
-    time: "18-12-2023",
+    time: "12/18/2023",
   },
   {
     id: 7,
@@ -617,7 +617,7 @@ var reviews = [
     comment: "Vải khá là mỏng, phí tiền",
     rate: 1,
     title: "Sản phẩm rất tệ",
-    time: "19-12-2023",
+    time: "12/19/2023",
   },
   {
     id: 8,
@@ -627,7 +627,7 @@ var reviews = [
       "?Khác với các phiên bản khác của Black Rouge thì đây là bảng có những thay đổi mới lạ về bao bì và kiểu dáng. Dòng Son Kem Lì Black Rouge Air Fit Velvet Tint với bao bì đỏ long lanh, sang chảnh. Dòng son kẹo bông Black Rouge Cotton Lip với bao bì tinh tế.?",
     rate: 5,
     title: "Xấu",
-    time: "23-12-2023",
+    time: "12/23/2023",
   },
   {
     id: 9,
@@ -637,7 +637,7 @@ var reviews = [
       "?Khác với các phiên bản khác của Black Rouge thì đây là bảng có những thay đổi mới lạ về bao bì và kiểu dáng. Dòng Son Kem Lì Black Rouge Air Fit Velvet Tint với bao bì đỏ long lanh, sang chảnh. Dòng son kẹo bông Black Rouge Cotton Lip với bao bì tinh tế.?",
     rate: 5,
     title: "Đẹp quá",
-    time: "23-12-2023",
+    time: "12/23/2023",
   },
   {
     id: 10,
@@ -647,7 +647,7 @@ var reviews = [
       "?Khác với các phiên bản khác của Black Rouge thì đây là bảng có những thay đổi mới lạ về bao bì và kiểu dáng. Dòng Son Kem Lì Black Rouge Air Fit Velvet Tint với bao bì đỏ long lanh, sang chảnh. Dòng son kẹo bông Black Rouge Cotton Lip với bao bì tinh tế.?",
     rate: 4,
     title: "Sản phẩm chất lượng",
-    time: "23-12-2023",
+    time: "12/23/2023",
   },
   {
     id: 11,
@@ -657,7 +657,7 @@ var reviews = [
       "?Khác với các phiên bản khác của Black Rouge thì đây là bảng có những thay đổi mới lạ về bao bì và kiểu dáng. Dòng Son Kem Lì Black Rouge Air Fit Velvet Tint với bao bì đỏ long lanh, sang chảnh. Dòng son kẹo bông Black Rouge Cotton Lip với bao bì tinh tế.?",
     rate: 5,
     title: "Sản phẩm rất đẹp",
-    time: "23-12-2023",
+    time: "12/23/2023",
   },
   {
     id: 12,
@@ -667,7 +667,7 @@ var reviews = [
       "Màu S05 Milky Latte: đỏ nâu.Trong các bộ siêu tập son gần đây từ các hãng thì tông đỏ đất để khép lại bảng màu. Nói như vậy để biết được độ hot của sắc son trong giới Beauty Guru, màu son tông da, trắng răng, khuôn mặt như bừng sáng hẳn. Đây là một ưu điểm tuyệt vời của màu đỏ đất siêu hot này.",
     rate: 1,
     title: "Sản phẩm rất tệ",
-    time: "23-12-2023",
+    time: "12/23/2023",
   },
   {
     id: 13,
@@ -677,7 +677,27 @@ var reviews = [
       "Màu S01 Rosy Cinnamon: hồng đào ấm. Đây là màu son nhẹ nhàng và trẻ trung, sẽ thích hợp cho các bạn năng động để đi làm hay đi học. Màu son sẽ phù hợp với các nàng có tông da từ trung bình đến sáng. Tuy nhiên màu son sẽ hơi kén men răng một xíu nha!",
     rate: 3,
     title: "Sản phẩm đẹp quá",
-    time: "23-12-2023",
+    time: "12/23/2023",
+  },
+  {
+    id: 14,
+    userName: "Phùng A Danh",
+    productId: 1,
+    comment:
+      "Tuyệt vời 10 điểm",
+    rate: 3,
+    title: "Sản phẩm đẹp quá",
+    time: "3/28/2024",
+  },
+  {
+    id: 15,
+    userName: "Lý Thị Danh",
+    productId: 1,
+    comment:
+      "Sản phẩm rất tệ",
+    rate: 1,
+    title: "Đánh giá một sao",
+    time: "3/29/2024",
   },
 ];
 const shippingDetails = [

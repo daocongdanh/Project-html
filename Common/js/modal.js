@@ -10,7 +10,7 @@ $(document).ready(function () {
 
   // Modal
   $(document).on("click",".btn-quick-view",function(){
-    var id = $(this).closest(".item").attr("data-id"); // Tìm thẻ item là cha gần nhất của button
+    var id = parseInt($(this).closest(".item").attr("data-id")); // Tìm thẻ item là cha gần nhất của button
     var product = getProductById(id);
     var modal = $("#myModal");
     modal.find(".wish").closest(".item").attr("data-id",id);

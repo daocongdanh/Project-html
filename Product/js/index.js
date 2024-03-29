@@ -120,7 +120,7 @@ $(document).ready(function () {
     productFilter.forEach(item => {
       htmlProducts += `<div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
                         <div class="item" data-id="${item.id}">
-                          <div class="redirect image" href="../../ProductDetail/html/product.html" data-id="${item.id}">
+                          <div class="image" href="../../ProductDetail/html/product.html" data-id="${item.id}">
                             <img src="../../Common/img/${item.thumbnail[0]}" class="image-front w-100" alt="">
                             <img src="../../Common/img/${item.thumbnail[1]}" class="image-back w-100" alt="">
                             ${item.sale > 0 ? '<span class="sale">SALE</span>' : ''}

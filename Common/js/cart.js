@@ -224,7 +224,7 @@ $(document).ready(function () {
     cartModal();
     $(".btn-close").click(); // giả lập click thoát
     setTimeout(() => {
-      alert("Thêm sản phẩm vào giỏ hàng thành công"); 
+      toastr.success("Thêm sản phẩm vào giỏ hàng thành công"); 
     },100)
   })
 
@@ -244,7 +244,7 @@ $(document).ready(function () {
     addToCart(id,1,"XL");
     cartModal();
     setTimeout(() => {
-      alert("Thêm sản phẩm vào giỏ hàng thành công"); 
+      toastr.success("Thêm sản phẩm vào giỏ hàng thành công"); 
     },100)
   })
 });

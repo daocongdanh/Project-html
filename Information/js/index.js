@@ -62,5 +62,7 @@ $(document).ready(function () {
     users.push(userNew);
     localStorage.setItem("users",JSON.stringify(users));
     loadData();
+    $("#cPass").val("");
+    $("#nPass").val("");
   })
 });

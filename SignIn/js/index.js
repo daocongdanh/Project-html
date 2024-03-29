@@ -38,13 +38,15 @@ $(document).ready(function () {
   // Submit form đăng nhập
   $("#submit").click(function(e){
     e.preventDefault()
+    document.getElementById("formLogin").reportValidity();
     var email = $("#input-email").val();
     var password = $("#input-password").val();
     var remember = document.getElementById("remember").checked;
-
+    if(email == '' || password == '')
+      return;
     var user = users.filter(u => u.email === email);
     if(user.length == 0 || user[0].password !== password){
-      alert("Tài khoản hoặc mật khẩu không chính xác");
+      toastr.error("Tài khoản hoặc mật khẩu không chính xác")
     }
     else{
       user = user[0];
@@ -62,6 +64,7 @@ $(document).ready(function () {
     
   })
   // Gửi mail lấy lại mật khẩu
+  // https://dashboard.emailjs.com/
   const sendMail = (password,email) => {
     (function(){
       emailjs.init("BUmcFUr7c4RgKqioc");
@@ -78,7 +81,7 @@ $(document).ready(function () {
     emailjs.send(serviceID,templateID,params)
       .then(res => {
         $(".btn-close").click();
-        alert("Mật khẩu đã được gửi vào email của bạn")
+        toastr.success("Mật khẩu đã được gửi vào email của bạn")
       })
       .catch();
   }
@@ -86,10 +89,13 @@ $(document).ready(function () {
   // Quên mật khẩu
   $("#forgot").click(function(e){
     e.preventDefault();
+    document.getElementById("formReset").reportValidity();
     var email = $("#modalPasswordResetEmail").val();
+    if(email == '')
+      return;
     var user = users.filter(u => u.email === email);
     if(user.length == 0){
-      alert("Email không tồn tại");
+      toastr.error("Email không tồn tại");
     }
     else{
       sendMail(user[0].password,email);

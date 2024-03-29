@@ -32,13 +32,23 @@ $(document).ready(function () {
     $("#wish").attr("data-id",product.id);
 
   }
-
   // Bình luận
-  const loadReviews = (page) =>{
+  const loadReviews = (page,sort) =>{
      // Bình luận
     var reviewList = JSON.parse(localStorage.getItem("reviews"));
     var reviewsByProduct = reviewList.filter(item => item.productId == idProduct);
-
+    if(sort == "Lowest star"){
+      reviewsByProduct.sort((o1, o2) => o1.rate - o2.rate);
+    }
+    if(sort == "Highest star"){
+      reviewsByProduct.sort((o1, o2) => o2.rate - o1.rate);
+    }
+    if(sort == "Oldest"){
+      reviewsByProduct.sort((o1, o2) => Date.parse(o1.time) - Date.parse(o2.time));
+    }
+    if(sort == "Newest"){
+      reviewsByProduct.sort((o1, o2) => Date.parse(o2.time) - Date.parse(o1.time));
+    }
     // Rate avg
     var tong = 0;
     reviewsByProduct.forEach(item => {
@@ -58,7 +68,7 @@ $(document).ready(function () {
       $(this).text(`Reviews (${reviewsByProduct.length})`)
     })
 
-    var totalPage = Math.floor((reviewsByProduct.length)/3) + (((reviewsByProduct.length) % 3 == 0) ? 0 : 1);
+    var totalPage = Math.floor((reviewsByProduct.length)/2) + (((reviewsByProduct.length) % 2 == 0) ? 0 : 1);
     var pagination = $("#pagination");
     var pageActive = parseInt(pagination.find(".page-item.active").text());
     var pageCurrent = pageActive;
@@ -66,15 +76,15 @@ $(document).ready(function () {
     if(page == -1 && pageActive == 1 || page == -2 && pageActive == totalPage)
       return;
     if(page == -1){ // prev
-      reviewsByProduct = reviewsByProduct.slice((pageActive-1 - 1)*3,(pageActive-1 - 1)*3+3);
+      reviewsByProduct = reviewsByProduct.slice((pageActive-1 - 1)*2,(pageActive-1 - 1)*2+2);
       pageCurrent = pageActive - 1;
     }
     else if(page == -2){ // next
-      reviewsByProduct = reviewsByProduct.slice((pageActive-1 + 1)*3,(pageActive-1 + 1)*3+3);
+      reviewsByProduct = reviewsByProduct.slice((pageActive-1 + 1)*2,(pageActive-1 + 1)*2+2);
       pageCurrent = pageActive + 1;
     }
     else{
-      reviewsByProduct = reviewsByProduct.slice((page-1)*3,(page-1)*3+3);
+      reviewsByProduct = reviewsByProduct.slice((page-1)*2,(page-1)*2+2);
       pageCurrent = page;
     }
     var htmlReview = ``;
@@ -103,7 +113,13 @@ $(document).ready(function () {
                                 </div>
                               </div>
                               <div class="col-12">
-                                <span class="fs-xs text-muted">${item.userName}, ${item.time}</span>
+                                <span class="fs-xs text-muted">${item.userName}, 
+                                `
+                    var date = item.time.split('/');
+                    htmlReview+= `${date[1].length == 1 ? ('0'+date[1]) : date[1]}-${date[0].length == 1 ? ('0'+date[0]) : date[0]}-${date[2]}`
+                    htmlReview+=
+                                `
+                                </span>
                               </div>
                             </div>
                             <h5 class="mb-2" style="font-size: 18px;">${item.title}</h5>
@@ -151,12 +167,19 @@ $(document).ready(function () {
     pagination.html(htmlPagination)
   }
   loadData();
-  loadReviews(1);
+  loadReviews(1,"Default");
+
+  // Sort Review
+  $(document).on("change","#sortReview",function(){
+    var sort = $(this).val();
+    loadReviews(1,sort);
+  })
 
   // Chuyển trang
   $(document).on("click",".page-item",function(){
     var page = parseInt($(this).attr("data-page"));
-    loadReviews(page);
+    var sort = $("#sortReview").val();
+    loadReviews(page,sort);
   })
   // Random 4 sp
   const randomProduct = () => {
@@ -204,6 +227,7 @@ $(document).ready(function () {
     $("#product-list").html(htmlRandom);
   }
   randomProduct();
+
 
   // Thay đổi hình ảnh
   $('.radio-sneaker').click(function (state) { 
@@ -259,7 +283,6 @@ $(document).ready(function () {
     state.currentTarget.classList.add('selected-size');
   });
 
-
   $('.star').click(function (state) {
     let value = state.currentTarget.value;
     $(this).closest("ul").attr("data-star",value);
@@ -279,7 +302,7 @@ $(document).ready(function () {
     e.preventDefault();
     var user = localStorage.getItem("user");
     if(user == null){
-      window.location = "../../SignIn/html/SignIn.html"
+      window.location = "../../SignIn/html/index.html"
     }
     else{
       user = JSON.parse(user);

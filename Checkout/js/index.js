@@ -242,5 +242,9 @@ $(document).ready(function(){
       })
       .catch();
     localStorage.removeItem("cart");
+
+    setTimeout(() => {
+      window.location = "../../Order/html/index.html";
+    },1000)
   })
 });

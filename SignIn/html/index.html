@@ -8,10 +8,12 @@
   <link rel="stylesheet" href="../../Common/css/bootstrap.min.css">
   <link rel="stylesheet" href="../../Common/css/all.min.css">
   <link rel="stylesheet" href="../../Common/css/style.css">
+  <link rel="stylesheet" href="../../Common/css/toastr.min.css">
   <link rel="stylesheet" href="../css/style.css">
 </head>
 
 <body>
+  <div id="scrollUp"></div>
   <!-- Header -->
   <header class="header">
     <section class="top bg-dark">
@@ -127,7 +129,7 @@
   <!-- Content -->
   <section class="login">
     <div class="container">
-      <form action="" class="form">
+      <form action="" class="form" id="formLogin">
         <div class="row">
           <div class="col-12">
             <h1 class="title">Returning Customer</h1>
@@ -177,7 +179,7 @@
                 </p>
 
                 <!-- Form -->
-                <form action="">
+                <form action="" id="formReset">
                   <!-- Email -->
                   <div class="form-group">
                     <label class="visually-hidden" for="modalPasswordResetEmail">
@@ -409,8 +411,8 @@
       <span class="price" id="total-money">$89.00</span>
     </div>
     <div class="offcanva-footer">
-      <a href="#" class="button-footer btn-checkout">Continue to Checkout</a>
-      <a href="../../Cart/html/shopping-cart.html" class="button-footer btn-view">View Cart</a>
+      <a href="../../Checkout/html/index.html" class="button-footer btn-checkout">Continue to Checkout</a>
+      <a href="../../Cart/html/index.html" class="button-footer btn-view">View Cart</a>
     </div>
   </div>
   <!-- End Cart -->
@@ -419,12 +421,16 @@
   <script src="../../Common/js/jquery.min.js"></script>
   <script src="../../Common/js/jquery-1.11.0.min.js"></script>
   <script src="../../Common/js/jquery-migrate-1.2.1.min.js"></script>
+  <script src="../../Common/js/scroll.js"></script>
   <script src="../../Common/js/data.js"></script>
+  <script src="../../Common/js/email.min.js"></script>
   <script src="../../Common/js/modal.js"></script>
   <script src="../../Common/js/cart.js"></script>
   <script src="../../Common/js/search.js"></script>
   <script src="../../Common/js/wishList.js"></script>
   <script src="../../Common/js/redirect.js"></script>
+  <script src="../../Common/js/toastr.min.js"></script>
+  <script src="../../Common/js/config-toastr.js"></script>
   <script src="../js/index.js"></script>
   
 </body>

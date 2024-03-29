@@ -6,6 +6,7 @@ $(document).ready(function () {
   const loadDataSearch = (category,keyword) => {
     var htmlSearch = ``;
     var result;
+
     if(category === "All Categories"){
       result = productList.filter(item => item.name.toLowerCase().includes(keyword.toLowerCase())).slice(0,5);
     }

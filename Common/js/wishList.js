@@ -38,7 +38,7 @@ $(document).ready(function () {
     if(localStorage.getItem("wishLists") != null){
       var wishLists = JSON.parse(localStorage.getItem("wishLists"));
       if(wishLists.findIndex(item => item.id == id) >= 0){
-        alert("Sản phẩm đã có trong danh mục yêu thích của bạn");
+        toastr.error("Sản phẩm đã có trong danh mục yêu thích của bạn");
         return;
       }
       else{
@@ -52,7 +52,7 @@ $(document).ready(function () {
       localStorage.setItem("wishLists",JSON.stringify(wishLists));
     }
     loadDataWishList();
-    alert("Thêm thành công sản phẩm vào danh mục yêu thích");
+    toastr.success("Thêm thành công sản phẩm vào danh mục yêu thích");
   })
 
   // Xóa sản phẩm yêu thích
