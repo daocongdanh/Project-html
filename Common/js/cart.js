@@ -217,15 +217,29 @@ $(document).ready(function () {
 
   // Xử lý sự kiện click rồi gọi hàm addToCart
   $(".add-cart").click(function(){
-    var id = $("#myModal").attr("data-id");
-    var qty = $("#quantity").val();
-    var size = $(".btn-check:checked + .size-input").text();
-    addToCart(parseInt(id),parseInt(qty), size);
-    cartModal();
-    $(".btn-close").click(); // giả lập click thoát
-    setTimeout(() => {
-      toastr.success("Thêm sản phẩm vào giỏ hàng thành công"); 
-    },100)
+    var check = $(this).attr("data-modal");
+    if(check == 'true'){
+      var id = $("#myModal").attr("data-id");
+      var qty = $("#quantity").val();
+      var size = $("#sizeChoose").text();
+      addToCart(parseInt(id),parseInt(qty), size);
+      cartModal();
+      $(".btn-close").click(); // giả lập click thoát
+      setTimeout(() => {
+        toastr.success("Thêm sản phẩm vào giỏ hàng thành công"); 
+      },100)
+    }
+    else{
+      var id = $(this).attr("data-id");
+      var qty = $("#quantity1").val();
+      var size = $("#sizeChoose1").text();
+      addToCart(parseInt(id),parseInt(qty), size);
+      cartModal();
+      $(".btn-close").click(); // giả lập click thoát
+      setTimeout(() => {
+        toastr.success("Thêm sản phẩm vào giỏ hàng thành công"); 
+      },100)
+    }
   })
 
   // Xử lý sự kiện click rồi gọi hàm updateCart

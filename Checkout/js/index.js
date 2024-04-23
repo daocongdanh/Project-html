@@ -1,5 +1,13 @@
 $(document).ready(function(){
 
+  const cart = JSON.parse(localStorage.getItem("cart"));
+  if(cart == null){
+    toastr.error("Không có sản phẩm trong giỏ hàng. Vui lòng shopping trước !!!");
+    setTimeout(() => {
+      window.location = "../../Product/html/index.html";
+    },2000);
+  
+  }
   // Tính tổng tiền trong giỏ hàng
   const totalMoney = () => {
     var tong = 0;
@@ -238,13 +246,13 @@ $(document).ready(function(){
   
     emailjs.send(serviceID,templateID,params)
       .then(res => {
-        alert("success");
+        toastr.success("Đặt hàng thành công");
       })
       .catch();
     localStorage.removeItem("cart");
 
     setTimeout(() => {
       window.location = "../../Order/html/index.html";
-    },1000)
+    },3000)
   })
 });

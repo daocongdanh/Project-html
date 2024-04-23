@@ -10,7 +10,9 @@
 .form-control {
   padding: 13px 20px;
 }
-
+.form-check-input:focus {
+  box-shadow: none;
+}
 .price {
   font-weight: 500;
 }

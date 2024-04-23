@@ -69,7 +69,7 @@ $(document).ready(function () {
                                 if(index <= 2){
                                   var product = productList.filter(p => p.id == od.productId)[0];
                                   htmlOrders += `<div class="col-3">
-                                                    <div class="box-img">
+                                                    <div style="box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;" class="box-img">
                                                       <img src="../../Common/img/${product.thumbnail[0]}" alt="">
                                                     </div>
                                                   </div>`

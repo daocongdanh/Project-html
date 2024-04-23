@@ -52,4 +52,6 @@ $(document).ready(function () {
     var img = $(this).attr("id");
     $(".image #modal-image").attr("src",`../../Common/img/${img}`);
   })
+
+  
 });

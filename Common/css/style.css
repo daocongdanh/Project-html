@@ -327,6 +327,15 @@ a {
   color: #a6a6a6 !important;
   text-decoration: line-through;
 }
+.selected {
+  border-bottom: 2px solid black !important;
+}
+
+.selected-size {
+  border: 1px solid black !important;
+}
+
+
 .modal .right {
   position: relative;
 }
@@ -412,6 +421,27 @@ a {
 }
 .modal .right .rd-img:checked + label {
   border-bottom: 2px solid #000;
+}
+
+@media screen and (max-width: 1200px) {
+  .modal #quantity {
+    padding: 14px 50px 14px 24px;
+  }
+  .modal #box1, #box2 {
+    margin-bottom: 10px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .modal .left {
+    padding: 16px;
+  }
+  .modal .right {
+    position: relative;
+  }
+  .modal .right .btn-close{
+    position: absolute;
+    top: -89%;
+  }
 }
 /* End Modal */
 .offcanvas {

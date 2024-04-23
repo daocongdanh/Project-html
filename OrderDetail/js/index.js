@@ -47,12 +47,12 @@ $(document).ready(function () {
                     var product = productList.filter(p => p.id === od.productId)[0];
                     html += `<li class="list-group-item">
                               <div class="row align-items-center">
-                                <div class="col-4 col-md-3 col-xl-2">
+                                <a data-id=${product.id} href="../../ProductDetail/html/index.html" class="redirect col-4 col-md-3 col-xl-2">
                                   <img src="../../Common/img/${product.thumbnail[0]}" alt="" class="w-100">
-                                </div>
+                                </a>
                                 <div class="col">
                                   <p class="mb-4 fs-sm fw-bold">
-                                    <a class="text-body" href="product.html">${product.name} x ${od.quantity}</a> <br>
+                                    <a class=" redirect text-body" data-id=${product.id} href="../../ProductDetail/html/index.html">${product.name} x ${od.quantity}</a> <br>
                                     <span class="text-muted price">$${(product.price*(1-product.sale/100)).toFixed(0)}</span>
                                   </p>
                                   <div class="fs-sm text-muted">

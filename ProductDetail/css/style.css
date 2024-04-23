@@ -35,7 +35,9 @@
 .img-sneaker {
   width: 100%;
 }
-
+.btn-close:focus {
+  box-shadow: none;
+}
 .selected {
   border-bottom: 2px solid black !important;
 }
@@ -48,7 +50,7 @@
   cursor: pointer;
 }
 
-.form-check-size,
+.form-check-size1,
 .form-check-wait {
   width: 48px;
   height: 42px;
@@ -58,12 +60,12 @@
   justify-content: center;
 }
 
-.form-check-size input[type="radio"],
+.form-check-size1 input[type="radio"],
 .form-check-wait input[type="radio"] {
   display: none;
 }
 
-.form-check-size:hover {
+.form-check-size1:hover {
   cursor: pointer;
 }
 

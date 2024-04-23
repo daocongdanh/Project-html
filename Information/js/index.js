@@ -17,7 +17,9 @@ $(document).ready(function () {
   loadData();
 
   // Cập nhật thông tin
-  $("#save").click(function(){
+  $("#save").click(function(e){
+    e.preventDefault();
+    document.getElementById("formInfo").reportValidity();
     var user = JSON.parse(localStorage.getItem("user"));
     var firstName = $("#fName").val();
     var lastName = $("#lName").val();
@@ -27,6 +29,9 @@ $(document).ready(function () {
     var password = $("#cPass").val();
     var newPassword = $("#nPass").val();
     var gender = parseInt($(".gender:checked")[0].id);
+    if(firstName == '' || lastName == '' || email == '' || phone == ''){
+      return;
+    }
     var userNew;
     if(password === ""){
       userNew = {
@@ -42,7 +47,7 @@ $(document).ready(function () {
     }
     else{
       if(password != user.password){
-        alert("Mật khẩu không đúng");
+        toastr.error("Mật khẩu không đúng");
         return;
       }
       userNew = {
@@ -64,5 +69,6 @@ $(document).ready(function () {
     loadData();
     $("#cPass").val("");
     $("#nPass").val("");
+    toastr.success("Lưu thông tin thành công");
   })
 });
