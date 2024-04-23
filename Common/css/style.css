@@ -300,24 +300,32 @@ a {
 .modal .right {
   padding: 48px;
 }
-.modal .size-input {
-  padding: 8px;
-  min-width: 48px;
-  border-radius: 0;
-  border: 1px solid #ddd;
-  color: #767676;
-  margin-right: 10px;
-  margin-bottom: 10px;
+.form-check-size,
+.form-check-wait {
+  width: 48px;
+  height: 42px;
+  border: 1px solid rgb(215, 215, 215);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.modal .size-input.through {
+
+.form-check-size input[type="radio"],
+.form-check-wait input[type="radio"] {
+  display: none;
+}
+
+.form-check-size:hover {
+  cursor: pointer;
+}
+
+.form-check-wait:hover {
+  cursor: pointer;
+}
+
+.form-check-disable {
+  color: #a6a6a6 !important;
   text-decoration: line-through;
-}
-.modal .btn-check+.btn:hover{
-  border: 1px solid #ddd;
-  color: #767676;
-}
-.modal .btn-check:checked + .btn{
-  pointer-events: none;
 }
 .modal .right {
   position: relative;

@@ -5,7 +5,6 @@ $(document).ready(function () {
     }, 1000);
   })
   $(window).scroll(function(){
-    console.log($(this).scrollTop())
     if($(this).scrollTop() > 0){
       $("#scrollUp").css("display","block");
     }

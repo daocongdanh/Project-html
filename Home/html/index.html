@@ -579,9 +579,6 @@
             </div>
           </div>
         </div>
-        <div class="col-12">
-          <button class="button-more">Discover more</button>
-        </div>
       </div>
     </div>
   </div>
@@ -752,36 +749,70 @@
                 <input class="rd-img" type="radio" id="image2" name="image" value="2"/>
                 <label class="lb2" for="image2"></label>
               </div>
-              <p class="size">Size: <span id="size">8 US</span></p>
-              <div class="size-list">
-                <input type="radio" class="btn-check" name="options-base" id="size1" autocomplete="off">
-                <label class="size-input btn" for="size1">6</label>
-                <input type="radio" class="btn-check" name="options-base" id="size2" autocomplete="off" disabled>
-                <label class="size-input through btn" for="size2">6.5</label>
-                <input type="radio" class="btn-check" name="options-base" id="size3" autocomplete="off" >
-                <label class="size-input btn" for="size3">7</label>
-                <input type="radio" class="btn-check" name="options-base" id="size4" autocomplete="off" >
-                <label class="size-input btn" for="size4">7.5</label>
-                <input type="radio" class="btn-check" name="options-base" id="size5" autocomplete="off" checked>
-                <label class="size-input btn" for="size5">8</label>
-                <input type="radio" class="btn-check" name="options-base" id="size6" autocomplete="off" >
-                <label class="size-input btn" for="size6">8.5</label>
-                <input type="radio" class="btn-check" name="options-base" id="size7" autocomplete="off" disabled>
-                <label class="size-input through btn" for="size7">9</label>
-                <input type="radio" class="btn-check" name="options-base" id="size8" autocomplete="off" disabled>
-                <label class="size-input through btn" for="size8">9.5</label>
-                <input type="radio" class="btn-check" name="options-base" id="size9" autocomplete="off" >
-                <label class="size-input btn" for="size9">10</label>
-                <input type="radio" class="btn-check" name="options-base" id="size10" autocomplete="off" >
-                <label class="size-input btn" for="size10">10.5</label>
-                <input type="radio" class="btn-check" name="options-base" id="size11" autocomplete="off" >
-                <label class="size-input btn" for="size11">11</label>
-                <input type="radio" class="btn-check" name="options-base" id="size12" autocomplete="off" >
-                <label class="size-input btn" for="size12">12</label>
-                <input type="radio" class="btn-check" name="options-base" id="size13" autocomplete="off" >
-                <label class="size-input btn" for="size13">13</label>
-                <input type="radio" class="btn-check" name="options-base" id="size14" autocomplete="off" >
-                <label class="size-input btn" for="size14">14</label>
+              <div class="mb-3">
+                <label for="size" class="form-label">Size: </label>
+                <b id="sizeChoose" style="font-weight: 500;">7.5 US</b>
+              </div>
+              <!--Option size-->
+              <div class="mb-3">
+                <div class="w-100 d-flex flex-wrap">
+                  <div class="form-check form-check-inline form-check-size mb-2 p-0">
+                    <input type="radio" name="sizeForm" id="radioSize" value="6">
+                    <label class="valueSize">6</label>
+                  </div>
+                  <div class="form-check form-check-inline form-check-size mb-2 p-0">
+                    <input type="radio" name="sizeForm" id="radioSize" value="6.5">
+                    <span class="valueSize form-check-disable">6.5</span>
+                  </div>
+                  <div class="form-check form-check-inline form-check-size mb-2 p-0">
+                    <input type="radio" name="sizeForm" id="radioSize" value="7">
+                    <span class="valueSize">7</span>
+                  </div>
+                  <div class="form-check form-check-inline form-check-size mb-2 p-0">
+                    <input type="radio" name="sizeForm" id="radioSize" value="7.5">
+                    <span class="valueSize">7.5</span>
+                  </div>
+                  <div class="form-check form-check-inline form-check-size mb-2 p-0">
+                    <input type="radio" name="sizeForm" id="radioSize" value="8">
+                    <span class="valueSize">8</span>
+                  </div>
+                  <div class="form-check form-check-inline form-check-size mb-2 p-0">
+                    <input type="radio" name="sizeForm" id="radioSize" value="8.5">
+                    <span class="valueSize">8.5</span>
+                  </div>
+                  <div class="form-check form-check-inline form-check-size mb-2 p-0">
+                    <input type="radio" name="sizeForm" id="radioSize" value="9">
+                    <span class="valueSize form-check-disable">9</span>
+                  </div>
+                  <div class="form-check form-check-inline form-check-size mb-2 p-0">
+                    <input type="radio" name="sizeForm" id="radioSize" value="9.5">
+                    <span class="valueSize form-check-disable">9.5</span>
+                  </div>
+                  <div class="form-check form-check-inline form-check-size mb-2 p-0">
+                    <input type="radio" name="sizeForm" id="radioSize" value="10">
+                    <span class="valueSize">10</span>
+                  </div>
+                  <div class="form-check form-check-inline form-check-size mb-2 p-0">
+                    <input type="radio" name="sizeForm" id="radioSize" value="10.5">
+                    <span class="valueSize">10.5</span>
+                  </div>
+                  <div class="form-check form-check-inline form-check-size mb-2 p-0">
+                    <input type="radio" name="sizeForm" id="radioSize" value="11">
+                    <span class="valueSize">11</span>
+                  </div>
+                  <div class="form-check form-check-inline form-check-size mb-2 p-0">
+                    <input type="radio" name="sizeForm" id="radioSize" value="12">
+                    <span class="valueSize">12</span>
+                  </div>
+                  <div class="form-check form-check-inline form-check-size mb-2 p-0">
+                    <input type="radio" name="sizeForm" id="radioSize" value="13">
+                    <span class="valueSize">13</span>
+                  </div>
+                  <div class="form-check form-check-inline form-check-size mb-2 p-0">
+                    <input type="radio" name="sizeForm" id="radioSize" value="14">
+                    <span class="valueSize">14</span>
+                  </div>
+                </div>
               </div>
               <div class="button-modal">
                 <div class="row d-flex align-items-center">

@@ -33,6 +33,20 @@ $(document).ready(function () {
     modal.find("#imageModal").html(htmlImageModal)
   })
   
+  $('.form-check-size').click(function (state) {
+    let elementSpan = state.currentTarget.children[1];
+    if ( !elementSpan.classList.contains('form-check-disable')) {
+      let valueChoose = state.currentTarget.children[0].value;
+      let sizeChoose = document.getElementById('sizeChoose');
+      sizeChoose.innerHTML = valueChoose + " US";
+
+      document.querySelectorAll('.form-check-size').forEach((e) => {
+        e.classList.remove('selected-size');
+      });
+
+      state.currentTarget.classList.add('selected-size');
+    }
+  });
   // Image Modal
   $(document).on("click","#myModal .image .rd-img",function(){
     var img = $(this).attr("id");
